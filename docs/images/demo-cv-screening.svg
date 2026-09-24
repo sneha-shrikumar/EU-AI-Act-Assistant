@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="660" viewBox="0 0 860 660">
+<rect x="0.5" y="0.5" width="859" height="659" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<path d="M12 0.5 H848 Q859.5 0.5 859.5 12 V56 H0.5 V12 Q0.5 0.5 12 0.5 Z" fill="#0f172a"/>
+<text x="24" y="35" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" font-style="normal" fill="#ffffff">⚖️  EU AI Act Assistant</text>
+<text x="586" y="35" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" font-style="normal" fill="#94a3b8">agentic · Haiku 4.5 · 4 LLM calls</text>
+<rect x="228" y="90" width="600" height="72" rx="14" fill="#dbeafe"/>
+<text x="246" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" font-style="normal" fill="#1e3a8a">We&#x27;re using AI to screen CVs. Does that make us high-risk under the EU</text>
+<text x="246" y="142" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" font-style="normal" fill="#1e3a8a">AI Act?</text>
+<rect x="32" y="186" width="796" height="444" rx="14" fill="#f6f8fa" stroke="#e5e7eb"/>
+<text x="52" y="204" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#6b7280">Answer (cited from the Act&#x27;s text only)</text>
+<text x="52" y="230" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#6b7280">Assumption: you use the AI to screen CVs for recruitment or employment decisions.</text>
+<text x="52" y="260" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold" font-style="normal" fill="#1f2328">Classification as high-risk</text>
+<text x="52" y="284" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">Yes, this likely constitutes a high-risk AI system. Annex III(4)(a) lists as high-risk “AI</text>
+<text x="52" y="306" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">systems intended to be used for the recruitment or selection of natural persons, in particular …</text>
+<text x="52" y="328" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">to analyse and filter job applications, and to evaluate candidates.” CV screening directly</text>
+<text x="52" y="350" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">matches this description.</text>
+<text x="52" y="380" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold" font-style="normal" fill="#1f2328">Potential exceptions</text>
+<text x="52" y="404" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">Article 6(3) provides a narrow exception where the system does not pose a significant risk of</text>
+<text x="52" y="426" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">harm, e.g. it performs only a narrow procedural task or a preparatory task. But an Annex III</text>
+<text x="52" y="448" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">system “shall always be considered to be high-risk where the AI system performs profiling of</text>
+<text x="52" y="470" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">natural persons.”</text>
+<text x="52" y="500" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="bold" font-style="normal" fill="#1f2328">What you must do</text>
+<text x="52" y="524" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">Comply with requirements including data governance (Article 10) and accuracy and robustness</text>
+<text x="52" y="546" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">(Article 15), and document your assessment if you believe the system falls outside the high-risk</text>
+<text x="52" y="568" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" font-style="normal" fill="#1f2328">category (Article 6(4)). …</text>
+<text x="52" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" font-style="normal" fill="#6b7280">Sources:</text>
+<rect x="116" y="588" width="115.39999999999999" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="126" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" font-style="normal" fill="#065f46">Annex III(4-5)</text>
+<rect x="239.39999999999998" y="588" width="115.39999999999999" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="249.39999999999998" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" font-style="normal" fill="#065f46">Article 6(3-5)</text>
+<rect x="362.79999999999995" y="588" width="123.0" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="372.79999999999995" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" font-style="normal" fill="#065f46">Article 10(1-3)</text>
+<rect x="493.79999999999995" y="588" width="123.0" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="503.79999999999995" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" font-style="normal" fill="#065f46">Article 15(1-4)</text>
+<rect x="624.8" y="588" width="62.199999999999996" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+<text x="634.8" y="604" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" font-style="normal" fill="#065f46">+6 more</text>
+<text x="32" y="650" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="italic" fill="#9ca3af">Real output from the agent (abridged). No citations outside the retrieved text.</text>
+</svg>

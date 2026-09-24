@@ -17,16 +17,29 @@ journey, run the way I'd run an AI feature as a PM:
 2. Measure every change against it.
 3. Never ship on vibes.
 
+![The assistant answering whether CV screening is high-risk, with citations to Annex III and Article 6](docs/images/demo-cv-screening.svg)
+
 ---
 
 ## 🎯 Four KPIs, in priority order
 
-| KPI | Target | Shipped | Status | How to read it | Why this bar |
+| Priority | KPI | Target | Shipped | Status | In plain words |
 |---|---|---|---|---|---|
-| **1. Groundedness**: never invent | ≥ 0.95 | **0.98** | ✅ | 40 of 41 answers had every claim backed by text retrieved from the law | An invented obligation is the most dangerous failure, because someone might act on it. It isn't 1.00 because LLM judges wobble, so I review every flagged answer by hand. |
-| **2. Correct refusals**: don't bluff | 100% | **100%** | ✅ | Both questions the law doesn't cover were declined, not guessed at | Bluffing once destroys trust, so this is a hard gate, not an average. |
-| **3. Correctness** | ≥ 0.90 | **0.93** | ✅ | 38 of 41 answers said what the law actually says | This is only worth something once 1 and 2 hold. At 9 in 10, people trust it for first-pass research. |
-| **4. Cost per question** | ≤ $0.03 | **$0.022** | ✅ | About 2 cents per answer, or about $22 for 1,000 questions | Keeps it viable, and stops me "buying" quality with the biggest model. |
+| 1 | **Groundedness** | ≥ 0.95 | 0.98 | ✅ | 40 of 41 answers had every claim backed by the law's text |
+| 2 | **Correct refusals** | 100% | 100% | ✅ | Both questions the law doesn't cover were declined |
+| 3 | **Correctness** | ≥ 0.90 | 0.93 | ✅ | 38 of 41 answers said what the law actually says |
+| 4 | **Cost per question** | ≤ $0.03 | $0.022 | ✅ | About $22 for 1,000 questions |
+
+**Why these bars:**
+1. **Never invent.** An invented obligation is the most dangerous failure, because
+   someone might act on it. The target isn't 1.00 because LLM judges wobble, so I review
+   every flagged answer by hand.
+2. **Never bluff.** Answering a question the law doesn't cover, even once, destroys
+   trust. So this is a hard gate, not an average.
+3. **Then be right.** Correctness only counts once 1 and 2 hold. At 9 in 10, people
+   trust the assistant for first-pass research.
+4. **Stay viable.** A cost cap stops me "buying" quality with the biggest model on
+   every question.
 
 *All four are scored on a 41-question test set I wrote by hand. Scores come from LLM
 judges, and I review every answer the judges fail.*
@@ -42,8 +55,6 @@ judges, and I review every answer the judges fail.*
     annexes) instead of arbitrary text windows.
   - Tag every chunk with its chapter and section.
   - When a question names "Article 97", look that article up directly.
-
-  Strict retrieval rose from **0.58 to 0.75**.
 - **Fixed a cautious prompt.** One line, *"when in doubt, refuse"*, was blocking answers
   the evidence supported. Rewriting it cut wrong refusals **from 10 to 4**.
 - **Made retrieval smarter, not just the model.** People say "CV screening", and the law
@@ -58,21 +69,28 @@ judges, and I review every answer the judges fail.*
 
 ## ⚖️ Three ways to answer
 
-| | 💨 Basic RAG | 🧠 Agent (shipped) | 🔨 Whole law sent to Opus 5.5 |
+| | 💨 Basic RAG (first version) | 🧠 Agent (shipped) | 🔨 Whole law sent to Opus 5.5 |
 |---|---|---|---|
-| Correctness | 0.73 | **0.93** | 0.98 |
-| Cost per question | **$0.005** | $0.022 | $0.086 ❌ over budget |
-| Time per answer | **5 s** | 15 s | 17 s |
+| 1. Groundedness (≥ 0.95) | 1.00\* | **0.98** ✅ | 0.93 ❌ |
+| 2. Correct refusals (100%) | 100% ✅ | 100% ✅ | 100% ✅ |
+| 3. Correctness (≥ 0.90) | 0.63 ❌ | 0.93 ✅ | **0.98** ✅ |
+| 4. Cost per question (≤ $0.03) | **$0.003** ✅ | $0.022 ✅ | $0.086 ❌ |
+| Answerable questions wrongly refused | 11 of 37 | **0** | **0** |
+| Time per answer | **4 s** | 15 s | 17 s |
 
-The agent gets within 2 questions of brute force for about a quarter of the price. Its
-weak spot is speed.
+\* Inflated: the 11 wrong refusals count as "grounded", because a refusal can't invent
+anything.
 
-*The agent's scores are human-reviewed. The other two columns are judge-only.*
+Only the agent passes all four KPIs. It gets within 2 questions of brute force on
+correctness for about a quarter of the price. Its weak spot is speed.
+
+*Scoring: the first basic RAG was scored by hand, the agent by LLM judge plus my
+review, and Opus by LLM judge only.*
 
 ## 💡 What I learned
 
 - **Garbage in, garbage out.** With the same answering model (Haiku 4.5) throughout,
-  better chunking and retrieval took correctness from 0.73 to 0.93. That's why I spent
+  better chunking and retrieval took correctness from 0.63 to 0.93. That's why I spent
   most of my time there. The one big jump that didn't come from retrieval was fixing
   the over-cautious refusal prompt. A stronger model can compensate, but at 4× the cost:
   giving Opus 5.5 the whole law scores 0.98.
@@ -85,19 +103,22 @@ weak spot is speed.
 
 ## 🚀 What I'd do next to perfect it
 
-1. **Test with real users.** Run a pilot with a compliance team, collect thumbs-up and
+1. **Build a web UI.** Add clickable citations that open the source text, show the
+   agent's assumptions, give refusals a clear state, and add thumbs-up/down feedback.
+   That's also what makes step 2 possible.
+2. **Test with real users.** Run a pilot with a compliance team, collect thumbs-up and
    thumbs-down on answers, and track a true product KPI: the share of questions resolved
    without escalating to legal.
-2. **Strengthen the test set.** 41 questions is small, and "100% correct refusals" rests
+3. **Strengthen the test set.** 41 questions is small, and "100% correct refusals" rests
    on only 2 questions. I'd grow it to 100+ questions, with at least 15 that should be
    refused.
-3. **Make it faster.** Target under 8 seconds by running stages in parallel, using a
+4. **Make it faster.** Target under 8 seconds by running stages in parallel, using a
    smaller model for the self-check, and skipping steps for simple lookups.
-4. **Get stable numbers.** Average 3 eval runs per change so judge wobble can't decide a
+5. **Get stable numbers.** Average 3 eval runs per change so judge wobble can't decide a
    release, and run the eval automatically on every prompt or retrieval change.
-5. **Run a fair benchmark.** Test the strongest model *with* retrieval, to separate how
+6. **Run a fair benchmark.** Test the strongest model *with* retrieval, to separate how
    much of the gap comes from the model and how much from the search.
-6. **Keep it current.** Add the Commission's guidance documents, and version the index
+7. **Keep it current.** Add the Commission's guidance documents, and version the index
    so answers say which version of the law and guidance they came from.
 
 ---
@@ -145,3 +166,13 @@ Link to the Act on EUR-Lex:
   - agent: `35fe63c2`
   - basic RAG: `ecfbeb79`
   - whole law sent to Opus 5.5: `f0d6b8ee`
+
+---
+
+## 👋 About me
+
+I'm a product manager who builds, so I can reason about AI products from the evals up.
+This project is how I work: problem first, quality defined before building, decisions
+written down.
+
+Questions or feedback: **[shrikumarsneha@gmail.com](mailto:shrikumarsneha@gmail.com)**
