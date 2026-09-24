@@ -57,9 +57,6 @@ review every answer they fail.*
 Only the agent passes all four KPIs, and it does so at a quarter of Opus's cost. Its
 weak spot is speed.
 
-*Scoring: basic RAG by hand; the agent by LLM judge plus my review; Opus by LLM judge
-only.*
-
 ## 💡 What I learned
 
 - **Garbage in, garbage out.** With the same answering model throughout, better
