@@ -16,5 +16,41 @@
     "judge_score": 0,
     "human_score": 1,
     "judge_reasoning": "The reference simply states that biometric categorisation in the workplace is high-risk (yes, high risk). The candidate's answer is overly complicated, introducing a distinction that suggests it could be prohibited in some cases, which contradicts the reference's clear answer of high-risk. This adds confusion rather than conveying the same substantive content."
+  },
+  {
+    "experiment": "eu-ai-act-agentic-reflect-35fe63c2",
+    "question": "what data must be listed in the EU database for high-risk systems?",
+    "key": "groundedness",
+    "lesson": "Human review: the claims are supported by the retrieved excerpts. Check each claim against every excerpt before marking it unsupported.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The answer's claims are all traceable to the excerpts: Section A details match Annex VIII(1-12), the fundamental rights/data protection impact assessment items match Annex VIII(2-5), the deployer info matches Annex VIII(13-1), and the restricted secure section rule matches Article 49(4). However, there is a mislabeling: the Annex VIII(2-5) excerpt is titled 'Section A' in the source but the answer presents items 4 and 5 (impact assessments) as additional numbered items 4 and 5 alongside the Section A list already given as 1-13, creating a duplicate/confusing numbering (two different item 4 and item 5 for Section A) that doesn't match the source structure - the source's Annex VIII(2-5) excerpt actually lists items 2-5 which include 'name/contact of person submitting on behalf of deployer' (item 2), URL of entry (item 3), impact assessment summary (item 4) and DPIA summary (item 5) - but the answer misattributes item 2 as being about 'the person submitting information on behalf of the provider' when the source says 'on behalf of the deployer,' and skips item 3 (URL) entirely while renumbering 4 and 5 as separate additional points rather than part of a continuous Section list. This is a mismatch/misattribution of content between two different Annex VIII fragments (Section A vs the deployer-related Section list), constituting an ungrounded/misattributed claim."
+  },
+  {
+    "experiment": "eu-ai-act-agentic-reflect-35fe63c2",
+    "question": "how must high-risk systems be tested?",
+    "key": "groundedness",
+    "lesson": "Human review: the claims are supported by the retrieved excerpts. Check each claim against every excerpt before marking it unsupported.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The answer misattributes the quotes about testing timing and metrics to 'Article 8(8)', but the excerpts show this content is actually from Article 9(8), not Article 8. This is a clear misattribution of source. All other claims are accurately quoted and attributed to the correct excerpts (Article 9(6), 9(7), 15(1), 15(4), Annex IV(2)(g), Article 72(1-2)), but the repeated citation error to a nonexistent/incorrect Article 8 makes the answer not fully grounded with correct citations."
+  },
+  {
+    "experiment": "eu-ai-act-agentic-reflect-35fe63c2",
+    "question": "what data must be listed in the EU database for high-risk systems?",
+    "key": "answer_correctness",
+    "lesson": "The answer contained the material in the reference answer. Judge on substance: if the reference's key points are present, score 1 even when the answer is longer or organised differently.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The candidate covers Section A reasonably well but omits Section B (information for AI systems deemed not high-risk under Article 6(3)) entirely, and mischaracterizes Section C items (fundamental rights and data protection impact assessment summaries) as provider-submitted rather than deployer-submitted, while also failing to list the remaining Section C items (URL of provider entry, summaries) under deployers. This is a significant omission and misattribution across the multi-part reference, not just a minor paraphrase."
+  },
+  {
+    "experiment": "eu-ai-act-agentic-reflect-35fe63c2",
+    "question": "We are a company selling AI software for Children in Italy. What applies to us?",
+    "key": "answer_correctness",
+    "lesson": "The answer contained the material in the reference answer. Judge on substance: if the reference's key points are present, score 1 even when the answer is longer or organised differently.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The reference gives a clear, direct conclusion: AI for children is high-risk. The candidate hedges throughout, stating there is no general 'AI for children' category and only conditionally suggesting high-risk classification if the software falls under education-specific Annex III provisions. It never affirmatively states the straightforward conclusion the reference gives, making it an incomplete/hedged answer rather than a refinement."
   }
 ]
