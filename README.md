@@ -23,23 +23,12 @@ journey, run the way I'd run an AI feature as a PM:
 
 ## 🎯 Four KPIs, in priority order
 
-| Priority | KPI | Target | Shipped | Status | In plain words |
-|---|---|---|---|---|---|
-| 1 | **Groundedness** | ≥ 0.95 | 0.98 | ✅ | 40 of 41 answers had every claim backed by the law's text |
-| 2 | **Correct refusals** | 100% | 100% | ✅ | Both questions the law doesn't cover were declined |
-| 3 | **Correctness** | ≥ 0.90 | 0.93 | ✅ | 38 of 41 answers said what the law actually says |
-| 4 | **Cost per question** | ≤ $0.03 | $0.022 | ✅ | About $22 for 1,000 questions |
-
-**Why these bars:**
-1. **Never invent.** An invented obligation is the most dangerous failure, because
-   someone might act on it. The target isn't 1.00 because LLM judges wobble, so I review
-   every flagged answer by hand.
-2. **Never bluff.** Answering a question the law doesn't cover, even once, destroys
-   trust. So this is a hard gate, not an average.
-3. **Then be right.** Correctness only counts once 1 and 2 hold. At 9 in 10, people
-   trust the assistant for first-pass research.
-4. **Stay viable.** A cost cap stops me "buying" quality with the biggest model on
-   every question.
+| KPI | Target | Shipped | Status | Why this bar |
+|---|---|---|---|---|
+| **1. Groundedness**: never invent | ≥ 0.95 | **0.98** | ✅ | An invented obligation is the most dangerous failure, because someone might act on it. It isn't 1.00 because LLM judges wobble, so I review every flagged answer by hand. |
+| **2. Correct refusals**: don't bluff | 100% | **100%** | ✅ | Bluffing once destroys trust, so this is a hard gate, not an average. |
+| **3. Correctness** | ≥ 0.90 | **0.93** | ✅ | This is only worth something once 1 and 2 hold. At 9 in 10, people trust it for first-pass research. |
+| **4. Cost per question** | ≤ $0.03 | **$0.022** | ✅ | Keeps it viable, and stops me "buying" quality with the biggest model. |
 
 *All four are scored on a 41-question test set I wrote by hand. Scores come from LLM
 judges, and I review every answer the judges fail.*
