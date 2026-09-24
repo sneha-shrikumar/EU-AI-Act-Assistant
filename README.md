@@ -54,8 +54,6 @@ review every answer they fail.*
 | Answerable questions wrongly refused | 11 of 37 | **0** | **0** |
 | Time per answer | **4 s** | 15 s | 17 s |
 
-\* Inflated, because refusals count as "grounded".
-
 Only the agent passes all four KPIs, and it does so at a quarter of Opus's cost. Its
 weak spot is speed.
 
