@@ -34,7 +34,7 @@ OpenRouter actually charged, excluding the judges.
 | System | Answer correctness | Groundedness | Answerable questions refused | Cost per question | Mean latency |
 |---|---|---|---|---|---|
 | Basic RAG (Haiku 4.5, one search) | 0.73 | 0.90 | 5 | **$0.005** | **5.0 s** |
-| **Agentic RAG (Haiku 4.5, shipped)** | **90** | 0.98 | 0 | $0.022 | 15 s |
+| **Agentic RAG (Haiku 4.5, shipped)** | **0.90** | 0.98 | 0 | $0.022 | 15 s |
 | Whole Act sent to Opus 5.5 (no retrieval, ceiling check) | 0.98 | 0.93 | 0 | $0.086 | 17 s |
 
 Correctness is a share of the 41 golden questions.
