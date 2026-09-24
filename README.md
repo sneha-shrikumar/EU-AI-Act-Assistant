@@ -29,7 +29,7 @@ against it, and don't ship on vibes.
 I defined these before writing the agent. Each one has a threshold, because a metric
 without a target can't tell you whether to ship.
 
-| KPI | Target | Shipped agent | |
+| KPI | Target | Shipped agent | Status |
 |---|---|---|---|
 | **Correctness**: does the answer match what the law says? | ≥ 0.90 | **0.93** | ✅ |
 | **Groundedness**: is every claim backed by the retrieved text? | ≥ 0.95 | **0.98**  | ✅ |
