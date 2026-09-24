@@ -31,9 +31,9 @@ without a target can't tell you whether to ship.
 
 | KPI | Target | Shipped agent | |
 |---|---|---|---|
-| **Correctness**: does the answer match what the law says? | ≥ 0.90 | **0.93** (38/41) | ✅ |
-| **Groundedness**: is every claim backed by the retrieved text? | ≥ 0.95 | **0.98** (40/41) | ✅ |
-| **Correct refusals**: does it decline questions the Act doesn't cover? | 100% | **100%** (2/2) | ✅ |
+| **Correctness**: does the answer match what the law says? | ≥ 0.90 | **0.93** | ✅ |
+| **Groundedness**: is every claim backed by the retrieved text? | ≥ 0.95 | **0.98**  | ✅ |
+| **Correct refusals**: does it decline questions the Act doesn't cover? | 100% | **100%**  | ✅ |
 | **Cost per question** | ≤ $0.03 | **$0.022** | ✅ |
 
 **1. Correctness ≥ 0.90: the promise to the user.**
