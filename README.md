@@ -6,142 +6,99 @@ Picture a product manager asking:
 
 > *"We're using AI to screen CVs. Does that make us high-risk under the EU AI Act?"*
 
-The honest answer is spread across three places in a 144-page law:
-- **Annex III** says recruitment tools are high-risk.
-- **Article 6** explains what that classification means.
-- **Article 26** lists what you now have to do.
+The answer is spread across three parts of a 144-page law: Annex III, Article 6 and
+Article 26. A general chatbot answers confidently, and sometimes it cites the wrong
+article. In compliance, a confident wrong answer is worse than no answer.
 
-A general chatbot answers confidently, and sometimes it cites the wrong article. In
-compliance work, a confident wrong answer is worse than no answer.
-
-So I set out to build an assistant that answers **only from the law itself** and cites
-its source for every claim. It also had to refuse when the law doesn't cover the
-question, without refusing when it does.
-
-This repo is the whole journey. It's not just a RAG demo. It's how I'd run an AI feature
-as a product manager: decide what "good" means before building, measure every change
-against it, and don't ship on vibes.
+So I built an assistant that answers **only from the law**, cites a source for every
+claim, and refuses when the law doesn't cover the question. This repo is the whole
+journey, run the way I'd run an AI feature as a PM:
+1. Decide what "good" means first.
+2. Measure every change against it.
+3. Never ship on vibes.
 
 ---
 
-## 🎯 The four KPIs, and the reasoning behind each
+## 🎯 Four KPIs, in priority order
 
-I defined these before writing the agent. Each one has a threshold, because a metric
-without a target can't tell you whether to ship.
+| # | KPI | Target | Shipped | How to read it | Why this bar |
+|---|---|---|---|---|---|
+| 1 | **Groundedness**: never invent | ≥ 0.95 | **0.98** ✅ | 40 of 41 answers had every claim backed by text retrieved from the law | An invented obligation is the most dangerous failure, because someone might act on it. It isn't 1.00 because LLM judges wobble, so I review every flagged answer by hand. |
+| 2 | **Correct refusals**: don't bluff | 100% | **2/2** ✅ | Both questions the law doesn't cover were declined, not guessed at | Bluffing once destroys trust, so this is a hard gate, not an average. |
+| 3 | **Correctness** | ≥ 0.90 | **0.93** ✅ | 38 of 41 answers said what the law actually says | This is only worth something once 1 and 2 hold. At 9 in 10, people trust it for first-pass research. |
+| 4 | **Cost per question** | ≤ $0.03 | **$0.022** ✅ | About 2 cents per answer, or about $22 for 1,000 questions | Keeps it viable, and stops me "buying" quality with the biggest model. |
 
-| KPI | Target | Shipped agent | |
-|---|---|---|---|
-| **Correctness**: does the answer match what the law says? | ≥ 0.90 | **0.93** (38/41) | ✅ |
-| **Groundedness**: is every claim backed by the retrieved text? | ≥ 0.95 | **0.98** (40/41) | ✅ |
-| **Correct refusals**: does it decline questions the Act doesn't cover? | 100% | **100%** (2/2) | ✅ |
-| **Cost per question** | ≤ $0.03 | **$0.022** | ✅ |
-
-**1. Correctness ≥ 0.90: the promise to the user.**
-This is the reason the product exists. I set the bar at 0.90 for three reasons:
-- At 9 in 10, a user will trust the assistant for first-pass research and check the
-  citations on the answers that matter.
-- Below that, they go back to reading the Act themselves.
-- It's an achievable target. Giving the whole law to the most capable model scores
-  0.98, so 0.90 isn't wishful. Basic RAG scored 0.73, so it isn't a given either.
-
-On a 41-question test set, it means **no more than 4 wrong answers.**
-
-**2. Groundedness ≥ 0.95: never invent.**
-In compliance, an invented obligation is more dangerous than a missing one. The user
-might act on it. The target isn't 1.00 for a practical reason: LLM judges wobble by 1–2
-questions between runs. 0.95 allows at most 2 flagged answers, and **I review every
-flagged answer by hand.** That's how the shipped figure went from 0.93 (judge only) to
-0.98 (after review).
-
-**3. Correct refusals = 100%: zero tolerance for bluffing.**
-If someone asks about something the Act doesn't cover, the assistant must say so.
-Bluffing even once destroys trust faster than any number of good answers builds it, so
-this is a hard gate, not an average. It has a counterweight, tracked alongside it:
-**wrongly refusing questions the Act *does* answer** (0 in the shipped version, down
-from 10).
-
-**4. Cost ≤ $0.03 per question: it has to be viable.**
-At 3 cents a question, 1,000 questions a month costs about $30. That's cheap enough to
-roll out internally without a budget conversation. The budget also stops quality from
-being "solved" by throwing the biggest model at every question. The whole-law Opus
-approach scores higher but costs $0.086, **so it fails this KPI.** That's why it's the
-benchmark, not the product.
-
-*All four are measured against a 41-question golden set I wrote by hand. There's more
-on the evaluation system below.*
+*All four are scored on a 41-question test set I wrote by hand. Scores come from LLM
+judges, and I review every answer the judges fail.*
 
 ---
 
 ## 📖 How it got there
 
-**Started simple.** Basic retrieval-augmented generation: find the most relevant
-passages and let the model answer from them. It got **63%** right, and it refused about
-1 in 4 questions it *could* have answered.
+- **Started simple.** Basic RAG got **63%** right, and it refused 1 in 4 questions it
+  *could* have answered.
+- **Went deep on chunking and retrieval**, which is where most of my time went:
+  - Split the law along its real structure (articles, paragraphs, definitions,
+    annexes) instead of arbitrary text windows.
+  - Tag every chunk with its chapter and section.
+  - When a question names "Article 97", look that article up directly.
 
-**The surprise.** I expected search to be the problem. It wasn't. The single biggest
-issue was one cautious line in the prompt: *"when in doubt, refuse."* Rewriting it so the
-model applies the law to the user's situation and names what's missing cut wrong
-refusals **from 10 to 4**.
+  Strict retrieval rose from **0.58 to 0.75**.
+- **Fixed a cautious prompt.** One line, *"when in doubt, refuse"*, was blocking answers
+  the evidence supported. Rewriting it cut wrong refusals **from 10 to 4**.
+- **Made retrieval smarter, not just the model.** People say "CV screening", and the law
+  says "recruitment or selection of natural persons". So the agent rewrites the question
+  into legal language, splits it into parts, and searches again until every part is
+  covered. Sources found went **from 39 to 47 out of 61**, with the same answering model
+  throughout.
+- **My own release gate blocked it.** The agent answered 2 questions labelled "should
+  refuse", so I didn't ship it. On review, the law *does* answer them, so I relabelled
+  them, re-ran everything and fixed a separate bug before shipping. The
+  [case study](docs/case-study.md) keeps that sequence visible on purpose.
 
-**Hit a wall.** I tried better search: keyword search, hybrid search, a reranker, bigger
-embedding models and four ways of splitting the law into chunks. None of them beat the
-noise. I set a margin *before* testing (a change must find ≥ 3 more sources out of 61),
-and it stopped me shipping "wins" that were really luck.
-
-**The real gap was vocabulary.** People say "CV screening", and the law says
-"recruitment or selection of natural persons". So I made it **agentic**:
-1. The model reads the question.
-2. It rewrites the question into legal language and splits it into parts.
-3. It searches.
-4. It checks whether the evidence covers every part, and searches again where it
-   doesn't.
-
-The sources found went from **39 to 47 out of 61**.
-
-**Then my own release gate blocked it.** The agent was more accurate, but it started
-answering 2 questions I'd labelled "should refuse". I didn't ship it. On review, the Act
-*does* answer those two questions (they're about its territorial scope), so I relabelled
-them, re-ran everything from scratch, and fixed a separate bug. Only then did it pass.
-I've kept that sequence visible in the [case study](docs/case-study.md), because
-relabelling after a failure is exactly the kind of decision that should be questioned.
-
----
-
-## ⚖️ Three ways to answer the same question
+## ⚖️ Three ways to answer
 
 | | 💨 Basic RAG | 🧠 Agent (shipped) | 🔨 Whole law sent to Opus 5.5 |
 |---|---|---|---|
 | Correctness | 0.73 | **0.93** | 0.98 |
-| Cost per question | **$0.005** | $0.022 | $0.086 |
+| Cost per question | **$0.005** | $0.022 | $0.086 ❌ over budget |
 | Time per answer | **5 s** | 15 s | 17 s |
-| Best for | "What does Article 5 say?" | Real scenario questions | A few very high-stakes questions |
 
-The agent gets within 2 questions of brute force for about a quarter of the price.
+The agent gets within 2 questions of brute force for about a quarter of the price. Its
+weak spot is speed.
 
-Its weak spot is **speed**. 15 seconds is fine for research, but too slow for inline help,
-and that's the next thing to fix.
-
-*The agent's scores include my review of flagged answers. The other two columns are
-judge-only.*
-
----
+*The agent's scores are human-reviewed. The other two columns are judge-only.*
 
 ## 💡 What I learned
 
-- **A perfect metric can hide a bad product.** My first hand-scored run showed 100%
-  groundedness, because a refusal can't invent anything. The product was refusing 1 in
-  4 answerable questions.
-- **Read the failures before tuning the system.** I spent effort on search when the
-  biggest fix was one sentence in a prompt.
+- **Garbage in, garbage out.** With the same answering model (Haiku 4.5) throughout,
+  better chunking and retrieval took correctness from 0.73 to 0.93. That's why I spent
+  most of my time there. The one big jump that didn't come from retrieval was fixing
+  the over-cautious refusal prompt. A stronger model can compensate, but at 4× the cost:
+  giving Opus 5.5 the whole law scores 0.98.
+- **A perfect metric can hide a bad product.** Groundedness scored 100% while the
+  assistant refused 1 in 4 answerable questions, because a refusal can't invent
+  anything.
 - **Write the ship rule before you see the results.** Otherwise every result looks like
   a reason to ship.
-- **LLM judges wobble.** The same code scored 0.73 and 0.71 on two runs. One run isn't a
-  trend, and a human needs to review what the judge flags.
+- **LLM judges wobble.** One run isn't a trend, so a human reviews what the judge flags.
 
-The full story is in the **[case study](docs/case-study.md)**: every experiment, the
-release gate, 11 failures and what they taught me, trade-offs and next steps. The
-**[decision log](docs/decision-log.md)** covers each change as hypothesis → result →
-decision.
+## 🚀 What I'd do next to perfect it
+
+1. **Test with real users.** Run a pilot with a compliance team, collect thumbs-up and
+   thumbs-down on answers, and track a true product KPI: the share of questions resolved
+   without escalating to legal.
+2. **Strengthen the test set.** 41 questions is small, and "100% correct refusals" rests
+   on only 2 questions. I'd grow it to 100+ questions, with at least 15 that should be
+   refused.
+3. **Make it faster.** Target under 8 seconds by running stages in parallel, using a
+   smaller model for the self-check, and skipping steps for simple lookups.
+4. **Get stable numbers.** Average 3 eval runs per change so judge wobble can't decide a
+   release, and run the eval automatically on every prompt or retrieval change.
+5. **Run a fair benchmark.** Test the strongest model *with* retrieval, to separate how
+   much of the gap comes from the model and how much from the search.
+6. **Keep it current.** Add the Commission's guidance documents, and version the index
+   so answers say which version of the law and guidance they came from.
 
 ---
 
@@ -149,74 +106,42 @@ decision.
 
 ```mermaid
 flowchart LR
-    PDF[EU AI Act PDF] --> P[Structural parser<br/>articles, paragraphs, annexes,<br/>recitals, chapter/section metadata]
-    P --> C[Chunks ≤500 tokens<br/>bge-small embeddings]
-    C --> DB[(Chroma)]
-
-    Q[Question] --> A1["① Analyse<br/>sub-questions, assumptions,<br/>queries in the Act's vocabulary"]
-    A1 --> R["② Retrieve<br/>original + rewritten queries<br/>metadata pinning for named provisions<br/>rank fusion"]
-    DB --> R
-    R --> A3["③ Reflect (≤2 rounds)<br/>is each sub-question covered?<br/>follow cross-references found in the text"]
+    Q[Question] --> A1["① Analyse<br/>split + rewrite in legal terms"]
+    A1 --> R["② Retrieve<br/>all queries + named provisions"]
+    DB[(EU AI Act index)] --> R
+    R --> A3["③ Reflect<br/>every part covered?"]
     A3 -- gaps --> R
-    A3 --> G[Answer<br/>Haiku 4.5, excerpts only,<br/>every claim cited]
-    G --> CK[Citation check<br/>+ refusal gates]
+    A3 --> G["Answer from excerpts only<br/>every claim cited"]
 ```
 
-- **Guardrails:** a fixed sequence, not an open-ended agent loop. There are at most 5
-  LLM calls per question, and follow-up lookups happen only for provisions named in the
-  retrieved text, never from the model's memory.
-- **Models:** Claude Haiku 4.5 answers. Claude Sonnet 5 judges, a different model, so
-  no model grades its own work. Both are called through OpenRouter.
-- **Stack:** bge-small embeddings, Chroma, and LangSmith for tracing and evaluation.
+- **Models:** Claude Haiku 4.5 answers, and Claude Sonnet 5 judges (a different model,
+  so nothing grades its own work).
+- **Stack:** bge-small embeddings, Chroma, and LangSmith for traces and evaluations.
+- **Built-in limits:** at most 5 model calls per question, and follow-ups only for
+  provisions named in the retrieved text.
 
-**How it's evaluated:**
-- **Judges:** three LLM judges score correctness, groundedness and relevance.
-- **Human review:** my corrections are saved in
-  [`evals/human_labels.json`](evals/human_labels.json), each with the lesson it
-  teaches, and fed back into the judge prompts. The judge and I agree on 97% of scores.
-- **Retrieval metrics:** computed by code, with no judge involved.
-- **One command:** [`run_all_evals.py`](run_all_evals.py) runs the whole evaluation.
-
-Metric definitions are in [docs/metrics.md](docs/metrics.md).
-
-### Run it yourself
+**Run it:**
 
 ```bash
-python -m venv venv && venv\Scripts\activate    # macOS/Linux: source venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env                              # add your OPENROUTER_API_KEY
+pip install -r requirements.txt && cp .env.example .env   # add OPENROUTER_API_KEY
+# save the Act from EUR-Lex (Regulation (EU) 2024/1689) as data/eu_ai_act.pdf
+python ingest.py --reset      # build the index
+python query.py               # ask questions (add --baseline for basic RAG)
+python run_all_evals.py --system agentic --concurrency 2   # full evaluation
 ```
 
-Download the Act from EUR-Lex:
-[Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj). Save it as
-`data/eu_ai_act.pdf`. Then:
+Link to the Act on EUR-Lex:
+[Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj).
 
-```bash
-python ingest.py --reset          # build the index
-python query.py                   # ask questions (agent)
-python query.py --baseline        # ask questions (basic RAG)
-python run_all_evals.py --system agentic --concurrency 2   # full eval, about $1 plus judging
-```
-
-### Repo map
-
-| Path | What's there |
-|---|---|
-| [`docs/case-study.md`](docs/case-study.md) | The full product story |
-| [`docs/decision-log.md`](docs/decision-log.md) | Every change: hypothesis, result, decision |
-| [`docs/metrics.md`](docs/metrics.md) | How each metric is computed |
-| [`docs/analysis/`](docs/analysis/) | Deep dives: retrieval options, run comparisons, the Opus 5.5 benchmark |
-| [`plans/`](plans/) | The plan written before each change, with its results |
-| `agent.py` | The agentic pipeline |
-| `query.py`, `llm.py`, `provision_refs.py` | Basic RAG, refusal gates, answer generation |
-| `ingest.py`, `chunking.py`, `embeddings.py` | PDF → structured chunks → index |
-| `baseline_full_doc.py` | The whole-law Opus 5.5 benchmark |
-| `evals/`, `run_all_evals.py`, `eval_retrieval.py` | Judges, human labels, golden set, results, retrieval metrics |
-| `results/` | A spreadsheet for every evaluation run |
-
-*Experiment IDs behind the numbers:*
-- Agent: `35fe63c2`, human-reviewed
-- Basic RAG: `ecfbeb79`
-- Whole law sent to Opus 5.5: `f0d6b8ee`
-
-Per-question results are in [`evals/results/`](evals/results/).
+**Read more:**
+- **[Case study](docs/case-study.md):** every experiment, the release gate, the
+  failures, and the trade-offs.
+- **[Decision log](docs/decision-log.md):** each change as hypothesis, result and
+  decision.
+- **[Metrics](docs/metrics.md):** how each metric is defined.
+- **[`plans/`](plans/):** the plan written before each change.
+- **[`evals/results/`](evals/results/):** per-question results for the runs behind these
+  numbers:
+  - agent: `35fe63c2`
+  - basic RAG: `ecfbeb79`
+  - whole law sent to Opus 5.5: `f0d6b8ee`
