@@ -1,0 +1,115 @@
+{
+  "experiment": "eu-ai-act-opus55-fulldoc-6cc55966",
+  "system": "full_doc",
+  "model": "anthropic/claude-opus-5.5",
+  "judge_model": "anthropic/claude-sonnet-5",
+  "rows": [
+    {
+      "run_id": "01a0d13e-e386-7910-968a-0970b0989907",
+      "id": "17",
+      "category": "single",
+      "question": "what is a general purpose AI Model?",
+      "should_answer": "yes",
+      "expected_answer": "\tSystemic Risk Applies to General-Purpose AI (GPAI) models; in particular the generality and the capability to competently perform a wide range of distinct task",
+      "answer": "A **general-purpose AI model** is defined as \"an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market\" (Article 3(63)).\n\n**Key characteristics**\n\n- **Generality and breadth of tasks:** The definition rests on the model's generality and its ability to competently perform a wide range of distinct tasks (Recital 97).\n- **Training:** These models are typically trained on large amounts of data through methods such as self-supervised, unsupervised or reinforcement learning (Recital 97).\n- **Parameter indicator:** Models with at least a billion parameters, trained on a large amount of data using self-supervision at scale, should be considered to display significant generality and to competently perform a wide range of distinctive tasks (Recital 98).\n- **Typical example:** Large generative AI models, which can flexibly generate text, audio, images or video for a wide range of tasks (Recital 99).\n\n**How they are placed on the market**\n\nThey may be placed on the market through libraries, application programming interfaces (APIs), direct download, or physical copy. They may also be further modified or fine-tuned into new models (Recital 97).\n\n**Models versus AI systems**\n\n- A model is not an AI system on its own. It needs further components, such as a user interface, to become one, and models are typically integrated into and form part of AI systems (Recital 97).\n- An AI system based on a general-purpose AI model that can serve a variety of purposes, either directly or integrated into other AI systems, is a \"general-purpose AI system\" (Article 3(66)).\n\n**What is excluded**\n\nThe definition does not cover AI models used before being placed on the market solely for research, development and prototyping. However, once such a model is placed on the market, it must comply with the Regulation (Recital 97; Article 3(63)).\n\n**Models with systemic risk**\n\nA general-purpose AI model is classified as having systemic risk if either:\n- it has high-impact capabilities, or\n- the Commission decides it has equivalent capabilities or impact (Article 51(1)).\n\nA model is presumed to have high-impact capabilities when the cumulative computation used for its training exceeds 10^25 floating point operations (Article 51(2)).",
+      "refused": false,
+      "citations": [
+        "Article 3(63)",
+        "Recital 97",
+        "Recital 98",
+        "Recital 99",
+        "Article 3(66)",
+        "Article 51(1)",
+        "Article 51(2)"
+      ],
+      "error": null,
+      "latency_s": 13.878016,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims closely track the provided excerpts: the definition quote matches Article 3(63), the recital-based characteristics (generality, training methods, billion-parameter benchmark, generative AI example, placement methods, model vs. system distinction, research exclusion) accurately reflect Recitals 97-99 and Article 3(66). The systemic risk classification criteria match Article 51(1) and 51(2), including the 10^25 FLOP threshold. All citations point to the correct excerpts, and no outside legal knowledge is introduced."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly defines general-purpose AI Model with the legal definition, characteristics, exclusions, and related concepts, fully addressing the question."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The reference emphasizes that Systemic Risk applies to GPAI models, particularly focusing on generality and capability to competently perform a wide range of distinct tasks. The candidate covers the generality/capability aspect thoroughly and also discusses systemic risk classification, matching the reference's key points."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d13f-19bc-7882-90bd-192c515a5427",
+      "id": "16",
+      "category": "multi-hop",
+      "question": "for how long should certificates for high risk systems  be valid?",
+      "should_answer": "yes",
+      "expected_answer": "Certificates shall be valid for the period they indicate, which shall not exceed five years for AI systems covered by \nAnnex I, and four years for AI systems covered by Annex III",
+      "answer": "**Certificate validity (Article 44(2))**\n\nCertificates issued by notified bodies are valid for the period they indicate, up to a maximum that depends on the type of AI system (Article 44(2)):\n\n- **AI systems covered by Annex I:** no more than **five years**.\n- **AI systems covered by Annex III:** no more than **four years**.\n\n**Extensions:** At the provider's request, a certificate can be extended for further periods. Each extension is capped at five years for Annex I systems and four years for Annex III systems. Every extension requires a re-assessment under the applicable conformity assessment procedures (Article 44(2)).\n\n**Supplements:** A supplement to a certificate stays valid as long as the certificate it supplements is valid (Article 44(2)).\n\n**Suspension or withdrawal:** A certificate can be cut short. If a notified body finds that an AI system no longer meets the Section 2 requirements, it must suspend or withdraw the certificate or restrict it, applying the principle of proportionality. This does not happen if the provider fixes the problem through corrective action within a deadline set by the notified body (Article 44(3)).\n\n**Validity when a notified body stops operating or loses its designation:**\n- **Notified body ceases its activities:** Its certificates may stay valid for nine months, provided another notified body confirms in writing that it will take responsibility for the affected systems (Article 36(3)).\n- **Designation withdrawn:** Certificates, except those unduly issued, stay valid for nine months if two conditions are met (Article 36(9)):\n  - the relevant national competent authority confirms there is no risk to health, safety or fundamental rights; and\n  - another notified body takes immediate responsibility and completes its assessment within 12 months.\n- **Further extension after withdrawal:** The national competent authority may extend this provisional validity by additional three-month periods, not exceeding 12 months in total (Article 36(9)).",
+      "refused": false,
+      "citations": [
+        "Article 44(2)",
+        "Annex I",
+        "Annex III",
+        "Article 44(3)",
+        "Article 36(3)",
+        "Article 36(9)"
+      ],
+      "error": null,
+      "latency_s": 8.75389,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims about certificate validity periods (5 years Annex I, 4 years Annex III), extension mechanics, supplement validity, suspension/withdrawal grounds under Article 44(3), and the provisions on cessation/withdrawal of notified body designation under Article 36(3) and 36(9) (nine-month validity, conditions, additional three-month extensions up to 12 months total) are all accurately supported by the provided excerpts and correctly cited to the respective articles."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly states the maximum validity periods for certificates (5 years for Annex I, 4 years for Annex III) and provides relevant details on extensions, suspensions, and edge cases, fully addressing the question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly states the core content: five years for Annex I systems, four years for Annex III systems, matching the reference exactly, plus additional accurate detail."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d13f-3bef-79d2-9cfa-f580fdd35457",
+      "id": "38",
+      "category": "single",
+      "question": "what article talks about classifying ai models as ones with systemic risk>?",
+      "should_answer": "yes",
+      "expected_answer": "article 51",
+      "answer": "The main provision is **Chapter V (General-Purpose AI Models), Section 1 (Classification rules), Article 51, \"Classification of general-purpose AI models as general-purpose AI models with systemic risk\"** (Article 51).\n\n**What Article 51 says**\n\n- A general-purpose AI model is classified as having systemic risk if it meets either of these conditions (Article 51(1)):\n  - it has high-impact capabilities, evaluated using appropriate technical tools and methodologies, including indicators and benchmarks; or\n  - the Commission decides, on its own initiative or after a qualified alert from the scientific panel, that it has equivalent capabilities or impact, based on the criteria in Annex XIII.\n- A model is presumed to have high-impact capabilities when the cumulative computation used for its training is greater than 10^25 floating point operations (Article 51(2)).\n- The Commission shall adopt delegated acts to amend these thresholds and to supplement benchmarks and indicators as technology evolves (Article 51(3)).\n\n**Related provisions**\n\n- **Article 52 (\"Procedure\")**, in the same Chapter V, Section 1, sets out the classification procedure (Article 52):\n  - Providers must notify the Commission within two weeks once the high-impact condition is met, or once it becomes known that it will be met (Article 52(1)).\n  - Providers can argue that their model exceptionally does not present systemic risks (Article 52(2)).\n  - The Commission can designate models as presenting systemic risk (Article 52(4)).\n  - Providers of designated models can request reassessment (Article 52(5)).\n- **Annex XIII** lists the criteria the Commission considers when designating such models. These include the number of parameters, the size of the dataset, the training computation, and reach, which is presumed high when the model is available to at least 10,000 registered business users in the EU (Annex XIII).",
+      "refused": false,
+      "citations": [
+        "Article 51",
+        "Article 51(1)",
+        "Annex XIII",
+        "Article 51(2)",
+        "Article 51(3)",
+        "Article 52",
+        "Article 52(1)",
+        "Article 52(2)",
+        "Article 52(4)",
+        "Article 52(5)"
+      ],
+      "error": null,
+      "latency_s": 8.994271,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer accurately summarizes Article 51, 52, and Annex XIII, with claims traceable to the provided excerpts: the two conditions in Art.51(1), the 10^25 FLOP presumption in Art.51(2), delegated acts in Art.51(3), notification procedure and reassessment in Art.52, and the criteria list plus 10,000 users threshold in Annex XIII. All citations correctly point to the relevant articles/annex, and no outside knowledge is introduced."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly identifies Article 51 as the provision on classifying AI models with systemic risk, explains its content, and provides relevant related context (Article 52, Annex XIII), fully addressing the question."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies Article 51 as the main provision, matching the reference exactly, and provides accurate additional detail."
+        }
+      }
+    }
+  ]
+}

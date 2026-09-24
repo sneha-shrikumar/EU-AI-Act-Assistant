@@ -1,0 +1,1292 @@
+{
+  "experiment": "eu-ai-act-opus55-fulldoc-59d3c90f",
+  "system": "full_doc",
+  "model": "anthropic/claude-opus-5.5",
+  "judge_model": "anthropic/claude-sonnet-5",
+  "rows": [
+    {
+      "run_id": "01a0d140-49ae-79c2-aba9-aa9175f8d7b4",
+      "id": "17",
+      "category": "single",
+      "question": "what is a general purpose AI Model?",
+      "should_answer": "yes",
+      "expected_answer": "\tSystemic Risk Applies to General-Purpose AI (GPAI) models; in particular the generality and the capability to competently perform a wide range of distinct task",
+      "answer": "A **general-purpose AI model** is \"an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market\" (Article 3(63)).\n\n**Key characteristics**\n- The definition rests on the model's key functional characteristics, in particular its generality and its ability to competently perform a wide range of distinct tasks (Recital 97).\n- These models are typically trained on large amounts of data through methods such as self-supervised, unsupervised or reinforcement learning (Recital 97).\n- Models with at least a billion parameters, trained on a large amount of data using self-supervision at scale, should be considered to display significant generality and to competently perform a wide range of distinctive tasks (Recital 98).\n- Large generative AI models are a typical example, because they can flexibly generate content such as text, audio, images or video and handle a wide range of distinctive tasks (Recital 99).\n\n**How they are placed on the market**\nThey may be placed on the market through libraries, application programming interfaces (APIs), direct download or physical copy, and they may be further modified or fine-tuned into new models (Recital 97).\n\n**Relationship to AI systems**\n- AI models are essential components of AI systems, but they are not AI systems on their own. They need further components, such as a user interface, to become AI systems (Recital 97).\n- A \"general-purpose AI system\" is an AI system based on a general-purpose AI model that can serve a variety of purposes, both for direct use and for integration into other AI systems (Article 3(66)).\n\n**Exclusion**\nThe definition does not cover AI models used before being placed on the market solely for research, development and prototyping. However, such a model must comply with the Regulation once it is placed on the market after those activities (Recital 97).\n\n**Systemic risk sub-category**\nA general-purpose AI model is classified as having systemic risk if either:\n- it has high-impact capabilities (Article 51(1)(a)), or\n- the Commission decides it has equivalent capabilities or impact (Article 51(1)(b)).\n\nHigh-impact capabilities are presumed when the cumulative computation used for training exceeds 10^25 floating point operations (Article 51(2)).",
+      "refused": false,
+      "citations": [
+        "Article 3(63)",
+        "Recital 97",
+        "Recital 98",
+        "Recital 99",
+        "Article 3(66)",
+        "Article 51(1)(a)",
+        "Article 51(1)(b)",
+        "Article 51(2)"
+      ],
+      "error": null,
+      "latency_s": 9.423921,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims are all directly traceable to the provided excerpts (Article 3(63), Recitals 97-99, Article 3(66), Article 51(1)-(2)) and citations correctly match the source material. The definition, characteristics, placement methods, relationship to AI systems, exclusions, and systemic risk criteria are all accurately quoted or paraphrased without adding outside legal knowledge."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly defines a general-purpose AI model with the legal definition, key characteristics, and related context, fully addressing the question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate provides the full, accurate definition of GPAI model with correct citations, covering generality and capability to perform a wide range of distinct tasks, matching the substance of the reference, plus extensive correct additional detail."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-6e7f-7101-add9-d1c08c60196c",
+      "id": "16",
+      "category": "multi-hop",
+      "question": "for how long should certificates for high risk systems  be valid?",
+      "should_answer": "yes",
+      "expected_answer": "Certificates shall be valid for the period they indicate, which shall not exceed five years for AI systems covered by \nAnnex I, and four years for AI systems covered by Annex III",
+      "answer": "Under the Act, a certificate for a high-risk AI system is valid for **the period it indicates**, subject to a maximum that depends on which Annex covers the system (Article 44(2)):\n\n- **AI systems covered by Annex I:** up to **five years** (Article 44(2)).\n- **AI systems covered by Annex III:** up to **four years** (Article 44(2)).\n\n**Extensions:** At the provider's request, a certificate can be extended for further periods. Each extension is capped at five years for Annex I systems and four years for Annex III systems, and requires a re-assessment under the applicable conformity assessment procedures (Article 44(2)).\n\n**Supplements:** A supplement to a certificate stays valid as long as the certificate it supplements is valid (Article 44(2)).\n\n**Other limits on validity:**\n- A notified body that finds a system no longer meets the Chapter III, Section 2 requirements must suspend, withdraw or restrict the certificate. This does not apply if the provider takes corrective action within a deadline the notified body sets (Article 44(3)).\n- If a notified body ceases its activities, its certificates may stay valid for nine months afterwards. This requires another notified body to confirm in writing that it will take responsibility for the systems covered (Article 36(3)).\n- If a notified body's designation is withdrawn, its certificates (other than unduly issued ones) may stay valid for nine months, subject to conditions (Article 36(9)). The national competent authority can extend this by further three-month periods, up to 12 months in total (Article 36(9)).",
+      "refused": false,
+      "citations": [
+        "Article 44(2)",
+        "Annex I",
+        "Annex III",
+        "Article 44(3)",
+        "Article 36(3)",
+        "Article 36(9)"
+      ],
+      "error": null,
+      "latency_s": 21.567592,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly specifies validity periods (up to five years for Annex I, four years for Annex III), plus extension and other validity conditions, addressing the specific question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly states the core answer matching the reference (max five years for Annex I, four years for Annex III) and adds extra correct detail without contradicting the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-c2bf-7cc1-a827-3c5badc7b347",
+      "id": "38",
+      "category": "single",
+      "question": "what article talks about classifying ai models as ones with systemic risk>?",
+      "should_answer": "yes",
+      "expected_answer": "article 51",
+      "answer": "The main provision is **Chapter V (General-Purpose AI Models), Section 1 (Classification rules), Article 51 \u2013 \"Classification of general-purpose AI models as general-purpose AI models with systemic risk\"** (Article 51).\n\n**What Article 51 says:**\n- A general-purpose AI model is classified as having systemic risk if it meets either of two conditions (Article 51(1)):\n  - it has high impact capabilities, evaluated using appropriate technical tools and methodologies, including indicators and benchmarks; or\n  - the Commission decides, on its own initiative or after a qualified alert from the scientific panel, that it has equivalent capabilities or impact, having regard to the criteria in Annex XIII.\n- A model is presumed to have high impact capabilities when the cumulative computation used for its training is greater than 10^25 floating point operations (Article 51(2)).\n- The Commission shall adopt delegated acts to amend these thresholds and to supplement benchmarks and indicators as technology evolves (Article 51(3)).\n\n**Related provisions:**\n- **Article 52 (Procedure)**, in the same Chapter V, Section 1, sets out the classification procedure (Article 52):\n  - The provider must notify the Commission within two weeks of meeting the condition (Article 52(1)).\n  - The provider may argue that the model exceptionally does not present systemic risks (Article 52(2)).\n  - The Commission may designate models as having systemic risk (Article 52(4)).\n  - A provider may request reassessment of a designation (Article 52(5)).\n- **Annex XIII** lists the criteria the Commission uses for designation, such as number of parameters, training computation, and reach, for example at least 10,000 registered business users in the Union (Annex XIII).\n- **Recitals 111\u2013113** explain the reasoning behind this classification methodology (Recital 111; Recital 112; Recital 113).",
+      "refused": false,
+      "citations": [
+        "Article 51",
+        "Article 51(1)",
+        "Annex XIII",
+        "Article 51(2)",
+        "Article 51(3)",
+        "Article 52",
+        "Article 52(1)",
+        "Article 52(2)",
+        "Article 52(4)",
+        "Article 52(5)",
+        "Recital 111",
+        "Recital 112",
+        "Recital 113"
+      ],
+      "error": null,
+      "latency_s": 9.097692,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly identifies Article 51 (with supporting context from Article 52 and Annex XIII) as the provision addressing classification of AI models with systemic risk, precisely answering the question."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies Article 51 as the provision on classifying AI models with systemic risk, matching the reference, and provides accurate additional detail without contradiction."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-e649-79b1-9123-77d81a3d3258",
+      "id": "36",
+      "category": "out of scope",
+      "question": "how does this act apply if we are a company providing Ai services to the US?",
+      "should_answer": "yes",
+      "expected_answer": "If you are established in the Union and placing AI systems on the market or putting them into service in the Union, the Act applies to you ",
+      "answer": "# How the EU AI Act applies to a company providing AI services to the US\n\nThe Act does not turn on where your customers are. It turns on whether your AI systems or models reach the EU market, or whether their output is used in the EU. Supplying US clients does not by itself put you inside or outside the Act. The territorial scope is set out in Chapter I (General Provisions), Article 2 (Scope).\n\n## When the Act applies\n\n**1. You place AI systems or general-purpose AI models on the EU market or put them into service in the EU.**\nThe Act applies to providers doing this \"irrespective of whether those providers are established or located within the Union or in a third country\" (Article 2(1)(a)). If any of your offerings are also made available in the EU, being US-focused or US-based does not exempt you.\n\n**2. The output of your AI system is used in the EU.**\nThe Act applies to \"providers and deployers of AI systems that have their place of establishment or are located in a third country, where the output produced by the AI system is used in the Union\" (Article 2(1)(c)). Recital 22 explains that this is meant to prevent circumvention. It gives the example of an EU operator contracting services to a third-country operator whose AI system processes data transferred from the EU and returns the output to the EU (Recital 22). So if a US client uses your system's output in the EU, or passes it on to EU users, the Act may apply.\n\n**3. You deploy AI systems and are established or located in the EU.**\nThe Act applies to \"deployers of AI systems that have their place of establishment or are located within the Union\" (Article 2(1)(b)).\n\n**4. Other roles in the supply chain.**\nThe Act also applies to importers and distributors of AI systems, to product manufacturers placing AI systems on the market with their product under their own name, and to authorised representatives of non-EU providers (Article 2(1)(d)\u2013(f)).\n\nThe excerpts do not expressly address a provider established in the EU that supplies AI solely to non-EU customers, with no EU placement and no EU use of output. How you are treated in that situation cannot be determined from the text provided.\n\n## If you are a non-EU provider within scope\n\n- **High-risk AI systems:** Before making them available on the EU market, providers established in third countries must appoint an authorised representative established in the Union, by written mandate (Article 22(1)).\n- **General-purpose AI models:** Before placing one on the EU market, third-country providers must also appoint an EU-established authorised representative (Article 54(1)). This does not apply to certain free and open-source models, unless they present systemic risks (Article 54(6)).\n\n## Relevant exclusions\n\nThe Act does not apply to:\n- AI systems used exclusively for military, defence or national security purposes (Article 2(3)).\n- AI systems or models specifically developed and put into service for the sole purpose of scientific research and development (Article 2(6)).\n- Research, testing or development before a system is placed on the market or put into service. Testing in real world conditions is not covered by this exclusion (Article 2(8)).\n\n## Practical takeaway\n\nTo decide whether and how the Act applies, check three things:\n1. Whether any of your AI systems or models are offered in the EU.\n2. Whether their output is used in the EU, including by your US clients.\n3. Whether your company is established or located in the EU (Article 2(1)).",
+      "refused": false,
+      "citations": [
+        "Article 2",
+        "Article 2(1)(a)",
+        "Article 2(1)(c)",
+        "Recital 22",
+        "Article 2(1)(b)",
+        "Article 2(1)(d)",
+        "Article 22(1)",
+        "Article 54(1)",
+        "Article 54(6)",
+        "Article 2(3)",
+        "Article 2(6)",
+        "Article 2(8)",
+        "Article 2(1)"
+      ],
+      "error": null,
+      "latency_s": 15.253373,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims are consistently supported by the cited excerpts (Article 2, Recital 22, Article 22, Article 54, Article 2(3)/(6)/(8)) with accurate attributions. The answer appropriately flags the gap where excerpts don't address the specific scenario of an EU provider serving only non-EU customers, rather than asserting unsupported claims. No fabricated legal content or misattribution detected."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses the specific scenario of a company providing AI services to the US under the EU AI Act, explaining territorial scope, relevant Article 2 provisions, exclusions, and practical steps to assess applicability."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies that the Act applies when a company is established in the Union and places AI systems on the market or puts them into service in the Union (matching Article 2(1)(a)), and adds correct additional detail from the Act (extraterritorial provisions, deployer/output rules, exclusions). This aligns with and expands on the reference without contradicting it."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-21df-7942-a83d-a1739fff79ca",
+      "id": "11",
+      "category": "multi-hop",
+      "question": "If we deploy AI for CV screening, what obligations apply?",
+      "should_answer": "yes",
+      "expected_answer": "it's a high risk system,  so testing, monitoring etc",
+      "answer": "# Obligations for deploying AI for CV screening\n\n## 1. CV screening is a high-risk use case\n\nAnnex III lists AI systems \"intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates\" (Annex III, point 4(a)). AI systems listed in Annex III are considered high-risk (Article 6(2)). The reason given is that such systems \"may have an appreciable impact on future career prospects, livelihoods of those persons and workers' rights\" and \"may perpetuate historical patterns of discrimination\" (Recital 57).\n\nThere is a narrow exception. An Annex III system is not high-risk if it poses no significant risk of harm, for example because it only performs a narrow procedural task or a preparatory task (Article 6(3)). However, an Annex III system \"shall always be considered to be high-risk where the AI system performs profiling of natural persons\" (Article 6(3)). A provider who relies on the exception must document its assessment and register the system (Article 6(4)).\n\n## 2. Deployer obligations for high-risk systems (Article 26)\n\nAs a deployer, you must:\n\n- **Follow the instructions.** Take appropriate technical and organisational measures to use the system in line with its instructions for use (Article 26(1)).\n- **Assign human oversight.** Give oversight to natural persons with the necessary competence, training, authority and support (Article 26(2)).\n- **Control input data quality.** To the extent you control the input data, ensure it is relevant and sufficiently representative for the system's intended purpose (Article 26(4)).\n- **Monitor and report.**\n  - Monitor the system's operation and inform providers where relevant (Article 26(5)).\n  - If you have reason to consider the system presents a risk, inform the provider or distributor and the market surveillance authority without undue delay, and suspend use (Article 26(5)).\n  - If you identify a serious incident, immediately inform the provider, then the importer or distributor and the market surveillance authorities (Article 26(5)).\n- **Keep logs.** Retain automatically generated logs under your control for at least six months, unless other law provides otherwise (Article 26(6)).\n- **Inform workers.** If you are an employer using the system at the workplace, inform workers' representatives and affected workers before putting it into service or using it (Article 26(7)).\n- **Inform candidates.** Tell the natural persons concerned that they are subject to the high-risk system when it makes or assists decisions about them (Article 26(11)).\n- **Use provider information for your DPIA.** Where applicable, use the information provided under Article 13 to carry out your data protection impact assessment under Article 35 of Regulation (EU) 2016/679 (Article 26(9)).\n- **Cooperate with authorities** in any action they take in relation to the system (Article 26(12)).\n\n## 3. Obligations that depend on who you are\n\n- **Public authorities or Union bodies** must comply with registration obligations (Article 26(8)). They must register themselves, select the system and register its use in the EU database before use (Article 49(3)). They must not use an unregistered system (Article 26(8)).\n- **Bodies governed by public law, or private entities providing public services,** must carry out a fundamental rights impact assessment before deployment and notify the market surveillance authority of the results (Article 27(1), (3)).\n\n## 4. Obligations that apply regardless\n\n- **AI literacy.** Ensure, to your best extent, a sufficient level of AI literacy among staff operating the system (Article 4).\n- **Right to explanation.** Candidates affected by a decision based on the system's output, where that decision produces legal effects or similarly significantly affects them, can request \"clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision taken\" (Article 86(1)).\n- **Prohibited practice to avoid.** Using AI to infer emotions in the workplace is prohibited, except for medical or safety reasons (Article 5(1)(f)).\n\n## 5. When you could become the provider\n\nYou would be treated as the provider, and take on the provider obligations in Article 16, if you:\n\n- put your name or trademark on the system,\n- make a substantial modification to it, or\n- change the intended purpose of a non-high-risk system so that it becomes high-risk\n\n(Article 25(1)).\n\n## 6. Penalties and timing\n\n- Breaching deployer obligations under Article 26 can lead to fines of up to EUR 15 000 000 or 3% of worldwide annual turnover, whichever is higher (Article 99(4)(e)). For SMEs, the lower of the two applies (Article 99(6)).\n- The Regulation generally applies from 2 August 2026 (Article 113). Chapters I and II, including Article 4 and Article 5, apply from 2 February 2025 (Article 113(a)).",
+      "refused": false,
+      "citations": [
+        "Annex III",
+        "Article 6(2)",
+        "Recital 57",
+        "Article 6(3)",
+        "Article 6(4)",
+        "Article 26",
+        "Article 26(1)",
+        "Article 26(2)",
+        "Article 26(4)",
+        "Article 26(5)",
+        "Article 26(6)",
+        "Article 26(7)",
+        "Article 26(11)",
+        "Article 13",
+        "Article 35",
+        "Article 26(9)",
+        "Article 26(12)",
+        "Article 26(8)",
+        "Article 49(3)",
+        "Article 27(1)",
+        "Article 4",
+        "Article 86(1)",
+        "Article 5(1)(f)",
+        "Article 16",
+        "Article 25(1)",
+        "Article 99(4)(e)",
+        "Article 99(6)",
+        "Article 113",
+        "Article 5",
+        "Article 113(a)"
+      ],
+      "error": null,
+      "latency_s": 23.511541,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims are largely traceable to the excerpts (Annex III point 4(a), Article 6, Article 26, Article 27, Article 4, Article 86, Article 5(1)(f), Article 25, Article 99, Article 113) and citations generally match content. However, there are a few inaccuracies: Article 26(11) actually references Article 50 and Article 13 of Directive 2016/680 for law enforcement, and the text cited as 'making or assisting decisions about them' is roughly accurate but the answer states deployers must inform candidates under Article 26(11) without noting the Annex III point 2 exception - a minor omission but not a fabrication. More significantly, Recital 57's quote is accurately used. Overall the answer is well-grounded with only minor imprecision (e.g., slight paraphrase issues) but no clear fabrication or misattribution of major claims, though the level of detail and confident specific citations (e.g., 'Article 26(11)' for informing candidates - actually it's Article 26(11) referencing Article 50, but the info obligation is separately in Annex III context) show mostly accurate sourcing."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly and comprehensively addresses the question of obligations for deploying AI in CV screening under the AI Act, covering classification, deployer obligations, contextual obligations, and related duties with specific article citations."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies CV screening as high-risk and extensively covers deployer obligations including monitoring, human oversight, logging, etc., which aligns with and greatly expands on the reference's brief statement about high-risk classification and testing/monitoring obligations."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-7db7-7bf3-ae65-eb0f85aa9849",
+      "id": "7",
+      "category": "multi-hop",
+      "question": "what are the requirements for a high risk system? How do we ensure compliance?",
+      "should_answer": "yes",
+      "expected_answer": "risk management system",
+      "answer": "# Requirements for High-Risk AI Systems and How to Ensure Compliance\n\n## 1. What counts as a high-risk AI system\n\nAn AI system is high-risk in two situations:\n- **Product safety route:** it is a safety component of a product, or is itself a product, covered by the Union harmonisation legislation listed in Annex I, and that product must undergo a third-party conformity assessment (Article 6(1)).\n- **Listed use cases:** it falls under one of the areas in Annex III (Article 6(2)). These areas include biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, and justice and democratic processes (Annex III).\n\nAn Annex III system is not high-risk if it does not pose a significant risk of harm to health, safety or fundamental rights. This exception applies, for example, where the system performs only a narrow procedural task or a preparatory task (Article 6(3)). However, a system that profiles natural persons is always high-risk (Article 6(3)). A provider relying on this exception must document its assessment before placing the system on the market and must register the system (Article 6(4)).\n\n## 2. The core requirements (Chapter III, Section 2, Articles 8\u201315)\n\nHigh-risk AI systems must comply with this Section, taking into account their intended purpose and the generally acknowledged state of the art (Article 8(1)).\n\n**Risk management system (Article 9)**\n- A risk management system must be established, implemented, documented and maintained (Article 9(1)).\n- It must be a continuous, iterative process across the entire lifecycle, with regular systematic review (Article 9(2)).\n- It must cover:\n  - identifying and analysing known and reasonably foreseeable risks (Article 9(2)(a));\n  - estimating risks, including under reasonably foreseeable misuse (Article 9(2)(b));\n  - evaluating risks based on post-market monitoring data (Article 9(2)(c));\n  - adopting targeted risk management measures (Article 9(2)(d)).\n- Residual risk must be judged acceptable (Article 9(5)).\n- Systems must be tested against prior defined metrics and probabilistic thresholds, in any event before being placed on the market (Article 9(6), (8)).\n- Providers must consider likely adverse impacts on persons under 18 and other vulnerable groups (Article 9(9)).\n\n**Data and data governance (Article 10)**\n- Training, validation and testing data sets must be subject to appropriate data governance practices. These include examining possible biases and taking measures to detect, prevent and mitigate them (Article 10(2)(f)\u2013(g)).\n- Data sets must be relevant, sufficiently representative and, to the best extent possible, free of errors and complete (Article 10(3)).\n- Data sets must take into account the specific geographical, contextual, behavioural or functional setting of use (Article 10(4)).\n- Special categories of personal data may be processed exceptionally for bias detection, but only under strict conditions (Article 10(5)).\n\n**Technical documentation (Article 11)**\n- Documentation must be drawn up before placing on the market and kept up to date (Article 11(1)).\n- It must demonstrate compliance and contain at least the elements in Annex IV (Article 11(1)).\n- SMEs may use a simplified form (Article 11(1)).\n\n**Record-keeping (Article 12)**\n- Systems must technically allow automatic recording of events (logs) over their lifetime (Article 12(1)).\n- Logs must support identifying risks, post-market monitoring and operational monitoring (Article 12(2)).\n\n**Transparency and instructions for use (Article 13)**\n- Operation must be sufficiently transparent for deployers to interpret and appropriately use outputs (Article 13(1)).\n- Systems must come with instructions for use (Article 13(2)). These must cover, among other things:\n  - the provider's identity;\n  - the system's intended purpose;\n  - accuracy, robustness and cybersecurity levels;\n  - foreseeable risks;\n  - human oversight measures;\n  - maintenance needs (Article 13(3)).\n\n**Human oversight (Article 14)**\n- Systems must be designed to be effectively overseen by natural persons while in use (Article 14(1)).\n- Overseers must be able to:\n  - understand the system's capacities and limitations;\n  - remain aware of automation bias;\n  - override or reverse outputs;\n  - stop the system through a \"stop\" button or similar procedure (Article 14(4)).\n- For remote biometric identification, identifications must be separately verified by at least two natural persons before action is taken, subject to exceptions (Article 14(5)).\n\n**Accuracy, robustness and cybersecurity (Article 15)**\n- Systems must achieve an appropriate level of accuracy, robustness and cybersecurity throughout their lifecycle (Article 15(1)).\n- Accuracy levels and metrics must be declared in the instructions for use (Article 15(3)).\n- Systems must be resilient to errors, faults and inconsistencies, and to feedback loops (Article 15(4)).\n- Systems must be resilient to attacks such as data poisoning, model poisoning and adversarial examples (Article 15(5)).\n\n## 3. How compliance is ensured\n\n### A. Provider obligations (Article 16)\n\nProviders must:\n- ensure compliance with Section 2 (Article 16(a));\n- have a quality management system (Article 16(c));\n- keep documentation and logs (Article 16(d)\u2013(e));\n- undergo conformity assessment before market placement (Article 16(f));\n- draw up an EU declaration of conformity (Article 16(g));\n- affix CE marking (Article 16(h));\n- register the system (Article 16(i));\n- take corrective actions (Article 16(j));\n- meet accessibility requirements (Article 16(l)).\n\nSupporting provisions:\n- **Quality management system:** it must cover, among other things, regulatory compliance strategy, design and development controls, testing, data management, risk management, post-market monitoring and incident reporting (Article 17(1)). It is proportionate to the provider's size (Article 17(2)).\n- **Documentation retention:** documentation must be kept for 10 years (Article 18(1)).\n- **Log retention:** logs must be kept for at least six months (Article 19(1)).\n\n### B. Tools for demonstrating conformity\n\n- **Harmonised standards:** conformity with published harmonised standards creates a presumption of conformity with Section 2 (Article 40(1)).\n- **Common specifications:** where standards are lacking, the Commission may adopt common specifications, which also confer a presumption of conformity (Article 41(1), (3)).\n- **Other presumptions:**\n  - training and testing on setting-specific data creates a presumption of compliance with Article 10(4) (Article 42(1));\n  - certification under a cybersecurity scheme under Regulation (EU) 2019/881 creates a presumption of compliance with the cybersecurity requirements (Article 42(2)).\n\n### C. Conformity assessment (Article 43)\n\n- **Biometrics (Annex III point 1):** the provider may choose internal control (Annex VI) or assessment by a notified body (Annex VII) if it has applied harmonised standards or common specifications. Otherwise it must follow Annex VII (Article 43(1)).\n- **Annex III points 2\u20138:** internal control under Annex VI, without a notified body (Article 43(2)).\n- **Annex I, Section A products:** the relevant sectoral conformity assessment applies, with the Section 2 requirements included (Article 43(3)).\n- **Substantial modification:** this triggers a new conformity assessment. Pre-determined changes for continuously learning systems are excluded (Article 43(4)).\n\n### D. Declaration, marking and registration\n\n- **EU declaration of conformity:** the provider draws it up, keeps it for 10 years, and thereby assumes responsibility for compliance (Article 47(1), (4)).\n- **CE marking:** it must be affixed visibly, legibly and indelibly, or digitally for digital systems (Article 48(2)\u2013(3)).\n- **Registration:** Annex III systems must be registered in the EU database before being placed on the market, except critical infrastructure systems, which are registered at national level (Article 49(1), (5)).\n\n### E. Ongoing, post-market compliance\n\n- **Post-market monitoring:** providers must establish a documented system and plan (Article 72(1), (3)).\n- **Serious incident reporting:**\n  - general rule: no later than 15 days after becoming aware (Article 73(2));\n  - widespread infringements or serious and irreversible disruption of critical infrastructure: no later than 2 days (Article 73(3));\n  - death of a person: no later than 10 days (Article 73(4)).\n- **Corrective action:** non-conforming systems must be brought into conformity, withdrawn, disabled or recalled, and others informed (Article 20(1)).\n- **Cooperation with authorities:** providers must supply information and documentation on reasoned request (Article 21(1)).\n\n### F. Other actors in the value chain\n\n- **Authorised representatives:** non-EU providers must appoint one (Article 22(1)).\n- **Importers:** before placing a system on the market, they must verify conformity assessment, technical documentation, CE marking and the authorised representative (Article 23(1)).\n- **Distributors:** before making a system available, they must verify CE marking, the declaration and instructions (Article 24(1)).\n- **Deployers** must:\n  - use systems according to the instructions (Article 26(1));\n  - assign competent human oversight (Article 26(2));\n  - monitor operation and report risks and incidents (Article 26(5));\n  - keep logs for at least six months (Article 26(6));\n  - inform workers (Article 26(7));\n  - inform affected natural persons (Article 26(11)).\n- **Fundamental rights impact assessment:** certain deployers (public bodies, private entities providing public services, and credit and insurance deployers) must carry one out before deployment (Article 27(1)).\n\n### G. Enforcement\n\n- **Market surveillance:** authorities can evaluate systems presenting a risk and require corrective action (Article 79(2)).\n- **Fines:** non-compliance with operator obligations can bring fines of up to EUR 15 000 000 or 3% of worldwide annual turnover, whichever is higher (Article 99(4)).",
+      "refused": false,
+      "citations": [
+        "Annex I",
+        "Article 6(1)",
+        "Annex III",
+        "Article 6(2)",
+        "Article 6(3)",
+        "Article 6(4)",
+        "Article 8(1)",
+        "Article 9",
+        "Article 9(1)",
+        "Article 9(2)",
+        "Article 9(2)(a)",
+        "Article 9(2)(b)",
+        "Article 9(2)(c)",
+        "Article 9(2)(d)",
+        "Article 9(5)",
+        "Article 9(6)",
+        "Article 9(9)",
+        "Article 10",
+        "Article 10(2)(f)",
+        "Article 10(3)",
+        "Article 10(4)",
+        "Article 10(5)",
+        "Article 11",
+        "Article 11(1)",
+        "Annex IV",
+        "Article 12",
+        "Article 12(1)",
+        "Article 12(2)",
+        "Article 13",
+        "Article 13(1)",
+        "Article 13(2)",
+        "Article 13(3)",
+        "Article 14",
+        "Article 14(1)",
+        "Article 14(4)",
+        "Article 14(5)",
+        "Article 15",
+        "Article 15(1)",
+        "Article 15(3)",
+        "Article 15(4)",
+        "Article 15(5)",
+        "Article 16",
+        "Article 16(a)",
+        "Article 16(c)",
+        "Article 16(d)",
+        "Article 16(f)",
+        "Article 16(g)",
+        "Article 16(h)",
+        "Article 16(i)",
+        "Article 16(j)",
+        "Article 16(l)",
+        "Article 17(1)",
+        "Article 17(2)",
+        "Article 18(1)",
+        "Article 19(1)",
+        "Article 40(1)",
+        "Article 41(1)",
+        "Article 42(1)",
+        "Article 42(2)",
+        "Article 43",
+        "Annex VI",
+        "Annex VII",
+        "Article 43(1)",
+        "Article 43(2)",
+        "Article 43(3)",
+        "Article 43(4)",
+        "Article 47(1)",
+        "Article 48(2)",
+        "Article 49(1)",
+        "Article 72(1)",
+        "Article 73(2)",
+        "Article 73(3)",
+        "Article 73(4)",
+        "Article 20(1)",
+        "Article 21(1)",
+        "Article 22(1)",
+        "Article 23(1)",
+        "Article 24(1)",
+        "Article 26(1)",
+        "Article 26(2)",
+        "Article 26(5)",
+        "Article 26(6)",
+        "Article 26(7)",
+        "Article 26(11)",
+        "Article 27(1)",
+        "Article 79(2)",
+        "Article 99(4)"
+      ],
+      "error": null,
+      "latency_s": 34.57025,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-3b47-7bd0-af0a-bb17abc2b8df",
+      "id": "24",
+      "category": "multi-hop",
+      "question": "is sex trafficking a prohibited AI practice?",
+      "should_answer": "yes",
+      "expected_answer": "no;  No. AI used for sex trafficking is not automatically a prohibited AI practice under the EU AI Act.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.774227,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-3e4e-7963-894e-5c2b1e1646ad",
+      "id": "8",
+      "category": "multi-hop",
+      "question": "how must high-risk systems be tested?",
+      "should_answer": "yes",
+      "expected_answer": "",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.454978,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-04c1-7c50-b61d-90622ee8e7d5",
+      "id": "27",
+      "category": "multi-hop",
+      "question": "Does R&D fall under a high risk AI system?",
+      "should_answer": "yes",
+      "expected_answer": "no",
+      "answer": "**No. R&D is not itself a high-risk category, and R&D activity is largely excluded from the Regulation. But an AI system that comes out of R&D can become high-risk once it is placed on the market or put into service.**\n\n**1. AI built solely for scientific research is outside the Regulation**\n- The Regulation does not apply to AI systems or AI models, including their output, \"specifically developed and put into service for the sole purpose of scientific research and development\" (Article 2(6)).\n- This exclusion exists because the Regulation \"should respect freedom of science, and should not undermine research and development activity\" (Recital 25).\n\n**2. Pre-market research, testing and development is excluded**\n- The Regulation does not apply to \"any research, testing or development activity regarding AI systems or AI models prior to their being placed on the market or put into service\" (Article 2(8)).\n- Such activities must still follow applicable Union law (Article 2(8)).\n- They should also meet \"recognised ethical and professional standards for scientific research\" (Recital 25).\n\n**3. Limits to the exclusion**\n- **Real-world testing** is not covered by the exclusion (Article 2(8)). Providers of Annex III high-risk systems may test them in real-world conditions only under the conditions in Article 60 (Article 60(1), (4)).\n- **Market placement after R&D:** the exclusion does not affect the obligation to comply once a system in scope \"is placed on the market or put into service as a result of such research and development activity.\" Nor does it affect the rules on AI regulatory sandboxes and real-world testing (Recital 25).\n- **Other AI tools used in research:** any AI system that \"may be used for the conduct of any research and development activity\" but was not developed solely for scientific research \"should remain subject to the provisions of this Regulation\" (Recital 25).\n\n**4. How high-risk status is decided**\n- A system is high-risk if it is a safety component of, or is itself, a product under the Annex I legislation that requires third-party conformity assessment (Article 6(1)).\n- It is also high-risk if it falls within the areas listed in Annex III (Article 6(2)).\n- Those areas are biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, and justice and democratic processes. Research and development is not listed as an area (Annex III).\n\n**5. General-purpose AI models**\n- The definition of a general-purpose AI model excludes \"AI models that are used for research, development or prototyping activities before they are placed on the market\" (Article 3(63)).\n- Obligations still apply if such a model is later placed on the market (Recital 97).\n\n**Where this sits in the Act:** the main research exclusions are in Chapter I (General Provisions), Article 2 (Scope), paragraphs 6 and 8. The high-risk classification rules are in Chapter III, Section 1 (Classification of AI systems as high-risk), Article 6.",
+      "refused": false,
+      "citations": [
+        "Article 2(6)",
+        "Recital 25",
+        "Article 2(8)",
+        "Annex III",
+        "Article 60",
+        "Article 60(1)",
+        "Annex I",
+        "Article 6(1)",
+        "Article 6(2)",
+        "Article 3(63)",
+        "Recital 97",
+        "Article 2",
+        "Article 6"
+      ],
+      "error": null,
+      "latency_s": 13.956564,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims are traceable to the provided excerpts: Article 2(6) and 2(8) exclusions for R&D, Recital 25 on freedom of science, Article 60 on real-world testing, Article 3(63) exclusion for general-purpose AI models used in research, Recital 97, and Article 6/Annex III classification rules. Citations point to correct excerpts and no outside legal knowledge is introduced. The answer stays within the substance of the text without overgeneralizing."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses whether R&D falls under high-risk AI systems, giving a clear 'No' with detailed explanation of exclusions, exceptions, and how high-risk classification works, fully engaging with the specific question."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly concludes that R&D does not fall under high-risk AI, matching the reference answer of 'no', with extensive supporting detail that is consistent with the Act."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-45cd-7ca1-8bde-92cfcb556c02",
+      "id": "1",
+      "category": "exemption",
+      "question": "What AI systems are excluded from the scope of the EU AI Act?",
+      "should_answer": "yes",
+      "expected_answer": "AI systems used for : military, defence or national security purposes , ai systems used for scientific research and development; ",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.513241,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-41b6-76d2-8542-1e3a6279cb8e",
+      "id": "31",
+      "category": "single",
+      "question": "what does article 97 talk about?",
+      "should_answer": "yes",
+      "expected_answer": "It is about how the EU AI Act itself can be updated over time without having to pass an entirely new law.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.510931,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-4dc0-7252-88c7-697c0c0a7fb6",
+      "id": "2",
+      "category": "multi-hop",
+      "question": "when does this regulation come into effect?",
+      "should_answer": "yes",
+      "expected_answer": "his Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the \nEuropean Union.\nIt shall apply from 2 August 2026.\nHowever:\n(a) Chapters I and II shall apply from 2 February 2025;\n(b) Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the \nexception of Article 101;\n(c) Article 6(1) and the corresponding obligations in this Regulation shall apply from 2 August 2027.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.807403,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-47ce-74e0-a05a-240d13b6f35b",
+      "id": "40",
+      "category": "single",
+      "question": "what is this document dated as?",
+      "should_answer": "yes",
+      "expected_answer": "6/13/2024",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.422841,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-4015-73e1-9d9f-6664ed92d723",
+      "id": "14",
+      "category": "multi-hop",
+      "question": "what are the obligations of importers vs distributers vs deployers?",
+      "should_answer": "yes",
+      "expected_answer": "Importer = \"Check before bringing it into the EU\" . Distributor = \"Check before selling\"Deployer = \"Use the AI responsibly\"",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.416982,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-43b6-7861-bdbf-eb3086c57472",
+      "id": "18",
+      "category": "multi-hop",
+      "question": "what are AI sandboxes?",
+      "should_answer": "yes",
+      "expected_answer": "\u2018AI regulatory sandbox\u2019 means a controlled framework set up by a competent authority which offers providers or \nprospective providers of AI systems the possibility to develop, train, validate and test, where appropriate in real-world",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.534358,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-4975-7fd1-8b60-5d2b3dd84b5d",
+      "id": "12",
+      "category": "multi-hop",
+      "question": "who is a deployer? How do we ensure transaperency for deployers?",
+      "should_answer": "yes",
+      "expected_answer": "\u2018deployer\u2019 means a natural or legal person, public authority, agency or other body using an AI system under its \nauthority except where the AI system is used in the course of a personal non-professional activity. \nHigh-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently \ntransparent to enable deployers to interpret a system\u2019s output and use it appropriately",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.526593,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-4b85-7fb1-b4ae-6e7e18bdcd4d",
+      "id": "15",
+      "category": "single",
+      "question": "which section talks about notifying everyone along with the procedure?",
+      "should_answer": "yes",
+      "expected_answer": "Section 4, article 30",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.570635,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-50e8-75a1-a92d-4c5ce7850187",
+      "id": "19",
+      "category": "single",
+      "question": "by when should AI sandboxesby member states be operational?",
+      "should_answer": "yes",
+      "expected_answer": "by 2 August 2026.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.396431,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5d17-7d23-85cc-ea55492a4268",
+      "id": "9",
+      "category": "single",
+      "question": "how must examination of biases be carried out?",
+      "should_answer": "yes",
+      "expected_answer": "training and test data are subjected to governance. They can store personal data for testing but on conditions.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.374467,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-542b-7641-bc44-d8ce159f19b9",
+      "id": "35",
+      "category": "single",
+      "question": "what is the information to be submitted for a high-risk system while real-world testing?",
+      "should_answer": "yes",
+      "expected_answer": "The following information shall be provided and thereafter kept up to date with regard to testing in real world conditions to \nbe registered in accordance with Article 60:\n1.\n2.\n3.\n4.\n5.\nA Union-wide unique single identification number of the testing in real world conditions;\nThe name and contact details of the provider or prospective provider and of the deployers involved in the testing in \nreal world conditions;\nA brief description of the AI system, its intended purpose, and other information necessary for the identification of \nthe system;\nA summary of the main characteristics of the plan for testing in real world conditions;\nInformation on the suspension or termination of the testing in real world conditions",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.590979,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-610e-7d53-9204-4f40d3fa2447",
+      "id": "22",
+      "category": "single",
+      "question": "what fines do providers of general purpose AI models face?",
+      "should_answer": "yes",
+      "expected_answer": "The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total \nworldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.588149,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5e8f-7e62-8d39-e6e8f4d0890b",
+      "id": "13",
+      "category": "single",
+      "question": "for how long must the documentation of high-risk system that's in the market be kept?",
+      "should_answer": "yes",
+      "expected_answer": "The provider shall, for a period ending 10 years after the high-risk AI system has been placed on the market or put \ninto service, keep at the disposal of the national competent authorities:",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.639249,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5b61-7922-bbbe-5e8a3b06d336",
+      "id": "41",
+      "category": "multi-hop",
+      "question": "I am a AI tool that evaluates students' answers during their exams. What kind of tool am I\\?",
+      "should_answer": "yes",
+      "expected_answer": "high-risk",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.438229,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5991-7522-9703-53c5856c7d10",
+      "id": "23",
+      "category": "single",
+      "question": "is an AI system that provides entertainment to children a prohibited AI practice?",
+      "should_answer": "yes",
+      "expected_answer": "no, but with caution",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.463887,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6516-75b3-a75d-c7dbad06e93e",
+      "id": "10",
+      "category": "single",
+      "question": "how must high-risk systems be logged? A",
+      "should_answer": "yes",
+      "expected_answer": "automatic recording of events (logs) over the lifetime of the system.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.438362,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5823-7a41-bacf-b3a8a6ca7f29",
+      "id": "30",
+      "category": "out of scope, multi-hop",
+      "question": "we are a company selling AI recruitment software across europe. What penalties must we pay for non-compliance ?",
+      "should_answer": "yes",
+      "expected_answer": "hall be subject to administrative \nfines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the \npreceding financial year, whichever is higher ; .\nNon-compliance with any of the following provisions related to operators or notified bodies, other than those laid \ndown in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up \nto 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.365133,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-567a-7171-adfb-9c4c1c88b096",
+      "id": "25",
+      "category": "out of scope",
+      "question": "What countries does the EU act cover?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.42454,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-5275-7632-9956-b11e88b83878",
+      "id": "26",
+      "category": "out of scope",
+      "question": "How much fine will a AI system plotting terrrorism in Singapore get in EU?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.437658,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-635b-7161-8f5b-64daf1cd6482",
+      "id": "37",
+      "category": "single",
+      "question": "what does Annex 11 talk about?:",
+      "should_answer": "yes",
+      "expected_answer": "Technical documentation referred to in Article 53(1), point (a) \u2014 technical documentation for \nproviders of general-purpose AI models",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.443227,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-66cd-77f2-92c9-4553e328e9a0",
+      "id": "28",
+      "category": "multi-hop",
+      "question": "We are a company selling AI software for Children in Italy. What applies to us?",
+      "should_answer": "yes",
+      "expected_answer": "high risk system",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.915865,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6a61-72a0-8a4b-68aa820a3aac",
+      "id": "5",
+      "category": "single",
+      "question": "what article talks about AI literacy?",
+      "should_answer": "yes",
+      "expected_answer": "Article 4: Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of \ntheir staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their \ntechnical knowledge, experience, education and training and the context the AI systems are to be used in, and considering \nthe persons or groups of persons on whom the AI systems are to be used.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.367899,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6bd2-7881-a344-a8ad32e23e0b",
+      "id": "3",
+      "category": "single",
+      "question": "what is an AI system",
+      "should_answer": "yes",
+      "expected_answer": "\u2018AI system\u2019 means a machine-based system that is designed to operate with varying levels of autonomy and that may \nexhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, \nhow to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or \nvirtual environments;",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.557249,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6e00-7c13-9c3e-ce1aaba04e99",
+      "id": "20",
+      "category": "multi-hop",
+      "question": "what data must be listed in the EU database for high-risk systems?",
+      "should_answer": "yes",
+      "expected_answer": "",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.412113,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6f9c-7ed2-8c2c-2192cb1c6a6b",
+      "id": "34",
+      "category": "out of scope",
+      "question": "What did the European Parliament say in the 2027 amendment?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.552682,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-71c6-7e32-9b4f-240e758d2021",
+      "id": "29",
+      "category": "multi-hop",
+      "question": "If we use AI for biometric categorisation in a workplace, is it prohibited, high-risk, or neither \u2014 and what follows?",
+      "should_answer": "yes",
+      "expected_answer": "Yes, high risk",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.386715,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-7349-7fb3-9760-903035802da4",
+      "id": "39",
+      "category": "single",
+      "question": "how many annexes do we have?",
+      "should_answer": "yes",
+      "expected_answer": "13",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.39037,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-74cf-75a3-9f00-5df4d925a95c",
+      "id": "32",
+      "category": "single",
+      "question": "summarize article 112",
+      "should_answer": "yes",
+      "expected_answer": "Article 112 explains when, what, and how often the Commission must review the Act to decide whether updates are needed.",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.420525,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-7674-7e62-bbf7-ac597e236a24",
+      "id": "6",
+      "category": "multi-hop",
+      "question": "when is the AI system considered high risk?",
+      "should_answer": "yes",
+      "expected_answer": "Biometrics, critical infrastructure, educational and vocational training, employment, law enforcement, essential public/private services , Migration, asylum and border control management, Administration of justice and democratic processes,",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.507323,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-7870-7bc3-a0fb-a71b828c2b90",
+      "id": "21",
+      "category": "multi-hop",
+      "question": "what penalties do deployers of AI systems that targets the minorities in EU face?",
+      "should_answer": "yes",
+      "expected_answer": "hall be subject to administrative \nfines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the \npreceding financial year, whichever is higher ; .\nNon-compliance with any of the following provisions related to operators or notified bodies, other than those laid \ndown in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up \nto 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.556609,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-7aa6-7db2-ad69-74775eb8aa18",
+      "id": "4",
+      "category": "single",
+      "question": "what is the difference between placing on market and making available on market and putting into service?",
+      "should_answer": "yes",
+      "expected_answer": "Placing on the market = First commercial launch in the EU (only once)\nMaking available on the market = Selling or distributing in the EU (can happen many times)\nPutting into service = First actual use for its intended purpose (when deployment begins)",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.445083,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-7c64-7630-924c-cdf63e407cf7",
+      "id": "33",
+      "category": "out of scope",
+      "question": "summarize article 114",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": null,
+      "refused": false,
+      "citations": [],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.450432,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    }
+  ]
+}

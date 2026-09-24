@@ -1,0 +1,347 @@
+<title>RAG vs. Opus 5.5 on the AI Act</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #141821;
+  --ink-2: #4b5263;
+  --muted: #6b7282;
+  --rule: #dfe2e8;
+  --rule-soft: #eceef2;
+  --accent: #1f3f8f;
+  --rag: #2a78d6;
+  --full: #eb6834;
+  --good: #0f7b4b;
+  --good-bg: #e3f3ea;
+  --bad: #b3261e;
+  --bad-bg: #fbe7e5;
+  --na-bg: #eceef2;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #12151b; --surface: #1a1e26; --ink: #eef0f4; --ink-2: #c3c8d3; --muted: #939aaa;
+    --rule: #2c323d; --rule-soft: #232833; --accent: #9db6f2;
+    --rag: #3987e5; --full: #d95926;
+    --good: #5fd39a; --good-bg: #173a2a; --bad: #ff8f86; --bad-bg: #43201e; --na-bg: #262b35;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #12151b; --surface: #1a1e26; --ink: #eef0f4; --ink-2: #c3c8d3; --muted: #939aaa;
+  --rule: #2c323d; --rule-soft: #232833; --accent: #9db6f2;
+  --rag: #3987e5; --full: #d95926;
+  --good: #5fd39a; --good-bg: #173a2a; --bad: #ff8f86; --bad-bg: #43201e; --na-bg: #262b35;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-inline: 16px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 64px; display: grid; gap: 48px; }
+h1, h2 { font-family: var(--serif); font-weight: 650; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(28px, 4.2vw, 40px); line-height: 1.15; }
+h2 { font-size: 22px; line-height: 1.25; }
+p { margin: 0; }
+.eyebrow { font: 500 12px/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 17px; color: var(--ink-2); max-width: 68ch; }
+.head { display: grid; gap: 14px; }
+.section { display: grid; gap: 18px; }
+.section > .note { color: var(--muted); font-size: 14px; max-width: 72ch; }
+.num { font-variant-numeric: tabular-nums; }
+.key { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-2); }
+.swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.legend { display: flex; flex-wrap: wrap; gap: 18px; }
+
+/* Systems */
+.systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.sys { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; display: grid; gap: 4px; border-top: 3px solid var(--c); }
+.sys b { font-weight: 600; }
+.sys .meta { font: 12.5px/1.4 var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+
+/* Scorecard */
+.scorecard { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; overflow-x: auto; }
+.scorecard table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.scorecard th, .scorecard td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--rule-soft); vertical-align: middle; }
+.scorecard tr:last-child td { border-bottom: 0; }
+.scorecard th { font: 500 12px/1.3 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.metric-name { font-weight: 600; }
+.metric-sub { display: block; font-size: 12.5px; color: var(--muted); font-weight: 400; }
+.cell { display: grid; gap: 6px; min-width: 150px; }
+.cell .v { font: 600 18px/1 var(--sans); font-variant-numeric: tabular-nums; }
+.cell .v small { font-weight: 400; font-size: 13px; color: var(--muted); }
+.track { height: 6px; background: var(--rule-soft); border-radius: 3px; position: relative; }
+.track i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--c); }
+.delta { font: 500 13px/1 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.delta.pos { color: var(--good); } .delta.neg { color: var(--bad); } .delta.zero { color: var(--muted); }
+
+/* Category chart */
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 16px 12px; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--sans); }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; line-height: 1.4; padding: 6px 9px; border-radius: 5px; white-space: nowrap; transform: translate(-50%, calc(-100% - 8px)); }
+
+/* Refusal */
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px; display: grid; gap: 10px; }
+.stat h3 { margin: 0; font-size: 14px; font-weight: 600; }
+.stat .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; }
+.stat .row span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Questions */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button { font: 500 13px/1 var(--sans); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.filters button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qlist { display: grid; gap: 8px; }
+details.q { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; }
+details.q > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; grid-template-columns: 2.4em 1fr auto; gap: 12px; align-items: center; }
+details.q > summary::-webkit-details-marker { display: none; }
+.qid { font: 500 13px/1 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.qtext { display: grid; gap: 3px; min-width: 0; }
+.qtext span { overflow-wrap: anywhere; }
+.qtext em { font-style: normal; font: 12px/1.2 var(--mono); color: var(--muted); }
+.pills { display: grid; grid-template-columns: auto auto; gap: 4px 8px; align-items: center; justify-items: start; }
+.pills .who { font: 500 11px/1 var(--mono); color: var(--muted); display: inline-flex; align-items: center; gap: 5px; }
+.pills .set { display: inline-flex; gap: 3px; }
+.p { font: 600 11px/1 var(--mono); width: 22px; height: 20px; display: inline-grid; place-items: center; border-radius: 4px; }
+.p.s1 { background: var(--good-bg); color: var(--good); }
+.p.s0 { background: var(--bad-bg); color: var(--bad); }
+.p.sn { background: var(--na-bg); color: var(--muted); }
+.qbody { border-top: 1px solid var(--rule-soft); padding: 14px; display: grid; gap: 14px; }
+.ref { font-size: 13.5px; color: var(--ink-2); background: var(--rule-soft); border-radius: 6px; padding: 10px 12px; white-space: pre-wrap; }
+.ref b { color: var(--ink); }
+.answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.ans { border: 1px solid var(--rule); border-top: 3px solid var(--c); border-radius: 6px; padding: 12px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.ans h4 { margin: 0; font-size: 13px; font-weight: 600; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.ans h4 span { font: 400 12px/1.4 var(--mono); color: var(--muted); }
+.ans .text { font-size: 13.5px; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 22em; overflow-y: auto; }
+.cites { display: flex; flex-wrap: wrap; gap: 4px; }
+.cite { font: 11.5px/1 var(--mono); padding: 4px 6px; border-radius: 4px; background: var(--rule-soft); color: var(--ink-2); }
+.verdicts { display: grid; gap: 6px; font-size: 12.5px; color: var(--ink-2); }
+.verdicts div { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: start; }
+.empty { color: var(--muted); padding: 16px; text-align: center; }
+
+/* Caveats */
+.caveats { display: grid; gap: 10px; max-width: 76ch; padding: 0; margin: 0; list-style: none; }
+.caveats li { padding-left: 18px; position: relative; color: var(--ink-2); }
+.caveats li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 1px; background: var(--accent); }
+.foot { font: 12px/1.5 var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  details.q > summary { grid-template-columns: 2em 1fr; }
+  .pills { grid-column: 2; }
+}
+@media (prefers-reduced-motion: no-preference) { .track i { transition: width .5s ease; } }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div class="eyebrow">Regulation (EU) 2024/1689 · golden set evaluation</div>
+    <h1>Does retrieval beat putting the whole AI Act in Opus 5.5’s context?</h1>
+    <p class="lede" id="verdict"></p>
+    <div class="systems" id="systems"></div>
+  </header>
+
+  <section class="section" aria-labelledby="s-score">
+    <h2 id="s-score">Scorecard</h2>
+    <p class="note">Each answer is graded pass or fail by an LLM judge on three separate questions. Did every claim come from the text the model was shown? Did it answer what was asked? Does it match the reference answer? Refusing a question the Act does not cover counts as a pass.</p>
+    <div class="scorecard"><table id="scorecard"></table></div>
+  </section>
+
+  <section class="section" aria-labelledby="s-cat">
+    <h2 id="s-cat">Correctness by question type</h2>
+    <div class="legend" id="cat-legend"></div>
+    <div class="chart" id="cat-chart"><div class="tip" id="tip" hidden></div></div>
+  </section>
+
+  <section class="section" aria-labelledby="s-ref">
+    <h2 id="s-ref">Refusal behaviour</h2>
+    <p class="note">Both systems are told to reply with one fixed sentence when the text does not answer the question. The golden set marks some questions as not answerable from the Act, so refusing those is correct.</p>
+    <div class="pair" id="refusals"></div>
+  </section>
+
+  <section class="section" aria-labelledby="s-q">
+    <h2 id="s-q">Question by question</h2>
+    <p class="note">G = groundedness, R = relevance, C = correctness. Open a row to compare both answers with the reference and read the judge’s reasoning.</p>
+    <div class="filters" role="group" aria-label="Filter questions" id="filters"></div>
+    <div class="qlist" id="qlist"></div>
+  </section>
+
+  <section class="section" aria-labelledby="s-cav">
+    <h2 id="s-cav">Reading these results</h2>
+    <ul class="caveats" id="caveats"></ul>
+    <p class="foot" id="foot"></p>
+  </section>
+</div>
+
+<script type="application/json" id="data">/*__DATA__*/null</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const S = D.systems, KEYS = ["rag", "full"];
+  const METRICS = [
+    ["groundedness", "Groundedness", "Every claim is supported by the text shown"],
+    ["answer_relevance", "Answer relevance", "Addresses the question asked"],
+    ["answer_correctness", "Answer correctness", "Matches the golden reference answer"],
+  ];
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const color = k => `var(--${k === "rag" ? "rag" : "full"})`;
+  const n = D.rows.rag.length;
+
+  // Join both arms on the golden-set id.
+  const byId = {};
+  for (const k of KEYS) for (const r of D.rows[k]) (byId[r.id] ??= {})[k] = r;
+  const ids = Object.keys(byId).sort((a, b) => +a - +b);
+  const sc = (r, m) => r?.scores?.[m]?.score;
+
+  const tally = (k, m) => {
+    const rows = D.rows[k], graded = rows.filter(r => sc(r, m) != null);
+    return { pass: graded.filter(r => sc(r, m) === 1).length, graded: graded.length };
+  };
+  const sum = a => a.reduce((x, y) => x + y, 0);
+  const median = a => { const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m-1] + s[m]) / 2) : null; };
+  const costs = k => D.rows[k].map(r => r.cost).filter(c => c != null);
+  const lats = k => D.rows[k].map(r => r.latency_s).filter(c => c != null);
+  const money = v => v == null ? "–" : v < 0.01 ? `$${v.toFixed(4)}` : `$${v.toFixed(v < 1 ? 3 : 2)}`;
+
+  // Systems
+  document.getElementById("systems").innerHTML = KEYS.map(k => `
+    <div class="sys" style="--c:${color(k)}"><b>${esc(S[k].label)}</b>
+      <span>${esc(S[k].detail)}</span>
+      <span class="meta">${esc(S[k].model)} · ${esc(S[k].experiment)}</span></div>`).join("");
+
+  // Verdict
+  const cR = tally("rag", "answer_correctness"), cF = tally("full", "answer_correctness");
+  const cpqR = sum(costs("rag")) / Math.max(1, costs("rag").length), cpqF = sum(costs("full")) / Math.max(1, costs("full").length);
+  const lead = cF.pass === cR.pass ? `Both systems got <b>${cR.pass} of ${n}</b> answers correct.`
+    : `${cF.pass > cR.pass ? "Opus 5.5 with the full document" : "The RAG pipeline"} got more answers correct: <b>${Math.max(cF.pass, cR.pass)} of ${n}</b> against <b>${Math.min(cF.pass, cR.pass)}</b>.`;
+  const ratio = cpqR > 0 ? cpqF / cpqR : null;
+  document.getElementById("verdict").innerHTML = `${lead} The full-document approach costs ${money(cpqF)} per question against ${money(cpqR)} for RAG${ratio ? ` (about ${ratio >= 10 ? Math.round(ratio) : ratio.toFixed(1)}× as much)` : ""}, even with the 181k-token Act prompt-cached.`;
+
+  // Scorecard
+  const cell = (k, v, max, label) => `<td><div class="cell" style="--c:${color(k)}"><span class="v">${label}</span>
+    <div class="track" aria-hidden="true"><i style="width:${max ? Math.min(100, 100 * v / max) : 0}%"></i></div></div></td>`;
+  let rows = METRICS.map(([m, name, sub]) => {
+    const a = tally("rag", m), b = tally("full", m), d = b.pass - a.pass;
+    const na = k => { const t = tally(k, m); return t.graded < n ? ` <small>(${n - t.graded} ungraded)</small>` : ""; };
+    return `<tr><td><span class="metric-name">${name}</span><span class="metric-sub">${sub}</span></td>
+      ${cell("rag", a.pass, n, `${a.pass}<small>/${n}</small>${na("rag")}`)}
+      ${cell("full", b.pass, n, `${b.pass}<small>/${n}</small>${na("full")}`)}
+      <td><span class="delta ${d > 0 ? "pos" : d < 0 ? "neg" : "zero"}">${d > 0 ? "+" : ""}${d}</span></td></tr>`;
+  });
+  const tR = sum(costs("rag")), tF = sum(costs("full")), mR = median(lats("rag")), mF = median(lats("full"));
+  const maxC = Math.max(cpqR, cpqF), maxL = Math.max(mR ?? 0, mF ?? 0);
+  rows.push(`<tr><td><span class="metric-name">Cost per question</span><span class="metric-sub">Generation only, from OpenRouter usage</span></td>
+    ${cell("rag", cpqR, maxC, `${money(cpqR)} <small>· ${money(tR)} total</small>`)}
+    ${cell("full", cpqF, maxC, `${money(cpqF)} <small>· ${money(tF)} total</small>`)}
+    <td><span class="delta zero">${ratio ? (ratio >= 10 ? Math.round(ratio) : ratio.toFixed(1)) + "×" : ""}</span></td></tr>`);
+  rows.push(`<tr><td><span class="metric-name">Median latency</span><span class="metric-sub">Seconds per question, end to end</span></td>
+    ${cell("rag", mR, maxL, `${mR?.toFixed(1) ?? "–"}<small> s</small>`)}
+    ${cell("full", mF, maxL, `${mF?.toFixed(1) ?? "–"}<small> s</small>`)}
+    <td><span class="delta zero">${mR && mF ? (mF / mR).toFixed(1) + "×" : ""}</span></td></tr>`);
+  document.getElementById("scorecard").innerHTML = `<thead><tr><th>Measure</th>
+    <th><span class="key"><i class="swatch" style="background:var(--rag)"></i>${esc(S.rag.label)}</span></th>
+    <th><span class="key"><i class="swatch" style="background:var(--full)"></i>${esc(S.full.label)}</span></th>
+    <th>Opus vs. RAG</th></tr></thead><tbody>${rows.join("")}</tbody>`;
+
+  // Category chart: % correct per category, grouped horizontal bars.
+  const cats = [...new Set(D.rows.rag.map(r => r.category || "uncategorised"))];
+  const catStats = cats.map(c => {
+    const o = { c, n: 0 };
+    for (const k of KEYS) {
+      const rs = D.rows[k].filter(r => (r.category || "uncategorised") === c);
+      o.n = rs.length;
+      const g = rs.filter(r => sc(r, "answer_correctness") != null);
+      o[k] = { pass: g.filter(r => sc(r, "answer_correctness") === 1).length, graded: g.length };
+    }
+    return o;
+  }).sort((a, b) => b.n - a.n);
+  document.getElementById("cat-legend").innerHTML = KEYS.map(k => `<span class="key"><i class="swatch" style="background:${color(k)}"></i>${esc(S[k].label)}</span>`).join("");
+  const W = 720, L = 150, R = 56, bh = 12, gap = 2, grp = 2 * bh + gap, rowH = grp + 22, top = 8;
+  const H = top + catStats.length * rowH + 26, x = v => L + v * (W - L - R);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Share of answers correct by question type">`;
+  for (const t of [0, 0.25, 0.5, 0.75, 1]) {
+    svg += `<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${H - 22}" stroke="var(--rule-soft)" stroke-width="1"/>
+      <text x="${x(t)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="var(--muted)">${t * 100}%</text>`;
+  }
+  catStats.forEach((s, i) => {
+    const y0 = top + i * rowH + 8;
+    svg += `<text x="${L - 12}" y="${y0 + grp / 2 - 2}" text-anchor="end" font-size="13" fill="var(--ink)">${esc(s.c)}</text>
+      <text x="${L - 12}" y="${y0 + grp / 2 + 12}" text-anchor="end" font-size="11" fill="var(--muted)">${s.n} question${s.n === 1 ? "" : "s"}</text>`;
+    KEYS.forEach((k, j) => {
+      const v = s[k].graded ? s[k].pass / s[k].graded : 0, y = y0 + j * (bh + gap), w = Math.max(0, x(v) - L);
+      const tip = `${S[k].label}: ${s[k].pass}/${s[k].graded} correct (${Math.round(v * 100)}%)`;
+      svg += `<g class="bar" data-tip="${esc(tip)}"><rect x="${L}" y="${y - 3}" width="${W - L - R}" height="${bh + 6}" fill="transparent"/>
+        <path d="M${L},${y} h${Math.max(0, w - 4)} a4,4 0 0 1 4,4 v${bh - 8} a4,4 0 0 1 -4,4 h-${Math.max(0, w - 4)} z" fill="${color(k)}"/>
+        <text x="${L + w + 6}" y="${y + bh - 2}" font-size="11" fill="var(--ink-2)" class="num">${s[k].pass}/${s[k].graded}</text></g>`;
+    });
+  });
+  svg += `<line x1="${L}" x2="${L}" y1="${top}" y2="${H - 22}" stroke="var(--muted)" stroke-width="1"/></svg>`;
+  const chart = document.getElementById("cat-chart"), tipEl = document.getElementById("tip");
+  chart.insertAdjacentHTML("beforeend", svg);
+  chart.querySelectorAll(".bar").forEach(g => {
+    g.addEventListener("pointermove", e => {
+      const b = chart.getBoundingClientRect();
+      tipEl.textContent = g.dataset.tip; tipEl.hidden = false;
+      tipEl.style.left = `${Math.min(b.width - 90, Math.max(90, e.clientX - b.left))}px`; tipEl.style.top = `${e.clientY - b.top}px`;
+    });
+    g.addEventListener("pointerleave", () => { tipEl.hidden = true; });
+  });
+
+  // Refusals
+  const refStats = k => {
+    const rs = D.rows[k], no = rs.filter(r => String(r.should_answer).toLowerCase() === "no"), yes = rs.filter(r => String(r.should_answer).toLowerCase() !== "no");
+    return { noN: no.length, correctRef: no.filter(r => r.refused).length, yesN: yes.length, falseRef: yes.filter(r => r.refused).length, errors: rs.filter(r => r.error).length };
+  };
+  document.getElementById("refusals").innerHTML = KEYS.map(k => { const s = refStats(k); return `
+    <div class="stat" style="border-top:3px solid ${color(k)}"><h3>${esc(S[k].label)}</h3>
+      <div class="row"><span>Refused an unanswerable question (correct)</span><span>${s.correctRef} / ${s.noN}</span></div>
+      <div class="row"><span>Refused an answerable question (missed)</span><span>${s.falseRef} / ${s.yesN}</span></div>
+      ${s.errors ? `<div class="row"><span>Pipeline errors</span><span>${s.errors}</span></div>` : ""}</div>`; }).join("");
+
+  // Questions
+  const FILTERS = [
+    ["all", "All questions", () => true],
+    ["disagree", "Correctness differs", q => sc(q.rag, "answer_correctness") !== sc(q.full, "answer_correctness")],
+    ["full", "Only Opus correct", q => sc(q.full, "answer_correctness") === 1 && sc(q.rag, "answer_correctness") === 0],
+    ["rag", "Only RAG correct", q => sc(q.rag, "answer_correctness") === 1 && sc(q.full, "answer_correctness") === 0],
+    ["both0", "Both wrong", q => sc(q.rag, "answer_correctness") === 0 && sc(q.full, "answer_correctness") === 0],
+  ];
+  const pill = (r, m, letter) => { const v = sc(r, m); return `<span class="p ${v === 1 ? "s1" : v === 0 ? "s0" : "sn"}" title="${letter}: ${v === 1 ? "pass" : v === 0 ? "fail" : "not graded"}">${letter}</span>`; };
+  const pills = r => pill(r, "groundedness", "G") + pill(r, "answer_relevance", "R") + pill(r, "answer_correctness", "C");
+  const ansBlock = (k, r) => !r ? "" : `<div class="ans" style="--c:${color(k)}">
+      <h4>${esc(S[k].label)}<span>${r.latency_s != null ? r.latency_s.toFixed(1) + " s" : ""}${r.cost != null ? " · " + money(r.cost) : ""}</span></h4>
+      <div class="text">${esc(r.error ? "Error: " + r.error : r.answer)}</div>
+      ${r.citations?.length ? `<div class="cites">${r.citations.slice(0, 12).map(c => `<span class="cite">${esc(c)}</span>`).join("")}</div>` : ""}
+      <div class="verdicts">${METRICS.map(([m, name]) => { const v = r.scores?.[m]; return `<div>${pill(r, m, name[0] === "A" ? (m === "answer_relevance" ? "R" : "C") : "G")}<span>${esc(v?.comment || "")}</span></div>`; }).join("")}</div></div>`;
+  const qHTML = id => { const q = byId[id], base = q.rag || q.full; return `
+    <details class="q"><summary><span class="qid">#${esc(id)}</span>
+      <span class="qtext"><span>${esc(base.question)}</span><em>${esc(base.category)}${String(base.should_answer).toLowerCase() === "no" ? " · not answerable from the Act" : ""}</em></span>
+      <span class="pills"><span class="who"><i class="swatch" style="background:var(--rag)"></i>RAG</span><span class="set">${pills(q.rag)}</span>
+        <span class="who"><i class="swatch" style="background:var(--full)"></i>Opus</span><span class="set">${pills(q.full)}</span></span></summary>
+      <div class="qbody"><div class="ref"><b>Reference answer${base.expected_answer ? "" : " (none)"}.</b> ${esc(base.expected_answer || "")}</div>
+        <div class="answers">${ansBlock("rag", q.rag)}${ansBlock("full", q.full)}</div></div></details>`; };
+  let active = "all";
+  const fEl = document.getElementById("filters"), qEl = document.getElementById("qlist");
+  const render = () => {
+    const f = FILTERS.find(f => f[0] === active)[2], shown = ids.filter(id => f(byId[id]));
+    fEl.innerHTML = FILTERS.map(([key, label, fn]) => `<button type="button" id="f-${key}" data-f="${key}" aria-pressed="${key === active}">${label} <span class="num">(${ids.filter(id => fn(byId[id])).length})</span></button>`).join("");
+    qEl.innerHTML = shown.length ? shown.map(qHTML).join("") : `<p class="empty">No questions match this filter.</p>`;
+  };
+  fEl.addEventListener("click", e => { const b = e.target.closest("button"); if (b) { active = b.dataset.f; render(); } });
+  render();
+
+  // Caveats
+  document.getElementById("caveats").innerHTML = [
+    `The generator models differ. RAG uses ${esc(S.rag.model)} and the baseline uses ${esc(S.full.model)}, so any gap reflects both the retrieval strategy and the model's size.`,
+    `Both systems use the same cite-or-refuse system prompt and the same text of the Act, as extracted by the ingest step, so neither can see anything the other cannot.`,
+    `Opus 5.5 may know the AI Act from its training data. The prompt restricts it to the text provided, and the groundedness judge checks that it did.`,
+    `For the baseline, groundedness is judged against the whole Act, because that is what the model saw. For RAG it is judged against the ${esc(S.rag.detail.match(/top-\d+/)?.[0] ?? "")} retrieved chunks.`,
+    `All three judges are ${esc(D.judge_model)}, a different model from both generators, to avoid self-preference bias. The scores are single LLM-judge verdicts on ${n} questions, so a difference of one or two questions is within noise.`,
+  ].map(t => `<li>${t}</li>`).join("");
+  document.getElementById("foot").textContent = `Judge: ${D.judge_model} · Experiments: ${S.rag.experiment}, ${S.full.experiment}`;
+})();
+</script>

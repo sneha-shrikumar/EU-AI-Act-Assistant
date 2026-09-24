@@ -1,0 +1,20 @@
+[
+  {
+    "experiment": "eu-ai-act-rag-342c66bc",
+    "question": "how does this act apply if we are a company providing Ai services to the US?",
+    "key": "answer_relevance",
+    "lesson": "An answer that gives the rules applying to the user's scenario and then states what the source does not settle HAS addressed the question. Acknowledging a limit is not evasion.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The user asked how the Act applies when their company provides AI services to the US (implying output used outside the EU). The answer explains the general territorial scope provisions but explicitly states it cannot answer the specific case of serving the US market, leaving the actual question unresolved."
+  },
+  {
+    "experiment": "eu-ai-act-rag-342c66bc",
+    "question": "If we use AI for biometric categorisation in a workplace, is it prohibited, high-risk, or neither — and what follows?",
+    "key": "answer_correctness",
+    "lesson": "A candidate that reaches the reference's conclusion and adds a condition under which a different outcome applies is refining, not contradicting. Only an irreconcilable conclusion scores 0.",
+    "judge_score": 0,
+    "human_score": 1,
+    "judge_reasoning": "The reference simply states that biometric categorisation in the workplace is high-risk (yes, high risk). The candidate's answer is overly complicated, introducing a distinction that suggests it could be prohibited in some cases, which contradicts the reference's clear answer of high-risk. This adds confusion rather than conveying the same substantive content."
+  }
+]

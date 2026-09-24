@@ -1,0 +1,339 @@
+{
+  "run_meta": {
+    "timestamp": "2026-07-13T15:02:14",
+    "model": "anthropic/claude-haiku-4.5",
+    "top_k": 5,
+    "similarity_threshold": 0.45,
+    "csv_path": "C:\\Users\\Asus\\Documents\\Portfolio1 - RAG\\eu-ai-act-rag\\eval harness for EU AI Act.csv",
+    "n_rows": 3,
+    "limit": 3
+  },
+  "aggregates": {
+    "overall": {
+      "n": 3,
+      "retrieval_applicable": 3,
+      "retrieval_hits": 3,
+      "hit_rate": 1.0,
+      "mrr": 0.8333333333333334,
+      "refusal_classes": {
+        "correct_answer": 3
+      },
+      "false_answers": 0,
+      "false_refusals": 0,
+      "errors": 0,
+      "refusal_accuracy": 1.0,
+      "total_latency_seconds": 12.54581440007314,
+      "avg_latency_seconds": 4.181938133357714,
+      "total_cost_usd": 0.011331540000000001,
+      "avg_cost_usd": 0.00377718,
+      "total_tokens": 8418,
+      "flagged_for_review": 1
+    },
+    "by_category": {
+      "exemption": {
+        "n": 1,
+        "retrieval_applicable": 1,
+        "retrieval_hits": 1,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "refusal_classes": {
+          "correct_answer": 1
+        },
+        "false_answers": 0,
+        "false_refusals": 0,
+        "errors": 0,
+        "refusal_accuracy": 1.0,
+        "total_latency_seconds": 3.7175873001106083,
+        "avg_latency_seconds": 3.7175873001106083,
+        "total_cost_usd": 0.00265023,
+        "avg_cost_usd": 0.00265023,
+        "total_tokens": 1613,
+        "flagged_for_review": 0
+      },
+      "multi-hop": {
+        "n": 1,
+        "retrieval_applicable": 1,
+        "retrieval_hits": 1,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "refusal_classes": {
+          "correct_answer": 1
+        },
+        "false_answers": 0,
+        "false_refusals": 0,
+        "errors": 0,
+        "refusal_accuracy": 1.0,
+        "total_latency_seconds": 3.3607960999943316,
+        "avg_latency_seconds": 3.3607960999943316,
+        "total_cost_usd": 0.00212751,
+        "avg_cost_usd": 0.00212751,
+        "total_tokens": 1509,
+        "flagged_for_review": 1
+      },
+      "single": {
+        "n": 1,
+        "retrieval_applicable": 1,
+        "retrieval_hits": 1,
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "refusal_classes": {
+          "correct_answer": 1
+        },
+        "false_answers": 0,
+        "false_refusals": 0,
+        "errors": 0,
+        "refusal_accuracy": 1.0,
+        "total_latency_seconds": 5.467430999968201,
+        "avg_latency_seconds": 5.467430999968201,
+        "total_cost_usd": 0.0065538,
+        "avg_cost_usd": 0.0065538,
+        "total_tokens": 5296,
+        "flagged_for_review": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "1",
+      "category": "exemption",
+      "raw_category": "exemption",
+      "question": "What AI systems are excluded from the scope of the EU AI Act?",
+      "should_answer": "yes",
+      "answer": "Based on the excerpts provided, the following AI systems are excluded from the scope of the EU AI Act:\n\n1. **Military, defence, and national security purposes**: AI systems placed on the market, put into service, or used for military, defence, or national security purposes are excluded \"(Recital 24)\". However, if such a system is used outside those purposes for civilian, humanitarian, law enforcement, or public security purposes, it falls within the scope of the Regulation \"(Recital 24)\".\n\n2. **Scientific research and development**: AI systems and models specifically developed and put into service for the sole purpose of scientific research and development are excluded \"(Article 2(6))\". Additionally, research, testing, or development activity regarding AI systems or models prior to their being placed on the market or put into service is excluded, though testing in real world conditions is not covered by this exclusion \"(Article 2(8))\".\n\n3. **Free and open-source AI systems**: AI systems released under free and open-source licences are excluded, unless they are placed on the market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50 \"(Article 2(12))\".",
+      "refused": false,
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "citation": "Recital 24",
+          "provision": "Recital 24",
+          "similarity": 0.7670823335647583,
+          "text": "If, and insofar as, AI systems are placed on the market, put into service, or used with or without modification of such \nsystems for military, defence or national security purposes, those should be excluded from the scope of this \nRegulation regardless of which type of entity is carrying out those activities, such as whether it is a public or private \nentity. As regards military and defence purposes, such exclusion is justified both by Article 4(2) TEU and by the \nspecificities of the Member States’ and the common Union defence policy covered by Chapter 2 of Title V TEU that \nare subject to public international law, which is therefore the more appropriate legal framework for the regulation of \nAI systems in the context of the use of lethal force and other AI systems in the context of military and defence \nactivities. As regards national security purposes, the exclusion is justified both by the fact that national security \nremains the sole responsibility of Member States in accordance with Article 4(2) TEU and by the specific nature and \noperational needs of national security activities and specific national rules applicable to those activities. Nonetheless, \nif an AI system developed, placed on the market, put into service or used for military, defence or national security \npurposes is used outside those temporarily or permanently for other purposes, for example, civilian or humanitarian \npurposes, law enforcement or public security purposes, such a system would fall within the scope of this Regulation. \nIn that case, the entity using the AI system for other than military, defence or national security purposes should \nensure the compliance of the AI system with this Regulation, unless the system is already compliant with this \nRegulation. AI systems placed on the market or put into service for an excluded purpose, namely military, defence or \nnational security, and one or more non-excluded purposes, such as civilian purposes or law enforcement, fall within \nthe scope of this Regulation and providers of those systems should ensure compliance with this Regulation. In those \ncases, the fact that an AI system may fall within the scope of this Regulation should not affect the possibility of \nentities carrying out national security, defence and military activities, regardless of the type of entity carrying out \nthose activities, to use AI systems for national security, military and defence purposes, the use of which is excluded \nfrom the scope of this Regulation. An AI system placed on the market for civilian or law enforcement purposes \nwhich is used with or without modification for military, defence or national security purposes should not fall within \nthe scope of this Regulation, regardless of the type of entity carrying out those activities."
+        },
+        {
+          "rank": 2,
+          "citation": "Recital 25",
+          "provision": "Recital 25",
+          "similarity": 0.7506917119026184,
+          "text": "This Regulation should support innovation, should respect freedom of science, and should not undermine research \nand development activity. It is therefore necessary to exclude from its scope AI systems and models specifically \ndeveloped and put into service for the sole purpose of scientific research and development. Moreover, it is necessary \nto ensure that this Regulation does not otherwise affect scientific research and development activity on AI systems or \nmodels prior to being placed on the market or put into service. As regards product-oriented research, testing and \ndevelopment activity regarding AI systems or models, the provisions of this Regulation should also not apply prior \nto those systems and models being put into service or placed on the market. That exclusion is without prejudice to \nthe obligation to comply with this Regulation where an AI system falling into the scope of this Regulation is placed \non the market or put into service as a result of such research and development activity and to the application of \nprovisions on AI regulatory sandboxes and testing in real world conditions. Furthermore, without prejudice to the \nexclusion of AI systems specifically developed and put into service for the sole purpose of scientific research and \ndevelopment, any other AI system that may be used for the conduct of any research and development activity should \nremain subject to the provisions of this Regulation. In any event, any research and development activity should be \ncarried out in accordance with recognised ethical and professional standards for scientific research and should be \nconducted in accordance with applicable Union law."
+        },
+        {
+          "rank": 3,
+          "citation": "Article 2(8)",
+          "provision": "Article 2",
+          "similarity": 0.7391753792762756,
+          "text": "Scope\n8. This Regulation does not apply to any research, testing or development activity regarding AI systems or AI models \nprior to their being placed on the market or put into service. Such activities shall be conducted in accordance with \napplicable Union law. Testing in real world conditions shall not be covered by that exclusion."
+        },
+        {
+          "rank": 4,
+          "citation": "Article 2(12)",
+          "provision": "Article 2",
+          "similarity": 0.7390369176864624,
+          "text": "Scope\n12. This Regulation does not apply to AI systems released under free and open-source licences, unless they are placed on \nthe market or put into service as high-risk AI systems or as an AI system that falls under Article 5 or 50."
+        },
+        {
+          "rank": 5,
+          "citation": "Article 2(6)",
+          "provision": "Article 2",
+          "similarity": 0.7236101627349854,
+          "text": "Scope\n6. This Regulation does not apply to AI systems or AI models, including their output, specifically developed and put into \nservice for the sole purpose of scientific research and development."
+        }
+      ],
+      "expected": {
+        "keys": [
+          "Recital 24",
+          "Recital 25",
+          "Article 2"
+        ],
+        "unparsed": [],
+        "raw": "Recital 24, 25, article 2"
+      },
+      "retrieval": {
+        "applicable": true,
+        "hit": true,
+        "matched": [
+          "Recital 24",
+          "Recital 25",
+          "Article 2"
+        ],
+        "missed": [],
+        "mrr_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "refusal": {
+        "expected_refuse": false,
+        "actual_refuse": false,
+        "class": "correct_answer"
+      },
+      "latency_seconds": 3.7175873001106083,
+      "tokens": {
+        "prompt": 1347,
+        "completion": 266,
+        "total": 1613
+      },
+      "cost_usd": 0.00265023,
+      "review_flags": []
+    },
+    {
+      "id": "2",
+      "category": "multi-hop",
+      "raw_category": "multi-hop",
+      "question": "when does this regulation come into effect?",
+      "should_answer": "yes",
+      "answer": "The EU AI Act enters into force on the twentieth day following its publication in the Official Journal of the European Union (Article 113). However, the regulation applies on a staggered basis:\n\n- The regulation generally applies from 2 August 2026 (Article 113)\n- Chapters I and II apply from 2 February 2025 (Article 113(a))\n- Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 apply from 2 August 2025, with the exception of Article 101 (Article 113(b))\n- Article 6(1) and corresponding obligations apply from 2 August 2027 (Article 113(c))",
+      "refused": false,
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "citation": "Recital 179",
+          "provision": "Recital 179",
+          "similarity": 0.7412438988685608,
+          "text": "This Regulation should apply from 2 August 2026. However, taking into account the unacceptable risk associated \nwith the use of AI in certain ways, the prohibitions as well as the general provisions of this Regulation should already \napply from 2 February 2025. While the full effect of those prohibitions follows with the establishment of the \ngovernance and enforcement of this Regulation, anticipating the application of the prohibitions is important to take \naccount of unacceptable risks and to have an effect on other procedures, such as in civil law. Moreover, the \ninfrastructure related to the governance and the conformity assessment system should be operational before \n2 August 2026, therefore the provisions on notified bodies and governance structure should apply from 2 August \n2025. Given the rapid pace of technological advancements and adoption of general-purpose AI models, obligations \nfor providers of general-purpose AI models should apply from 2 August 2025. Codes of practice should be ready by \n2 May 2025 in view of enabling providers to demonstrate compliance on time. The AI Office should ensure that \nclassification rules and procedures are up to date in light of technological developments. In addition, Member States \nshould lay down and notify to the Commission the rules on penalties, including administrative fines, and ensure that \nthey are properly and effectively implemented by the date of application of this Regulation. Therefore the provisions \non penalties should apply from 2 August 2025."
+        },
+        {
+          "rank": 2,
+          "citation": "Article 112(3)",
+          "provision": "Article 112",
+          "similarity": 0.7295111417770386,
+          "text": "Evaluation and review\n3. By 2 August 2029 and every four years thereafter, the Commission shall submit a report on the evaluation and review \nof this Regulation to the European Parliament and to the Council. The report shall include an assessment with regard to the \nstructure of enforcement and the possible need for a Union agency to resolve any identified shortcomings. On the basis of \nthe findings, that report shall, where appropriate, be accompanied by a proposal for amendment of this Regulation. The \nreports shall be made public."
+        },
+        {
+          "rank": 3,
+          "citation": "Article 113",
+          "provision": "Article 113",
+          "similarity": 0.7263684868812561,
+          "text": "Entry into force and application\nThis Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the \nEuropean Union.\nIt shall apply from 2 August 2026.\nHowever:\n(a) Chapters I and II shall apply from 2 February 2025;\n(b) Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the \nexception of Article 101;\n(c) Article 6(1) and the corresponding obligations in this Regulation shall apply from 2 August 2027.\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.\nDone at Brussels, 13 June 2024.\nFor the European Parliament\nThe President\nR. METSOLA\nFor the Council\nThe President\nM. MICHEL"
+        },
+        {
+          "rank": 4,
+          "citation": "Article 112(13)",
+          "provision": "Article 112",
+          "similarity": 0.7125788927078247,
+          "text": "Evaluation and review\n13. By 2 August 2031, the Commission shall carry out an assessment of the enforcement of this Regulation and shall \nreport on it to the European Parliament, the Council and the European Economic and Social Committee, taking into \naccount the first years of application of this Regulation. On the basis of the findings, that report shall, where appropriate, be \naccompanied by a proposal for amendment of this Regulation with regard to the structure of enforcement and the need for \na Union agency to resolve any identified shortcomings."
+        },
+        {
+          "rank": 5,
+          "citation": "Recital 174",
+          "provision": "Recital 174",
+          "similarity": 0.7066422700881958,
+          "text": "Given the rapid technological developments and the technical expertise required to effectively apply this Regulation, \nthe Commission should evaluate and review this Regulation by 2 August 2029 and every four years thereafter and \nreport to the European Parliament and the Council. In addition, taking into account the implications for the scope of \nthis Regulation, the Commission should carry out an assessment of the need to amend the list of high-risk AI \nsystems and the list of prohibited practices once a year. Moreover, by 2 August 2028 and every four years thereafter, \nthe Commission should evaluate and report to the European Parliament and to the Council on the need to amend \nthe list of high-risk areas headings in the annex to this Regulation, the AI systems within the scope of the \ntransparency obligations, the effectiveness of the supervision and governance system and the progress on the \ndevelopment of standardisation deliverables on energy efficient development of general-purpose AI models, \nincluding the need for further measures or actions. Finally, by 2 August 2028 and every three years thereafter, the \nCommission should evaluate the impact and effectiveness of voluntary codes of conduct to foster the application of \nthe requirements provided for high-risk AI systems in the case of AI systems other than high-risk AI systems and \npossibly other additional requirements for such AI systems."
+        }
+      ],
+      "expected": {
+        "keys": [
+          "Recital 179",
+          "Article 11"
+        ],
+        "unparsed": [
+          "2 august 20263"
+        ],
+        "raw": "recital 179, article 11, 2 august 20263"
+      },
+      "retrieval": {
+        "applicable": true,
+        "hit": true,
+        "matched": [
+          "Recital 179"
+        ],
+        "missed": [
+          "Article 11"
+        ],
+        "mrr_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      "refusal": {
+        "expected_refuse": false,
+        "actual_refuse": false,
+        "class": "correct_answer"
+      },
+      "latency_seconds": 3.3607960999943316,
+      "tokens": {
+        "prompt": 1349,
+        "completion": 160,
+        "total": 1509
+      },
+      "cost_usd": 0.00212751,
+      "review_flags": [
+        "unparsed_expected_tokens: ['2 august 20263']"
+      ]
+    },
+    {
+      "id": "3",
+      "category": "single",
+      "raw_category": "single",
+      "question": "what is an AI system",
+      "should_answer": "yes",
+      "answer": "According to the EU AI Act, an \"AI system\" means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments (Article 3(1)).\n\nKey characteristics that distinguish AI systems include:\n\n- **Capability to infer**: This refers to the process of obtaining outputs such as predictions, content, recommendations, or decisions, which can influence physical and virtual environments, and the capability to derive models or algorithms from inputs or data (Recital 12).\n\n- **Machine-based operation**: AI systems run on machines (Recital 12).\n\n- **Varying levels of autonomy**: AI systems are designed to operate with some degree of independence of actions from human involvement and capabilities to operate without human intervention (Recital 12).\n\n- **Adaptiveness**: AI systems may exhibit self-learning capabilities after deployment, allowing the system to change while in use (Recital 12).\n\n- **Techniques**: The techniques enabling inference include machine learning approaches that learn from data to achieve objectives, and logic- and knowledge-based approaches that infer from encoded knowledge (Recital 12).\n\nAI systems can be used on a stand-alone basis or as a component of a product, whether physically integrated (embedded) or serving functionality without being integrated (non-embedded) (Recital 12).",
+      "refused": false,
+      "error": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "citation": "Recital 12",
+          "provision": "Recital 12",
+          "similarity": 0.8055371642112732,
+          "text": "The notion of ‘AI system’ in this Regulation should be clearly defined and should be closely aligned with the work of \ninternational organisations working on AI to ensure legal certainty, facilitate international convergence and wide \nacceptance, while providing the flexibility to accommodate the rapid technological developments in this field. \nMoreover, the definition should be based on key characteristics of AI systems that distinguish it from simpler \ntraditional software systems or programming approaches and should not cover systems that are based on the rules \ndefined solely by natural persons to automatically execute operations. A key characteristic of AI systems is their \ncapability to infer. This capability to infer refers to the process of obtaining the outputs, such as predictions, content, \nrecommendations, or decisions, which can influence physical and virtual environments, and to a capability of AI \nsystems to derive models or algorithms, or both, from inputs or data. The techniques that enable inference while \nbuilding an AI system include machine learning approaches that learn from data how to achieve certain objectives, \nand logic- and knowledge-based approaches that infer from encoded knowledge or symbolic representation of the \ntask to be solved. The capacity of an AI system to infer transcends basic data processing by enabling learning, \nreasoning or modelling. The term ‘machine-based’ refers to the fact that AI systems run on machines. The reference \nto explicit or implicit objectives underscores that AI systems can operate according to explicit defined objectives or \nto implicit objectives. The objectives of the AI system may be different from the intended purpose of the AI system \nin a specific context. For the purposes of this Regulation, environments should be understood to be the contexts in \nwhich the AI systems operate, whereas outputs generated by the AI system reflect different functions performed by \nAI systems and include predictions, content, recommendations or decisions. AI systems are designed to operate with \nvarying levels of autonomy, meaning that they have some degree of independence of actions from human \ninvolvement and of capabilities to operate without human intervention. The adaptiveness that an AI system could \nexhibit after deployment, refers to self-learning capabilities, allowing the system to change while in use. AI systems \ncan be used on a stand-alone basis or as a component of a product, irrespective of whether the system is physically \nintegrated into the product (embedded) or serves the functionality of the product without being integrated therein \n(non-embedded)."
+        },
+        {
+          "rank": 2,
+          "citation": "Article 3",
+          "provision": "Article 3",
+          "similarity": 0.7677793502807617,
+          "text": "Definitions\nFor the purposes of this Regulation, the following definitions apply:\n(1)\n‘AI system’ means a machine-based system that is designed to operate with varying levels of autonomy and that may \nexhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, \nhow to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or \nvirtual environments;\n(2)\n‘risk’ means the combination of the probability of an occurrence of harm and the severity of that harm;\n(3)\n‘provider’ means a natural or legal person, public authority, agency or other body that develops an AI system or \na general-purpose AI model or that has an AI system or a general-purpose AI model developed and places it on the \nmarket or puts the AI system into service under its own name or trademark, whether for payment or free of charge;\n(4)\n‘deployer’ means a natural or legal person, public authority, agency or other body using an AI system under its \nauthority except where the AI system is used in the course of a personal non-professional activity;\n(5)\n‘authorised representative’ means a natural or legal person located or established in the Union who has received and \naccepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform \nand carry out on its behalf the obligations and procedures established by this Regulation;\n(6)\n‘importer’ means a natural or legal person located or established in the Union that places on the market an AI system \nthat bears the name or trademark of a natural or legal person established in a third country;\n(7)\n‘distributor’ means a natural or legal person in the supply chain, other than the provider or the importer, that makes \nan AI system available on the Union market;\n\n(9)\n‘placing on the market’ means the first making available of an AI system or a general-purpose AI model on the Union \nmarket;\n(10) ‘making available on the market’ means the supply of an AI system or a general-purpose AI model for distribution or \nuse on the Union market in the course of a commercial activity, whether in return for payment or free of charge;\n(11) ‘putting into service’ means the supply of an AI system for first use directly to the deployer or for own use in the Union \nfor its intended purpose;\n(12) ‘intended purpose’ means the use for which an AI system is intended by the provider, including the specific context \nand conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional \nor sales materials and statements, as well as in the technical documentation;\n(13) ‘reasonably foreseeable misuse’ means the use of an AI system in a way that is not in accordance with its intended \npurpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems, \nincluding other AI systems;\n(14) ‘safety component’ means a component of a product or of an AI system which fulfils a safety function for that product \nor AI system, or the failure or malfunctioning of which endangers the health and safety of persons or property;\n(15) ‘instructions for use’ means the information provided by the provider to inform the deployer of, in particular, an AI \nsystem’s intended purpose and proper use;\n(16) ‘recall of an AI system’ means any measure aiming to achieve the return to the provider or taking out of service or \ndisabling the use of an AI system made available to deployers;\n(17) ‘withdrawal of an AI system’ means any measure aiming to prevent an AI system in the supply chain being made \navailable on the market;\n(18) ‘performance of an AI system’ means the ability of an AI system to achieve its intended purpose;\n(19) ‘notifying authority’ means the national authority responsible for setting up and carrying out the necessary procedures \nfor the assessment, designation and notification of conformity assessment bodies and for their monitoring;\n(20) ‘conformity assessment’ means the process of demonstrating whether the requirements set out in Chapter III, Section 2 \nrelating to a high-risk AI system have been fulfilled;\n(21) ‘conformity assessment body’ means a body that performs third-party conformity assessment activities, including \ntesting, certification and inspection;\n(22) ‘notified body’ means a conformity assessment body notified in accordance with this Regulation and other relevant \nUnion harmonisation legislation;\n(23) ‘substantial modification’ means a change to an AI system after its placing on the market or putting into service which \nis not foreseen or planned in the initial conformity assessment carried out by the provider and as a result of which the \ncompliance of the AI system with the requirements set out in Chapter III, Section 2 is affected or results in \na modification to the intended purpose for which the AI system has been assessed;\n(24) ‘CE marking’ means a marking by which a provider indicates that an AI system is in conformity with the requirements \nset out in Chapter III, Section 2 and other applicable Union harmonisation legislation providing for its affixing;\n(25) ‘post-market monitoring system’ means all activities carried out by providers of AI systems to collect and review \nexperience gained from the use of AI systems they place on the market or put into service for the purpose of \nidentifying any need to immediately apply any necessary corrective or preventive actions;\n(26) ‘market surveillance authority’ means the national authority carrying out the activities and taking the measures\n\n(27) ‘harmonised standard’ means a harmonised standard as defined in Article 2(1), point (c), of Regulation (EU) \nNo 1025/2012;\n(28) ‘common specification’ means a set of technical specifications as defined in Article 2, point (4) of Regulation (EU) \nNo 1025/2012, providing means to comply with certain requirements established under this Regulation;\n(29) ‘training data’ means data used for training an AI system through fitting its learnable parameters;\n(30) ‘validation data’ means data used for providing an evaluation of the trained AI system and for tuning its non-learnable \nparameters and its learning process in order, inter alia, to prevent underfitting or overfitting;\n(31) ‘validation data set’ means a separate data set or part of the training data set, either as a fixed or variable split;\n(32) ‘testing data’ means data used for providing an independent evaluation of the AI system in order to confirm the \nexpected performance of that system before its placing on the market or putting into service;\n(33) ‘input data’ means data provided to or directly acquired by an AI system on the basis of which the system produces an \noutput;\n(34) ‘biometric data’ means personal data resulting from specific technical processing relating to the physical, physiological \nor behavioural characteristics of a natural person, such as facial images or dactyloscopic data;\n(35) ‘biometric identification’ means the automated recognition of physical, physiological, behavioural, or psychological \nhuman features for the purpose of establishing the identity of a natural person by comparing biometric data of that \nindividual to biometric data of individuals stored in a database;\n(36) ‘biometric verification’ means the automated, one-to-one verification, including authentication, of the identity of \nnatural persons by comparing their biometric data to previously provided biometric data;\n(37) ‘special categories of personal data’ means the categories of personal data referred to in Article 9(1) of Regulation (EU) \n2016/679, Article 10 of Directive (EU) 2016/680 and Article 10(1) of Regulation (EU) 2018/1725;\n(38) ‘sensitive operational data’ means operational data related to activities of prevention, detection, investigation or \nprosecution of criminal offences, the disclosure of which could jeopardise the integrity of criminal proceedings;\n(39) ‘emotion recognition system’ means an AI system for the purpose of identifying or inferring emotions or intentions of \nnatural persons on the basis of their biometric data;\n(40) ‘biometric categorisation system’ means an AI system for the purpose of assigning natural persons to specific \ncategories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly \nnecessary for objective technical reasons;\n(41) ‘remote biometric identification system’ means an AI system for the purpose of identifying natural persons, without \ntheir active involvement, typically at a distance through the comparison of a person’s biometric data with the \nbiometric data contained in a reference database;\n(42) ‘real-time remote biometric identification system’ means a remote biometric identification system, whereby the \ncapturing of biometric data, the comparison and the identification all occur without a significant delay, comprising \nnot only instant identification, but also limited short delays in order to avoid circumvention;\n(43) ‘post-remote biometric identification system’ means a remote biometric identification system other than a real-time \nremote biometric identification system;\n(44) ‘publicly accessible space’ means any publicly or privately owned physical place accessible to an undetermined number \nof natural persons regardless of whether certain conditions for access may apply and regardless of the potential\n\n(45) ‘law enforcement authority’ means:\n(a) any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or \nthe execution of criminal penalties, including the safeguarding against and the prevention of threats to public \nsecurity; or\n(b) any other body or entity entrusted by Member State law to exercise public authority and public powers for the \npurposes of the prevention, investigation, detection or prosecution of criminal offences or the execution of \ncriminal penalties, including the safeguarding against and the prevention of threats to public security;\n(46) ‘law enforcement’ means activities carried out by law enforcement authorities or on their behalf for the prevention, \ninvestigation, detection or prosecution of criminal offences or the execution of criminal penalties, including \nsafeguarding against and preventing threats to public security;\n(47) ‘AI Office’ means the Commission’s function of contributing to the implementation, monitoring and supervision of AI \nsystems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January \n2024; references in this Regulation to the AI Office shall be construed as references to the Commission;\n(48) ‘national competent authority’ means a notifying authority or a market surveillance authority; as regards AI systems \nput into service or used by Union institutions, agencies, offices and bodies, references to national competent \nauthorities or market surveillance authorities in this Regulation shall be construed as references to the European Data \nProtection Supervisor;\n(49) ‘serious incident’ means an incident or malfunctioning of an AI system that directly or indirectly leads to any of the \nfollowing:\n(a) the death of a person, or serious harm to a person’s health;\n(b) a serious and irreversible disruption of the management or operation of critical infrastructure;\n(c) the infringement of obligations under Union law intended to protect fundamental rights;\n(d) serious harm to property or the environment;\n(50) ‘personal data’ means personal data as defined in Article 4, point (1), of Regulation (EU) 2016/679;\n(51) ‘non-personal data’ means data other than personal data as defined in Article 4, point (1), of Regulation (EU) \n2016/679;\n(52) ‘profiling’ means profiling as defined in Article 4, point (4), of Regulation (EU) 2016/679;\n(53) ‘real-world testing plan’ means a document that describes the objectives, methodology, geographical, population and \ntemporal scope, monitoring, organisation and conduct of testing in real-world conditions;\n(54) ‘sandbox plan’ means a document agreed between the participating provider and the competent authority describing \nthe objectives, conditions, timeframe, methodology and requirements for the activities carried out within the sandbox;\n(55) ‘AI regulatory sandbox’ means a controlled framework set up by a competent authority which offers providers or \nprospective providers of AI systems the possibility to develop, train, validate and test, where appropriate in real-world \nconditions, an innovative AI system, pursuant to a sandbox plan for a limited time under regulatory supervision;\n(56) ‘AI literacy’ means skills, knowledge and understanding that allow providers, deployers and affected persons, taking \ninto account their respective rights and obligations in the context of this Regulation to make an informed deployment\n\n(57) ‘testing in real-world conditions’ means the temporary testing of an AI system for its intended purpose in real-world \nconditions outside a laboratory or otherwise simulated environment, with a view to gathering reliable and robust data \nand to assessing and verifying the conformity of the AI system with the requirements of this Regulation and it does \nnot qualify as placing the AI system on the market or putting it into service within the meaning of this Regulation, \nprovided that all the conditions laid down in Article 57 or 60 are fulfilled;\n(58) ‘subject’, for the purpose of real-world testing, means a natural person who participates in testing in real-world \nconditions;\n(59) ‘informed consent’ means a subject’s freely given, specific, unambiguous and voluntary expression of his or her \nwillingness to participate in a particular testing in real-world conditions, after having been informed of all aspects of \nthe testing that are relevant to the subject’s decision to participate;\n(60) ‘deep fake’ means AI-generated or manipulated image, audio or video content that resembles existing persons, objects, \nplaces, entities or events and would falsely appear to a person to be authentic or truthful;\n(61) ‘widespread infringement’ means any act or omission contrary to Union law protecting the interest of individuals, \nwhich:\n(a) has harmed or is likely to harm the collective interests of individuals residing in at least two Member States other \nthan the Member State in which:\n(i) the act or omission originated or took place;\n(ii) the provider concerned, or, where applicable, its authorised representative is located or established; or\n(iii) the deployer is established, when the infringement is committed by the deployer;\n(b) has caused, causes or is likely to cause harm to the collective interests of individuals and has common features, \nincluding the same unlawful practice or the same interest being infringed, and is occurring concurrently, \ncommitted by the same operator, in at least three Member States;\n(62) ‘critical infrastructure’ means critical infrastructure as defined in Article 2, point (4), of Directive (EU) 2022/2557;\n(63) ‘general-purpose AI model’ means an AI model, including where such an AI model is trained with a large amount of \ndata using self-supervision at scale, that displays significant generality and is capable of competently performing \na wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into \na variety of downstream systems or applications, except AI models that are used for research, development or \nprototyping activities before they are placed on the market;\n(64) ‘high-impact capabilities’ means capabilities that match or exceed the capabilities recorded in the most advanced \ngeneral-purpose AI models;\n(65) ‘systemic risk’ means a risk that is specific to the high-impact capabilities of general-purpose AI models, having \na significant impact on the Union market due to their reach, or due to actual or reasonably foreseeable negative effects \non public health, safety, public security, fundamental rights, or the society as a whole, that can be propagated at scale \nacross the value chain;\n(66) ‘general-purpose AI system’ means an AI system which is based on a general-purpose AI model and which has the \ncapability to serve a variety of purposes, both for direct use as well as for integration in other AI systems;\n(67) ‘floating-point operation’ means any mathematical operation or assignment involving floating-point numbers, which \nare a subset of the real numbers typically represented on computers by an integer of fixed precision scaled by an \ninteger exponent of a fixed base;\n(68) ‘downstream provider’ means a provider of an AI system, including a general-purpose AI system, which integrates an \nAI model regardless of whether the AI model is provided by themselves and vertically integrated or provided by"
+        },
+        {
+          "rank": 3,
+          "citation": "Recital 4",
+          "provision": "Recital 4",
+          "similarity": 0.7454215288162231,
+          "text": "AI is a fast evolving family of technologies that contributes to a wide array of economic, environmental and societal \nbenefits across the entire spectrum of industries and social activities. By improving prediction, optimising operations \nand resource allocation, and personalising digital solutions available for individuals and organisations, the use of AI \ncan provide key competitive advantages to undertakings and support socially and environmentally beneficial \noutcomes, for example in healthcare, agriculture, food safety, education and training, media, sports, culture, \ninfrastructure management, energy, transport and logistics, public services, security, justice, resource and energy \nefficiency, environmental monitoring, the conservation and restoration of biodiversity and ecosystems and climate \nchange mitigation and adaptation."
+        },
+        {
+          "rank": 4,
+          "citation": "Annex III(8)",
+          "provision": "Annex 3",
+          "similarity": 0.7349909543991089,
+          "text": "High-risk AI systems referred to in Article 6(2)\nHigh-risk AI systems pursuant to Article 6(2) are the AI systems listed in any of the following areas:\n8. Administration of justice and democratic processes:\n(a) AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in \nresearching and interpreting facts and the law and in applying the law to a concrete set of facts or to be used in\n\n(b) AI systems intended to be used for influencing the outcome of an election or referendum or the voting \nbehaviour of natural persons in the exercise of their vote in elections or referenda. This does not include AI \nsystems to the output of which natural persons are not directly exposed, such as tools used to organise, optimise \nor structure political campaigns from an administrative or logistical point of view."
+        },
+        {
+          "rank": 5,
+          "citation": "Recital 100",
+          "provision": "Recital 100",
+          "similarity": 0.723335325717926,
+          "text": "When a general-purpose AI model is integrated into or forms part of an AI system, this system should be considered \nto be general purpose AI system when due to this integration this system has the capability to serve a variety of"
+        }
+      ],
+      "expected": {
+        "keys": [
+          "Article 3"
+        ],
+        "unparsed": [],
+        "raw": "article 3"
+      },
+      "retrieval": {
+        "applicable": true,
+        "hit": true,
+        "matched": [
+          "Article 3"
+        ],
+        "missed": [],
+        "mrr_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      "refusal": {
+        "expected_refuse": false,
+        "actual_refuse": false,
+        "class": "correct_answer"
+      },
+      "latency_seconds": 5.467430999968201,
+      "tokens": {
+        "prompt": 4965,
+        "completion": 331,
+        "total": 5296
+      },
+      "cost_usd": 0.0065538,
+      "review_flags": []
+    }
+  ]
+}

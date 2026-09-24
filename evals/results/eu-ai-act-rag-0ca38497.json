@@ -1,0 +1,1484 @@
+{
+  "experiment": "eu-ai-act-rag-0ca38497",
+  "system": "rag",
+  "model": "anthropic/claude-haiku-4.5",
+  "judge_model": "anthropic/claude-sonnet-5",
+  "rows": [
+    {
+      "run_id": "01a0d140-49ae-7b90-ab5a-124c25e7b505",
+      "id": "17",
+      "category": "single",
+      "question": "what is a general purpose AI Model?",
+      "should_answer": "yes",
+      "expected_answer": "\tSystemic Risk Applies to General-Purpose AI (GPAI) models; in particular the generality and the capability to competently perform a wide range of distinct task",
+      "answer": "According to the EU AI Act excerpts provided, a general-purpose AI model is defined by its key functional characteristics:\n\nA general-purpose AI model is characterized by \"the generality and the capability to competently perform a wide range of distinct tasks\" (Recital 97). These models are \"typically trained on large amounts of data, through various methods, such as self-supervised, unsupervised or reinforcement learning\" (Recital 97).\n\nImportantly, \"AI models are essential components of AI systems, [but] they do not constitute AI systems on their own. AI models require the addition of further components, such as for example a user interface, to become AI systems\" (Recital 97).\n\nThe Act provides a specific threshold: \"models with at least a billion of parameters and trained with a large amount of data using self-supervision at scale should be considered to display significant generality and to competently perform a wide range of distinctive tasks\" (Recital 98).\n\nA concrete example is provided: \"Large generative AI models are a typical example for a general-purpose AI model, given that they allow for flexible generation of content, such as in the form of text, audio, images or video, that can readily accommodate a wide range of distinctive tasks\" (Recital 99).\n\nGeneral-purpose AI models \"may be placed on the market in various ways, including through libraries, application programming interfaces (APIs), as direct download, or as physical copy\" and \"may be further modified or fine-tuned into new models\" (Recital 97).",
+      "refused": false,
+      "citations": [
+        "Recital 97",
+        "Recitals 98-101",
+        "Article 51(1-3)",
+        "Recital 111",
+        "Article 3(66-68)",
+        "Recitals 112-113",
+        "Annex XII(1-2)",
+        "Recitals 162-163"
+      ],
+      "error": null,
+      "latency_s": 11.476012,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims are directly quoted or closely paraphrased from Recitals 97-99 as cited, with accurate attributions. No claims appear unsupported or misattributed."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly defines a general-purpose AI model, citing its key characteristics, generality, training methods, distinction from AI systems, parameter threshold, and examples, fully addressing the question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate captures the core substance from the reference\u2014generality and capability to competently perform a wide range of distinct tasks\u2014matching the reference's key point, and adds correct extra detail without contradicting it."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-7683-7591-8427-71907565e046",
+      "id": "16",
+      "category": "multi-hop",
+      "question": "for how long should certificates for high risk systems  be valid?",
+      "should_answer": "yes",
+      "expected_answer": "Certificates shall be valid for the period they indicate, which shall not exceed five years for AI systems covered by \nAnnex I, and four years for AI systems covered by Annex III",
+      "answer": "According to Article 44(2), certificates for high-risk AI systems have different validity periods depending on which Annex they are covered by:\n\n- For AI systems covered by Annex I, certificates shall be valid for a period not exceeding **five years** (Article 44(2))\n- For AI systems covered by Annex III, certificates shall be valid for a period not exceeding **four years** (Article 44(2))\n\nAdditionally, at the request of the provider, the validity of a certificate may be extended for further periods, each not exceeding five years for Annex I systems and four years for Annex III systems, based on a re-assessment in accordance with the applicable conformity assessment procedures (Article 44(2)).",
+      "refused": false,
+      "citations": [
+        "Article 44(1-3)",
+        "Article 36(9)",
+        "Article 42(1-2)",
+        "Article 43(1-2)",
+        "Recital 55",
+        "Recital 72",
+        "Article 9(1-4)",
+        "Article 15(1-4)"
+      ],
+      "error": null,
+      "latency_s": 3.84012,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims about certificate validity periods and extension provisions are directly and accurately supported by Article 44(2) as quoted in the excerpt, with correct citation."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses the question of validity periods for certificates for high-risk systems, providing specific durations with citations."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly states five years for Annex I and four years for Annex III, matching the reference, plus adds accurate extra detail about extensions."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-8583-77a0-977d-eba6389e04f2",
+      "id": "38",
+      "category": "single",
+      "question": "what article talks about classifying ai models as ones with systemic risk>?",
+      "should_answer": "yes",
+      "expected_answer": "article 51",
+      "answer": "Article 51 (Classification of general-purpose AI models as general-purpose AI models with systemic risk) covers the classification of AI models as ones with systemic risk. (Article 51(1-3))\n\nThis article is located in Chapter V (GENERAL-PURPOSE AI MODELS), Section 1 (Classification rules). (Article 51(1-3))",
+      "refused": false,
+      "citations": [
+        "Recital 97",
+        "Recital 110",
+        "Recitals 114-115",
+        "Recital 111",
+        "Recitals 112-113",
+        "Article 55(1-3)",
+        "Article 51(1-3)",
+        "Recital 97"
+      ],
+      "error": null,
+      "latency_s": 2.945748,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Both claims are directly supported by the Article 51(1-3) excerpt, which explicitly shows the article title 'Classification of general-purpose AI models as general-purpose AI models with systemic risk' under Chapter V, Section 1: Classification rules."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly identifies Article 51 as the article addressing classification of general-purpose AI models with systemic risk, matching the specific ask for an article number."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly identifies Article 51 as the answer, matching the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-a211-7bb3-8515-046fdff1ec53",
+      "id": "11",
+      "category": "multi-hop",
+      "question": "If we deploy AI for CV screening, what obligations apply?",
+      "should_answer": "yes",
+      "expected_answer": "it's a high risk system,  so testing, monitoring etc",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided do not contain specific information about CV screening or recruitment AI systems, their classification as high-risk or otherwise, or the particular obligations that would apply to their deployment. While the excerpts discuss general transparency obligations, high-risk AI system requirements, and deployer responsibilities, they do not specifically address CV screening use cases.",
+      "refused": true,
+      "citations": [
+        "Article 50(1-2)",
+        "Recitals 89-91",
+        "Recitals 92-93",
+        "Article 50(3-5)",
+        "Recital 96",
+        "Recital 165",
+        "Recitals 25-26",
+        "Article 50(6-7)"
+      ],
+      "error": null,
+      "latency_s": 4.730189,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-9105-7b10-8bbc-526e090025c0",
+      "id": "36",
+      "category": "out of scope",
+      "question": "how does this act apply if we are a company providing Ai services to the US?",
+      "should_answer": "yes",
+      "expected_answer": "If you are established in the Union and placing AI systems on the market or putting them into service in the Union, the Act applies to you ",
+      "answer": "Based on the excerpts provided, the EU AI Act applies to your company in the following circumstances:\n\n**If you are established in the Union:** The Act applies to you if you are \"placing on the market or putting into service AI systems or placing on the market general-purpose AI models in the Union, irrespective of whether those providers are established or located within the Union or in a third country\" (Article 2(1)(a)).\n\n**If you are established outside the Union:** The Act applies to you if \"the output produced by the AI system is used in the Union\" (Article 2(1)(c)).\n\nHowever, the excerpts provided do not contain specific information about how the Act applies when you are providing AI services to the US (a third country) where the output is used in the US rather than the Union. The excerpts focus on application within the Union market and when outputs are used in the Union.\n\nTo fully answer your question about providing AI services to the US specifically, I would need additional excerpts addressing the Act's territorial scope regarding third countries outside the Union.",
+      "refused": false,
+      "citations": [
+        "Article 3(1-9)",
+        "Article 3(10-19)",
+        "Recitals 82-83",
+        "Article 2(1-3)",
+        "Article 2(4-11)",
+        "Article 54(1-4)",
+        "Article 62(1-3)",
+        "Recital 9"
+      ],
+      "error": null,
+      "latency_s": 4.363702,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All factual claims (Article 2(1)(a), 2(1)(c) quotes and their attribution) are accurately drawn from the Article 2(1-3) excerpt, and the answer appropriately notes the lack of information for the US-specific scenario rather than fabricating claims. No outside knowledge is introduced."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "The user asked how the Act applies to a company providing AI services to the US. The answer explains the Act's territorial scope rules and explicitly notes the excerpts don't address the specific US scenario, effectively declining to answer the actual question while providing general adjacent info."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly conveys the core point that the Act applies if the company is established in the Union placing AI systems on the market/into service in the Union, matching the reference. It adds extra detail about third-country application, which is permitted as additional correct detail and does not contradict the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-b48b-7001-86d6-1cb3e27f3448",
+      "id": "7",
+      "category": "multi-hop",
+      "question": "what are the requirements for a high risk system? How do we ensure compliance?",
+      "should_answer": "yes",
+      "expected_answer": "risk management system",
+      "answer": "# Requirements for High-Risk AI Systems\n\nHigh-risk AI systems must comply with requirements laid down in Section 2 of Chapter III, taking into account their intended purpose and the generally acknowledged state of the art on AI and AI-related technologies (Article 8(1)).\n\nAccording to Recital 66, the key requirements apply to high-risk AI systems regarding:\n- Risk management\n- The quality and relevance of data sets used\n- Technical documentation and record-keeping\n- Transparency and the provision of information to deployers\n- Human oversight\n- Robustness, accuracy and cybersecurity\n\n## Ensuring Compliance\n\n**Risk Management System**: High-risk AI systems must establish, implement, document and maintain a risk management system (Article 9(1)). This is a continuous iterative process throughout the entire lifecycle of the system (Article 9(2)), requiring regular systematic review and updating (Recital 65).\n\n**Quality Management System**: Providers must put a quality management system in place that ensures compliance with the Regulation (Article 17(1)). This system must be documented in written policies, procedures and instructions, and includes aspects such as regulatory compliance strategy, design and development procedures, examination and testing procedures, data management systems, the risk management system, post-market monitoring, and serious incident reporting procedures (Article 17(1)).\n\n**Testing**: High-risk AI systems must be tested to identify appropriate risk management measures, ensuring consistent performance for their intended purpose (Article 9(6)). Testing must occur prior to being placed on the market or put into service (Article 9(8)).",
+      "refused": false,
+      "citations": [
+        "Article 8(1-2)",
+        "Article 9(1-4)",
+        "Recital 66",
+        "Article 17(1)",
+        "Article 9(5-9)",
+        "Recital 77",
+        "Recital 65",
+        "Article 9(10)"
+      ],
+      "error": null,
+      "latency_s": 5.660291,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All factual claims in the answer are directly supported by the cited excerpts (Article 8(1), Recital 66, Article 9(1)-(2), Article 17(1), Article 9(6) and (8)), and the attributions are accurate, including the regular-review point which is explicitly stated in Recital 65."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses both parts of the question: it lists the specific requirements for high-risk AI systems (risk management, data quality, documentation, transparency, human oversight, robustness/accuracy/cybersecurity) with citations, and explains compliance mechanisms (risk management system, quality management system, testing) with specific article references."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate covers risk management system in detail (Article 9), matching the reference's key point, plus additional accurate context. It does not contradict the reference and fully includes the required substance."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-d439-7861-8053-3a0aca7f28ff",
+      "id": "24",
+      "category": "multi-hop",
+      "question": "is sex trafficking a prohibited AI practice?",
+      "should_answer": "yes",
+      "expected_answer": "no;  No. AI used for sex trafficking is not automatically a prohibited AI practice under the EU AI Act.",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts mention \"trafficking in human beings\" as a context where real-time remote biometric identification systems may be used in law enforcement (Article 5(1)(h)(i)), but this describes a *permitted exception* to a prohibition, not a prohibited AI practice itself. Sex trafficking is not identified as a prohibited AI practice in the excerpts provided.",
+      "refused": true,
+      "citations": [
+        "Article 5(1)",
+        "Article 5(1)",
+        "Recitals 44-45",
+        "Recitals 25-26",
+        "Recitals 134-135",
+        "Article 5(1)",
+        "Recital 28",
+        "Recital 27"
+      ],
+      "error": null,
+      "latency_s": 2.650349,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-caa8-73b2-995d-fb2ee54a21a6",
+      "id": "27",
+      "category": "multi-hop",
+      "question": "Does R&D fall under a high risk AI system?",
+      "should_answer": "yes",
+      "expected_answer": "no",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided define high-risk AI systems by reference to specific use cases (such as those in Annex III), safety components of products, and systems used in judicial and democratic processes. However, they do not contain information about whether research and development (R&D) activities or R&D-focused AI systems are classified as high-risk AI systems.",
+      "refused": true,
+      "citations": [
+        "Article 15(5)",
+        "Recital 53",
+        "Recitals 61-62",
+        "Recital 111",
+        "Article 15(1-4)",
+        "Article 25(3-5)",
+        "Article 9(5-9)",
+        "Article 6(3-5)"
+      ],
+      "error": null,
+      "latency_s": 2.449426,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-de94-7432-b749-1dce1e23cd80",
+      "id": "8",
+      "category": "multi-hop",
+      "question": "how must high-risk systems be tested?",
+      "should_answer": "yes",
+      "expected_answer": "",
+      "answer": "According to the EU AI Act excerpts provided, high-risk AI systems must be tested as follows:\n\n**Timing and Scope:**\nHigh-risk AI systems \"shall be tested for the purpose of identifying the most appropriate and targeted risk management measures\" (Article 9(6)). Testing \"shall be performed, as appropriate, at any time throughout the development process, and, in any event, prior to their being placed on the market or put into service\" (Article 9(8)).\n\n**Testing Standards:**\n\"Testing shall ensure that high-risk AI systems perform consistently for their intended purpose and that they are in compliance with the requirements set out in this Section\" (Article 9(6)). Additionally, \"Testing shall be carried out against prior defined metrics and probabilistic thresholds that are appropriate to the intended purpose of the high-risk AI system\" (Article 9(8)).\n\n**Testing Procedures:**\n\"Testing procedures may include testing in real-world conditions in accordance with Article 60\" (Article 9(7)).\n\n**Performance Requirements:**\nHigh-risk AI systems must \"achieve an appropriate level of accuracy, robustness, and cybersecurity, and that they perform consistently in those respects throughout their lifecycle\" (Article 15(1)), with \"the levels of accuracy and the relevant accuracy metrics of high-risk AI systems...declared in the accompanying instructions of use\" (Article 15(3)).",
+      "refused": false,
+      "citations": [
+        "Article 9(5-9)",
+        "Article 9(1-4)",
+        "Recital 72",
+        "Article 15(5)",
+        "Recitals 74-75",
+        "Article 15(1-4)",
+        "Article 60(4)",
+        "Article 60(1-3)"
+      ],
+      "error": null,
+      "latency_s": 4.873863,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All quoted claims are accurately attributed to the correct excerpts (Article 9(6), 9(7), 9(8), Article 15(1), 15(3)) and no outside information or misattribution is introduced."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses how high-risk AI systems must be tested, covering timing, standards, procedures, and performance requirements with specific citations, fully engaging with the question asked."
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "no expected_answer in reference_outputs; cannot grade"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-17e6-7800-9975-f76b49ec075f",
+      "id": "31",
+      "category": "single",
+      "question": "what does article 97 talk about?",
+      "should_answer": "yes",
+      "expected_answer": "It is about how the EU AI Act itself can be updated over time without having to pass an entirely new law.",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided do not include Article 97. The excerpts contain Articles 3, 66, 103, 104, 106, 108, and 109, but Article 97 is not among them.",
+      "refused": true,
+      "citations": [
+        "Article 3(61-65)",
+        "Article 104",
+        "Article 3(47-54)",
+        "Article 103",
+        "Article 109",
+        "Article 108(4-6)",
+        "Article 106",
+        "Article 66"
+      ],
+      "error": null,
+      "latency_s": 2.117221,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d140-f19e-7281-9220-a6d81e95fa3b",
+      "id": "14",
+      "category": "multi-hop",
+      "question": "what are the obligations of importers vs distributers vs deployers?",
+      "should_answer": "yes",
+      "expected_answer": "Importer = \"Check before bringing it into the EU\" . Distributor = \"Check before selling\"Deployer = \"Use the AI responsibly\"",
+      "answer": "# Obligations of Importers, Distributors, and Deployers\n\n## Importers' Obligations\n\nBefore placing a high-risk AI system on the market, importers must [(Article 23(1))]:\n- Verify that the system is in conformity with the Regulation by checking that: the conformity assessment procedure has been carried out; the provider has drawn up technical documentation; the system bears the required CE marking and is accompanied by the EU declaration of conformity and instructions for use; and the provider has appointed an authorised representative.\n\nAdditional importer obligations include [(Article 23(2-5))]:\n- Not place non-conforming or falsified systems on the market until brought into conformity\n- Inform the provider, authorised representative, and market surveillance authorities if the system presents a risk\n- Indicate their name, registered trade name or trademark, and contact address on the system and its packaging or documentation\n- Ensure storage or transport conditions do not jeopardise compliance\n- Keep copies of the notified body certificate, instructions for use, and EU declaration of conformity for 10 years after placement on the market or putting into service\n- Provide competent authorities with necessary information and documentation upon reasoned request [(Article 23(6))], and cooperate with authorities in actions relating to the system [(Article 23(7))]\n\n## Distributors' Obligations\n\nBefore making a high-risk AI system available on the market, distributors must [(Article 24(1))]:\n- Verify that it bears the required CE marking, is accompanied by a copy of the EU declaration of conformity and instructions for use, and that the provider and importer have complied with their respective obligations.\n\nAdditional distributor obligations include [(Article 24(2-6))]:\n- Not make non-conforming systems available on the market until brought into conformity\n- Inform the provider or importer if the system presents a risk\n- Ensure storage or transport conditions do not jeopardise compliance\n- Take corrective actions (bring into conformity, withdraw, or recall) if they consider a system already made available is non-conforming, or ensure the provider or importer takes such actions\n- Immediately inform the provider or importer and competent authorities if the system presents a risk, with details of non-compliance and corrective actions\n- Provide competent authorities with information and documentation upon reasoned request\n- Cooperate with competent authorities in actions relating to the system\n\n## Deployers' Obligations\n\nDeployers' obligations include [(Article 26(1-6))]:\n- Take appropriate technical and organisational measures to use systems in accordance with the instructions for use\n- Assign human oversight to natural persons with necessary competence, training, authority, and support\n- Ensure input data is relevant and sufficiently representative in view of the intended purpose (to the extent the deployer exercises control over input data)\n- Monitor the operation of the system based on the instructions for use and inform providers in accordance with Article 72\n- Suspend use and inform the provider, distributor, and market surveillance authority without undue delay if they have reason to consider the system may present a risk\n- Immediately inform the provider, then the importer or distributor and market surveillance authorities of any serious incident identified\n- Keep logs automatically generated by the system for a period appropriate to the intended purpose, of at least six months (unless otherwise provided in applicable Union or national law)",
+      "refused": false,
+      "citations": [
+        "Article 26(1-4)",
+        "Article 23(6-7)",
+        "Article 24(1-3)",
+        "Article 26(5-6)",
+        "Article 25(1-2)",
+        "Article 24(4-6)",
+        "Article 23(1-5)",
+        "Recitals 84-85"
+      ],
+      "error": null,
+      "latency_s": 9.799581,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Each claim in the answer traces directly to the corresponding excerpt (Article 23, 24, and 26 provisions), with no added external legal knowledge or misattribution detected. The citations align with the actual excerpt content for importers, distributors, and deployers."
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-202b-7af2-b1bb-e4482c1c28f4",
+      "id": "18",
+      "category": "multi-hop",
+      "question": "what are AI sandboxes?",
+      "should_answer": "yes",
+      "expected_answer": "\u2018AI regulatory sandbox\u2019 means a controlled framework set up by a competent authority which offers providers or \nprospective providers of AI systems the possibility to develop, train, validate and test, where appropriate in real-world",
+      "answer": "Based on the excerpts provided, AI regulatory sandboxes are controlled environments established to support innovation in AI development. Here are their key characteristics:\n\n**Definition and Purpose:**\nAI regulatory sandboxes provide \"a controlled environment that fosters innovation and facilitates the development, training, testing and validation of innovative AI systems for a limited time before their being placed on the market or put into service\" (Article 57(5)).\n\n**Objectives:**\nThe objectives include: fostering AI innovation through controlled experimentation; ensuring compliance with the EU AI Regulation and other relevant law; enhancing legal certainty for innovators; improving competent authorities' oversight and understanding of AI opportunities and risks; facilitating regulatory learning; supporting cooperation and best practices; and accelerating market access, particularly for SMEs and start-ups (Recital 139).\n\n**Forms and Scope:**\n\"AI regulatory sandboxes could be established in physical, digital or hybrid form and may accommodate physical as well as digital products\" (Recital 138).\n\n**Supervision:**\n\"The supervision of the AI systems in the AI regulatory sandbox should therefore cover their development, training, testing and validation before the systems are placed on the market or put into service\" (Recital 139). Sandboxes may also include \"testing in real world conditions supervised therein\" (Article 57(5)).\n\n**Support Services:**\nProspective providers, particularly SMEs and start-ups, \"shall be directed, where relevant, to pre-deployment services such as guidance on the implementation of this Regulation, to other value-adding services such as help with standardisation documents and certification, testing and experimentation facilities\" (Article 58(3)).",
+      "refused": false,
+      "citations": [
+        "Recital 138",
+        "Article 57(1-5)",
+        "Recital 139",
+        "Article 58(2)",
+        "Article 58(3-4)",
+        "Article 57(17)",
+        "Recital 139",
+        "Article 57(6-8)"
+      ],
+      "error": null,
+      "latency_s": 5.869005,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-4cbb-74f3-8b5f-105993ffa03e",
+      "id": "40",
+      "category": "single",
+      "question": "what is this document dated as?",
+      "should_answer": "yes",
+      "expected_answer": "6/13/2024",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts do not contain a document date or publication date for the EU AI Act itself. While some of the excerpts reference dates of other EU regulations and decisions (such as dates when those regulations were adopted or published in the Official Journal), there is no overall date given for the EU AI Act document as a whole.",
+      "refused": true,
+      "citations": [
+        "Annex X(2)",
+        "Annex XI(1)",
+        "Article 56(9)",
+        "Annex XI(2-1)",
+        "Recital 60",
+        "Annex IV(1)",
+        "Article 18(1-3)",
+        "Annex X(5-6)"
+      ],
+      "error": null,
+      "latency_s": 2.60757,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-3719-77b0-a8d7-21125f86e1bb",
+      "id": "1",
+      "category": "exemption",
+      "question": "What AI systems are excluded from the scope of the EU AI Act?",
+      "should_answer": "yes",
+      "expected_answer": "AI systems used for : military, defence or national security purposes , ai systems used for scientific research and development; ",
+      "answer": "Based on the excerpts provided, the following AI systems are excluded from the scope of the EU AI Act:\n\n1. **Military, defence, and national security purposes**: AI systems placed on the market, put into service, or used for military, defence, or national security purposes are excluded (Article 2(4)), regardless of the type of entity carrying out those activities. However, if such a system is used outside those purposes for civilian, humanitarian, law enforcement, or public security purposes, it falls within the scope of the Regulation (Recital 24).\n\n2. **Scientific research and development**: AI systems specifically developed and put into service for the sole purpose of scientific research and development are excluded (Article 2(6)). Additionally, research, testing, or development activity regarding AI systems prior to their being placed on the market or put into service is excluded, though testing in real world conditions is not covered by this exclusion (Article 2(8)).\n\n3. **Personal non-professional use**: The Regulation does not apply to obligations of deployers who are natural persons using AI systems in the course of a purely personal non-professional activity (Article 2(10)).\n\n4. **Free and open-source AI systems**: AI systems released under free and open-source licences are excluded, unless they are placed on the market or put into service as high-risk AI systems or fall under Article 5 or 50 (Article 2(12)).\n\n5. **Third country authorities and international organisations**: The Regulation does not apply to public authorities in third countries or international organisations using AI systems in the framework of international cooperation or agreements for law enforcement and judicial cooperation, provided adequate safeguards for fundamental rights are provided (Article 2(4)).",
+      "refused": false,
+      "citations": [
+        "Recitals 25-26",
+        "Recital 24",
+        "Recital 24",
+        "Article 2(4-11)",
+        "Article 2(12)",
+        "Recital 12",
+        "Recital 53",
+        "Recital 131"
+      ],
+      "error": null,
+      "latency_s": 5.538003,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly enumerates categories of AI systems excluded from the EU AI Act's scope with article/recital citations, matching exactly what was asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate includes both exclusions from the reference (military/defence/national security and scientific research/development) plus additional accurate exclusions, which is allowed as extra detail."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-56eb-7f22-9830-25df172fd97b",
+      "id": "12",
+      "category": "multi-hop",
+      "question": "who is a deployer? How do we ensure transaperency for deployers?",
+      "should_answer": "yes",
+      "expected_answer": "\u2018deployer\u2019 means a natural or legal person, public authority, agency or other body using an AI system under its \nauthority except where the AI system is used in the course of a personal non-professional activity. \nHigh-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently \ntransparent to enable deployers to interpret a system\u2019s output and use it appropriately",
+      "answer": "# Who is a Deployer?\n\nI cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts refer extensively to \"deployers\" and their obligations, but do not contain a definition of who qualifies as a deployer.\n\n# How Do We Ensure Transparency for Deployers?\n\nThe Act ensures transparency for deployers through several mechanisms:\n\n**Design and Development Requirements:**\nHigh-risk AI systems \"shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately. An appropriate type and degree of transparency shall be ensured with a view to achieving compliance with the relevant obligations of the provider and deployer\" (Article 13(1)).\n\n**Instructions for Use:**\n\"High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise that include concise, complete, correct and clear information that is relevant, accessible and comprehensible to deployers\" (Article 13(2)). These instructions should include \"the characteristics, capabilities and limitations of performance of the AI system\" and information on \"possible known and foreseeable circumstances related to the use of the high-risk AI system...under which the AI system can lead to risks to health, safety, and fundamental rights\" (Recital 72).\n\n**Documentation:**\n\"Providers should ensure that all documentation, including the instructions for use, contains meaningful, comprehensive, accessible and understandable information, taking into account the needs and foreseeable knowledge of the target deployers\" (Recital 72).",
+      "refused": true,
+      "citations": [
+        "Recital 96",
+        "Article 26(1-4)",
+        "Article 26(10)",
+        "Recital 72",
+        "Article 27(3-5)",
+        "Article 26(5-6)",
+        "Recitals 92-93",
+        "Article 13(1-2)"
+      ],
+      "error": null,
+      "latency_s": 4.141728,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-6719-7243-ac76-274504592281",
+      "id": "15",
+      "category": "single",
+      "question": "which section talks about notifying everyone along with the procedure?",
+      "should_answer": "yes",
+      "expected_answer": "Section 4, article 30",
+      "answer": "Based on the excerpts provided, **Chapter III (HIGH-RISK AI SYSTEMS), Section 4 (Notifying authorities and notified bodies), Article 30** covers the notification procedure and talks about notifying everyone involved.\n\nSpecifically, Article 30(2) states that \"Notifying authorities shall notify the Commission and the other Member States, using the electronic notification tool developed and managed by the Commission, of each conformity assessment body\" (Article 30(2)). Article 30(3) then details what information must be included in that notification (Article 30(3)), and Article 30(4) describes the procedure for when objections may be raised (Article 30(4)).",
+      "refused": false,
+      "citations": [
+        "Article 30(1-5)",
+        "Article 36(1-4)",
+        "Article 28(1-7)",
+        "Article 39",
+        "Article 31(7-12)",
+        "Article 38(1-3)",
+        "Article 35(1-2)",
+        "Article 37(1-4)"
+      ],
+      "error": null,
+      "latency_s": 3.032392,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims in the answer accurately reflect the content of Article 30(2), (3), and (4) as given in the excerpts, with correct attribution and paraphrase/quotation matching the source text."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The question asks which section addresses notifying everyone along with the procedure, and the answer identifies a specific section/article (Chapter III, Section 4, Article 30) and explains the notification procedure details, directly addressing the ask with a specific locator."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly identifies Section 4, Article 30, matching the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-72f1-7711-bd35-53fa72fbb44a",
+      "id": "2",
+      "category": "multi-hop",
+      "question": "when does this regulation come into effect?",
+      "should_answer": "yes",
+      "expected_answer": "his Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the \nEuropean Union.\nIt shall apply from 2 August 2026.\nHowever:\n(a) Chapters I and II shall apply from 2 February 2025;\n(b) Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the \nexception of Article 101;\n(c) Article 6(1) and the corresponding obligations in this Regulation shall apply from 2 August 2027.",
+      "answer": "The EU AI Act has a phased entry into force and application schedule (Article 113):\n\nThe Regulation **enters into force on the twentieth day following its publication in the Official Journal of the European Union** (Article 113).\n\nHowever, it **applies from 2 August 2026** as the general date of application (Article 113).\n\nThat said, certain provisions apply earlier:\n\n- **Chapters I and II apply from 2 February 2025** (Article 113(a))\n- **Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 apply from 2 August 2025**, with the exception of Article 101 (Article 113(b))\n- **Article 6(1) and corresponding obligations apply from 2 August 2027** (Article 113(c))\n\nAdditionally, the prohibitions and general provisions apply from **2 February 2025** (Recital 179), and provisions on notified bodies, governance structure, general-purpose AI model obligations, and penalties apply from **2 August 2025** (Recital 179).",
+      "refused": false,
+      "citations": [
+        "Recitals 179-180",
+        "Article 113",
+        "Recitals 174-175",
+        "Article 112(1-4)",
+        "Recitals 176-178",
+        "Article 107",
+        "Preamble",
+        "Article 1(1-2)"
+      ],
+      "error": null,
+      "latency_s": 4.077867,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims in the answer directly correspond to statements in Article 113 and Recital 179, correctly cited. No outside information or misattribution is present."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly and thoroughly addresses when the regulation comes into effect, citing entry into force, general application date, and phased provisions with specific dates and article references."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate covers all elements of the reference: entry into force date, general application date, and all three phased exceptions (a), (b), (c) with correct details including the Article 101 exception. It adds extra detail from Recital 179 which does not contradict the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-8a92-7c80-834a-7e725a37e1c5",
+      "id": "26",
+      "category": "out of scope",
+      "question": "How much fine will a AI system plotting terrrorism in Singapore get in EU?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided address fines under the EU AI Act for providers of general-purpose AI models and certain violations within the EU regulatory framework. However, they do not contain information about: (1) how the EU AI Act applies to AI systems operating outside the EU (such as in Singapore), (2) fines for terrorism-related offenses specifically, or (3) how extraterritorial application of the Act works. The question involves legal and jurisdictional issues beyond what these excerpts cover.",
+      "refused": true,
+      "citations": [
+        "Recitals 169-172",
+        "Article 101(1-6)",
+        "Recitals 166-168",
+        "Article 79(2)",
+        "Article 74(12-14)",
+        "Article 80(7-8)",
+        "Recital 131",
+        "Article 82(1-5)"
+      ],
+      "error": null,
+      "latency_s": 2.883909,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Correctly refused an unanswerable question."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-82df-79d3-8850-b6856652f8f6",
+      "id": "19",
+      "category": "single",
+      "question": "by when should AI sandboxesby member states be operational?",
+      "should_answer": "yes",
+      "expected_answer": "by 2 August 2026.",
+      "answer": "According to Article 57(1), Member States shall ensure that their competent authorities establish at least one AI regulatory sandbox at national level, which shall be operational by 2 August 2026 (Article 57(1)).",
+      "refused": false,
+      "citations": [
+        "Article 57(1-5)",
+        "Recital 138",
+        "Recital 139",
+        "Article 57(12-16)",
+        "Article 58(2)",
+        "Recital 139",
+        "Article 58(1)",
+        "Article 58(3-4)"
+      ],
+      "error": null,
+      "latency_s": 1.970064,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The claim directly matches the text of Article 57(1), which states exactly this requirement and deadline, with correct citation."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly states the deadline (2 August 2026) for Member States to have operational AI regulatory sandboxes, which is exactly what was asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly states the deadline of 2 August 2026, matching the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-a6bb-7d72-ae07-407250dda4ea",
+      "id": "30",
+      "category": "out of scope, multi-hop",
+      "question": "we are a company selling AI recruitment software across europe. What penalties must we pay for non-compliance ?",
+      "should_answer": "yes",
+      "expected_answer": "hall be subject to administrative \nfines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the \npreceding financial year, whichever is higher ; .\nNon-compliance with any of the following provisions related to operators or notified bodies, other than those laid \ndown in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up \nto 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:",
+      "answer": null,
+      "refused": false,
+      "citations": [
+        "Recitals 169-172",
+        "Recitals 166-168",
+        "Article 101(1-6)",
+        "Article 100(4-7)",
+        "Article 80(7-8)",
+        "Article 99(1-4)",
+        "Recitals 118-119",
+        "Recital 109"
+      ],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.356007,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-a564-7a73-abec-b4a3eda5de3e",
+      "id": "25",
+      "category": "out of scope",
+      "question": "What countries does the EU act cover?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": null,
+      "refused": false,
+      "citations": [
+        "Annex X(2)",
+        "Annex X(3-4)",
+        "Annex X(5-6)",
+        "Annex X(1)",
+        "Annex X(7)",
+        "Annex I(1-7)",
+        "Annex I(20)",
+        "Annex I(19)"
+      ],
+      "error": "Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}",
+      "latency_s": 0.342576,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "pipeline error, nothing to grade: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-95d6-72c1-83b8-4bcbec061161",
+      "id": "35",
+      "category": "single",
+      "question": "what is the information to be submitted for a high-risk system while real-world testing?",
+      "should_answer": "yes",
+      "expected_answer": "The following information shall be provided and thereafter kept up to date with regard to testing in real world conditions to \nbe registered in accordance with Article 60:\n1.\n2.\n3.\n4.\n5.\nA Union-wide unique single identification number of the testing in real world conditions;\nThe name and contact details of the provider or prospective provider and of the deployers involved in the testing in \nreal world conditions;\nA brief description of the AI system, its intended purpose, and other information necessary for the identification of \nthe system;\nA summary of the main characteristics of the plan for testing in real world conditions;\nInformation on the suspension or termination of the testing in real world conditions",
+      "answer": "According to the excerpts provided, the information to be submitted for a high-risk AI system during real-world testing is specified in Annex IX and includes:\n\n1. \"A Union-wide unique single identification number of the testing in real world conditions\" (Annex IX(1))\n\n2. \"The name and contact details of the provider or prospective provider and of the deployers involved in the testing in real world conditions\" (Annex IX(2))\n\n3. \"A brief description of the AI system, its intended purpose, and other information necessary for the identification of the system\" (Annex IX(3))\n\n4. \"A summary of the main characteristics of the plan for testing in real world conditions\" (Annex IX(4))\n\n5. \"Information on the suspension or termination of the testing in real world conditions\" (Annex IX(5))\n\nAdditionally, providers must submit \"A summary of the data protection impact assessment carried out in accordance with Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680 as specified in Article 26(8) of this Regulation, where applicable\" (Annex IX).\n\nThis information must be \"provided and thereafter kept up to date\" (Annex IX).",
+      "refused": false,
+      "citations": [
+        "Article 60(1-3)",
+        "Annex IX(1-5)",
+        "Article 60(4)",
+        "Article 13(3)",
+        "Annex VIII(1-12)",
+        "Article 9(5-9)",
+        "Recital 72",
+        "Article 9(1-4)"
+      ],
+      "error": null,
+      "latency_s": 3.981757,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly lists the specific information items required under Annex IX for real-world testing of high-risk AI systems, addressing the exact question asked with concrete details."
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-a81f-77d2-89d8-8ddbda5ebbf8",
+      "id": "23",
+      "category": "single",
+      "question": "is an AI system that provides entertainment to children a prohibited AI practice?",
+      "should_answer": "yes",
+      "expected_answer": "no, but with caution",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts list specific prohibited AI practices in Article 5(1), such as systems using subliminal or manipulative techniques, systems exploiting vulnerabilities of specific groups, social scoring systems, certain biometric systems, and emotion recognition in workplace and education contexts. However, the excerpts do not contain information about whether an AI system that provides entertainment to children would constitute a prohibited practice under the Act.",
+      "refused": true,
+      "citations": [
+        "Article 5(1)",
+        "Recital 29",
+        "Recitals 44-45",
+        "Article 5(1)",
+        "Recital 28",
+        "Recital 9",
+        "Recital 56",
+        "Recitals 134-135"
+      ],
+      "error": null,
+      "latency_s": 2.806527,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-c141-7930-b5d5-9f8000d9c8ef",
+      "id": "9",
+      "category": "single",
+      "question": "how must examination of biases be carried out?",
+      "should_answer": "yes",
+      "expected_answer": "training and test data are subjected to governance. They can store personal data for testing but on conditions.",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nWhile the excerpts discuss the importance of bias detection and correction in high-risk AI systems (Recital 70) and address data governance practices to mitigate biases (Recital 67), they do not contain specific procedural requirements or methodologies for how the examination of biases must be carried out.",
+      "refused": true,
+      "citations": [
+        "Recitals 70-71",
+        "Recital 67",
+        "Article 92(7)",
+        "Article 85",
+        "Article 89(1-2)",
+        "Article 46(5-7)",
+        "Recital 96",
+        "Article 68(1-2)"
+      ],
+      "error": null,
+      "latency_s": 2.279784,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-b316-7683-920f-0b942b06327d",
+      "id": "41",
+      "category": "multi-hop",
+      "question": "I am a AI tool that evaluates students' answers during their exams. What kind of tool am I\\?",
+      "should_answer": "yes",
+      "expected_answer": "high-risk",
+      "answer": "Based on the excerpts provided, you are a **high-risk AI system** (Annex III(3)(d)).\n\nSpecifically, you fall under the category of \"AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels\" (Annex III(3)(d)).\n\nMore broadly, AI systems used in education and vocational training are classified as high-risk because \"they may determine the educational and professional course of a person's life and therefore may affect that person's ability to secure a livelihood\" (Recital 56). When improperly designed and used, such systems \"may be particularly intrusive and may violate the right to education and training as well as the right not to be discriminated against and perpetuate historical patterns of discrimination\" (Recital 56).",
+      "refused": false,
+      "citations": [
+        "Recital 59",
+        "Recital 12",
+        "Article 56(5-8)",
+        "Recitals 20-21",
+        "Recital 56",
+        "Article 4",
+        "Recital 96",
+        "Annex III(1-3)"
+      ],
+      "error": null,
+      "latency_s": 3.627455,
+      "scores": {
+        "groundedness": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_relevance": {
+          "score": null,
+          "comment": "judge error: Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, 'metadata': {'reason': 'in_flight_budget_exhausted', 'limit_source': 'openrouter_in_flight_budget', 'remedy_hint': 'Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.', 'headers': {'Retry-After': '120'}, 'provider_name': None}}, 'user_id': 'user_3B4shjcLvL8QelCqZ0dr1H5ZkCo'}"
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies the tool as high-risk, matching the reference, and adds accurate supporting detail without contradicting it."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-ca29-76e0-9916-e0ba4918c6f9",
+      "id": "13",
+      "category": "single",
+      "question": "for how long must the documentation of high-risk system that's in the market be kept?",
+      "should_answer": "yes",
+      "expected_answer": "The provider shall, for a period ending 10 years after the high-risk AI system has been placed on the market or put \ninto service, keep at the disposal of the national competent authorities:",
+      "answer": "According to the excerpts provided, the documentation retention period depends on the type of documentation:\n\n**For technical documentation and quality management system documentation:** Providers must keep documentation at the disposal of national competent authorities for a period ending **10 years after the high-risk AI system has been placed on the market or put into service** (Article 18(1)).\n\n**For automatically generated logs:** Providers must keep logs for **a period appropriate to the intended purpose of the high-risk AI system, of at least six months, unless provided otherwise in applicable Union or national law** (Article 19(1)).\n\n**For importers:** Importers must keep a copy of the notified body certificate, instructions for use, and EU declaration of conformity for **10 years after the high-risk AI system has been placed on the market or put into service** (Article 23(5)).",
+      "refused": false,
+      "citations": [
+        "Article 18(1-3)",
+        "Article 23(1-5)",
+        "Article 19(1-2)",
+        "Article 80(1-6)",
+        "Article 73(1-5)",
+        "Article 11(1-3)",
+        "Recital 72",
+        "Recital 155"
+      ],
+      "error": null,
+      "latency_s": 3.22076,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All three claims in the answer accurately reflect the content of Article 18(1), Article 19(1), and Article 23(5) respectively, with correct citations matching the source excerpts."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses the retention period for documentation of high-risk AI systems already on the market, giving specific durations (10 years, 6 months for logs, importer retention) with article citations."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate includes the core fact matching the reference (10 years after placed on market or put into service) plus additional correct details not contradicting the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-d6be-7392-b6ce-dc5d1cc06265",
+      "id": "22",
+      "category": "single",
+      "question": "what fines do providers of general purpose AI models face?",
+      "should_answer": "yes",
+      "expected_answer": "The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total \nworldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher.",
+      "answer": "According to Article 101(1), the Commission may impose on providers of general-purpose AI models fines not exceeding 3% of their annual total worldwide turnover in the preceding financial year or EUR 15,000,000, whichever is higher (Article 101(1)).\n\nThese fines may be imposed when the Commission finds that the provider intentionally or negligently: (a) infringed the relevant provisions of the Regulation; (b) failed to comply with a request for a document or information pursuant to Article 91, or supplied incorrect, incomplete or misleading information; (c) failed to comply with a measure requested under Article 93; or (d) failed to make available to the Commission access to the general-purpose AI model or general-purpose AI model with systemic risk with a view to conducting an evaluation pursuant to Article 92 (Article 101(1)).\n\nIn fixing the amount of the fine, regard shall be had to the nature, gravity and duration of the infringement, taking due account of the principles of proportionality and appropriateness, and the Commission shall also take into account commitments made in accordance with Article 93(3) or made in relevant codes of practice in accordance with Article 56 (Article 101(1)). Additionally, fines imposed must be effective, proportionate and dissuasive (Article 101(3)).",
+      "refused": false,
+      "citations": [
+        "Article 101(1-6)",
+        "Recitals 169-172",
+        "Recitals 162-163",
+        "Recitals 98-101",
+        "Recital 164",
+        "Recital 97",
+        "Article 53(1-2)",
+        "Recitals 112-113"
+      ],
+      "error": null,
+      "latency_s": 4.377603,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All factual claims in the answer are directly supported by Article 101(1) and (3) as quoted in the excerpts, with correct citation attribution and no outside information introduced."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly states the fine amount (up to 3% of worldwide turnover or EUR 15,000,000, whichever is higher), the grounds for imposing fines, and factors affecting the fine amount, fully addressing the question."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate states the exact same fine amount and cap as the reference, plus additional accurate detail from Article 101, without contradicting the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-e7d8-7f83-98ae-395ea7df4f57",
+      "id": "37",
+      "category": "single",
+      "question": "what does Annex 11 talk about?:",
+      "should_answer": "yes",
+      "expected_answer": "Technical documentation referred to in Article 53(1), point (a) \u2014 technical documentation for \nproviders of general-purpose AI models",
+      "answer": "Based on the excerpts provided, [Annex XI(1)] contains technical documentation requirements for providers of general-purpose AI models. Specifically, it requires providers to include at least the following information as appropriate to the size and risk profile of the model:\n\n1. A general description of the general-purpose AI model including: (a) the tasks that the model is intended to perform and the type and nature of AI systems in which it can be integrated; (b) the acceptable use policies applicable; (c) the date of release and methods of distribution; (d) the architecture and number of parameters; (e) the modality (e.g. text, image) and format of inputs and outputs; and (f) the licence [Annex XI(1)].\n\nThe excerpt indicates that Annex XI is \"Technical documentation referred to in Article 53(1), point (a) \u2014 technical documentation for providers of general-purpose AI models\" [Annex XI(1)], though the provided excerpts do not contain the complete contents of Annex XI beyond this initial section on general descriptions.",
+      "refused": false,
+      "citations": [
+        "Annex IV(1)",
+        "Annex IV(2)",
+        "Annex IV(3-9)",
+        "Annex IV(2)",
+        "Annex XI(1)",
+        "Annex X(2)",
+        "Annex XII(1-2)",
+        "Annex X(1)"
+      ],
+      "error": null,
+      "latency_s": 4.03921,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All factual claims in the answer directly match the content of Annex XI(1) excerpt, including the six sub-points and the title/reference to Article 53(1), point (a). No claims go beyond the provided excerpt, and citations correctly point to Annex XI(1)."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses what Annex 11 talks about, describing its content (technical documentation for general-purpose AI models) with specific details, and even notes the limitation of the excerpt provided."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate correctly identifies Annex XI as technical documentation for providers of general-purpose AI models referred to in Article 53(1)(a), matching the reference, and adds accurate extra detail without contradicting it."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d141-f79f-77e2-bcc8-61492c54d8d1",
+      "id": "10",
+      "category": "single",
+      "question": "how must high-risk systems be logged? A",
+      "should_answer": "yes",
+      "expected_answer": "automatic recording of events (logs) over the lifetime of the system.",
+      "answer": "According to the excerpts provided, high-risk AI systems must be logged as follows:\n\n**Technical capability:** \"High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system.\" (Article 12(1))\n\n**Scope of logging:** \"Logging capabilities shall enable the recording of events relevant for: (a) identifying situations that may result in the high-risk AI system presenting a risk within the meaning of Article 79(1) or in a substantial modification; (b) facilitating the post-market monitoring referred to in Article 72; and (c) monitoring the operation of high-risk AI systems referred to in Article 26(5).\" (Article 12(2))\n\n**Specific requirements for certain systems:** \"For high-risk AI systems referred to in point 1 (a), of Annex III, the logging capabilities shall provide, at a minimum: (a) recording of the period of each use of the system (start date and time and end date and time of each use); (b) the reference database against which input data has been checked by the system; (c) the input data for which the search has led to a match; (d) the identification of the natural persons involved in the verification of the results, as referred to in Article 14(5).\" (Article 12(3))",
+      "refused": false,
+      "citations": [
+        "Article 12(1-3)",
+        "Article 14(1-3)",
+        "Article 19(1-2)",
+        "Recital 72",
+        "Article 9(1-4)",
+        "Article 9(5-9)",
+        "Article 13(3)",
+        "Article 20(1-2)"
+      ],
+      "error": null,
+      "latency_s": 5.0736,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All quoted claims directly match the text of Article 12(1), 12(2), and 12(3) as given in the excerpts, with correct attributions and no added outside information."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses how high-risk AI systems must be logged, citing Article 12 provisions on technical logging capability, scope, and specific requirements for certain systems, matching the question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate captures the core requirement (automatic recording of events/logs over the lifetime of the system) and adds accurate extra detail, consistent with the reference."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-0b71-7db1-b9fe-497375f4da95",
+      "id": "28",
+      "category": "multi-hop",
+      "question": "We are a company selling AI software for Children in Italy. What applies to us?",
+      "should_answer": "yes",
+      "expected_answer": "high risk system",
+      "answer": "Based on the excerpts provided, several provisions of the EU AI Act would apply to your company:\n\n**General Application:**\nSince you are placing AI systems on the market in the Union, you are a \"provider\" (Article 3(3)) and the Regulation applies to you (Article 2(1)(a)).\n\n**Key Obligations:**\n\n1. **Harmonised Rules**: You must comply with \"harmonised rules for the placing on the market, the putting into service, and the use of AI systems in the Union\" (Article 1(2)(a)).\n\n2. **Transparency Rules**: You must comply with \"harmonised transparency rules for certain AI systems\" (Article 1(2)(d)).\n\n3. **High-Risk Requirements**: If your AI systems are classified as high-risk, you must meet \"specific requirements for high-risk AI systems and obligations for operators of such systems\" (Article 1(2)(c)).\n\n4. **Protection of Minors**: The Regulation does not affect \"national labour law and law on the protection of minors, namely persons below the age of 18\" (Recital 9), meaning Italian law protecting children would continue to apply alongside this Regulation.\n\n5. **Copyright Compliance**: If your software involves general-purpose AI models, you must \"put in place a policy to comply with Union law on copyright and related rights\" (Recital 106).\n\nHowever, the excerpts provided do not contain sufficient detail about which specific articles and requirements apply to children's AI software, so you would need to review the full Act for complete guidance.",
+      "refused": false,
+      "citations": [
+        "Article 1(1-2)",
+        "Article 3(1-9)",
+        "Article 2(1-3)",
+        "Recital 8",
+        "Recitals 105-106",
+        "Recital 9",
+        "Recitals 4-7",
+        "Article 3(10-19)"
+      ],
+      "error": null,
+      "latency_s": 7.465513,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims map correctly to their cited excerpts (Article 3(3), Article 2(1)(a), Article 1(2)(a),(c),(d), Recital 9, Recital 106) without misattribution or added outside content. The answer appropriately hedges on incomplete coverage."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "The answer gives generic EU AI Act provisions (provider status, harmonised rules, high-risk requirements) but fails to address the specific 'children' angle in depth\u2014it doesn't mention the AI Act's prohibited practices around exploiting vulnerabilities of minors (Article 5) and explicitly admits it lacks sufficient detail on requirements specific to children's AI software, leaving the core of the question unanswered."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "The reference indicates the key point is that AI systems aimed at children are classified as high-risk systems. The candidate only mentions high-risk classification conditionally ('If your AI systems are classified as high-risk') without asserting that AI targeting children is indeed high-risk, missing the core substantive point."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-289b-7d52-8a51-849795c6cbf8",
+      "id": "5",
+      "category": "single",
+      "question": "what article talks about AI literacy?",
+      "should_answer": "yes",
+      "expected_answer": "Article 4: Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of \ntheir staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their \ntechnical knowledge, experience, education and training and the context the AI systems are to be used in, and considering \nthe persons or groups of persons on whom the AI systems are to be used.",
+      "answer": "Article 4 covers AI literacy (Article 4). This article is located in Chapter I (GENERAL PROVISIONS) and requires that \"Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used.\" (Article 4)",
+      "refused": false,
+      "citations": [
+        "Recitals 20-21",
+        "Article 4",
+        "Recital 120",
+        "Recital 56",
+        "Recitals 134-135",
+        "Article 95(1-4)",
+        "Recitals 105-106",
+        "Recital 12"
+      ],
+      "error": null,
+      "latency_s": 2.951351,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims about Article 4's location in Chapter I and the quoted text are directly supported by the Article 4 excerpt provided, with accurate citation."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly names Article 4 as covering AI literacy and provides supporting text, directly addressing the specific question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Candidate correctly identifies Article 4 and quotes the exact text matching the reference, providing full substantive content."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-3422-7c23-aeae-a8a2def58b4d",
+      "id": "3",
+      "category": "single",
+      "question": "what is an AI system",
+      "should_answer": "yes",
+      "expected_answer": "\u2018AI system\u2019 means a machine-based system that is designed to operate with varying levels of autonomy and that may \nexhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, \nhow to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or \nvirtual environments;",
+      "answer": "According to the EU AI Act, an 'AI system' means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments (Article 3(1)).\n\nKey characteristics of AI systems include:\n\n- **Capability to infer**: This refers to the process of obtaining outputs such as predictions, content, recommendations, or decisions, which can influence physical and virtual environments, and the capability to derive models or algorithms from inputs or data (Recital 12).\n\n- **Learning and reasoning**: The capacity of an AI system to infer transcends basic data processing by enabling learning, reasoning or modelling (Recital 12).\n\n- **Techniques**: These include machine learning approaches that learn from data how to achieve certain objectives, and logic- and knowledge-based approaches that infer from encoded knowledge or symbolic representation of the task to be solved (Recital 12).\n\n- **Autonomy and adaptiveness**: AI systems are designed to operate with varying levels of autonomy, meaning they have some degree of independence of actions from human involvement and capabilities to operate without human intervention. They may also exhibit self-learning capabilities, allowing the system to change while in use (Recital 12).\n\n- **Deployment**: AI systems can be used on a stand-alone basis or as a component of a product, whether physically integrated into the product (embedded) or serving the functionality without being integrated therein (non-embedded) (Recital 12).",
+      "refused": false,
+      "citations": [
+        "Recital 12",
+        "Recital 12",
+        "Article 3(1-9)",
+        "Recital 59",
+        "Annex III(8)",
+        "Article 4",
+        "Article 50(1-2)",
+        "Recital 18"
+      ],
+      "error": null,
+      "latency_s": 8.094146,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All factual claims in the answer are directly supported by Article 3(1) and Recital 12 as provided, with accurate attributions and no added outside information."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly defines an AI system per the EU AI Act, citing the exact statutory definition and elaborating on key characteristics, fully addressing the question asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate reproduces the exact reference definition and adds accurate supplementary detail from Recital 12, without contradicting or omitting the core content."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-53c1-7aa2-be97-088306c78324",
+      "id": "20",
+      "category": "multi-hop",
+      "question": "what data must be listed in the EU database for high-risk systems?",
+      "should_answer": "yes",
+      "expected_answer": "",
+      "answer": "According to the excerpts provided, the data that must be listed in the EU database for high-risk systems is specified as follows:\n\n\"The data listed in Sections A and B of Annex VIII shall be entered into the EU database by the provider or, where applicable, by the authorised representative.\" (Article 71(2))\n\nAdditionally, \"The data listed in Section C of Annex VIII shall be entered into the EU database by the deployer who is, or who acts on behalf of, a public authority, agency or body, in accordance with Article 49(3) and (4).\" (Article 71(3))\n\nThe database shall also \"contain personal data only in so far as necessary for collecting and processing information in accordance with this Regulation. That information shall include the names and contact details of natural persons who are responsible for registering the system and have the legal authority to represent the provider or the deployer, as applicable.\" (Article 71(5))\n\nHowever, the excerpts do not contain the actual content of Sections A, B, and C of Annex VIII, so I cannot specify the detailed data requirements beyond what is stated above.",
+      "refused": false,
+      "citations": [
+        "Article 71(6)",
+        "Article 71(1-5)",
+        "Recital 131",
+        "Recital 131",
+        "Article 49(5)",
+        "Recitals 49-50",
+        "Recital 55",
+        "Article 49(1-4)"
+      ],
+      "error": null,
+      "latency_s": 4.615859,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims in the answer are direct quotes correctly attributed to Article 71(2), 71(3), and 71(5), matching the excerpts exactly. The answer appropriately notes the limitation that Annex VIII content is not provided, avoiding unsupported claims."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "The answer addresses the question by citing which provisions govern the data requirements (Annex VIII Sections A, B, C via Article 71) and includes personal data details, but explicitly states it cannot list the detailed data content of those sections, leaving the actual data list unspecified."
+        },
+        "answer_correctness": {
+          "score": null,
+          "comment": "no expected_answer in reference_outputs; cannot grade"
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-65c9-7a83-b538-0b1125847617",
+      "id": "34",
+      "category": "out of scope",
+      "question": "What did the European Parliament say in the 2027 amendment?",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided do not contain any information about a 2027 amendment or any statements by the European Parliament regarding such an amendment. The excerpts only cover the original EU AI Act (Regulation (EU) 2024/1689) adopted on 13 June 2024 and various amendments to other EU regulations and directives that were made by this Act.",
+      "refused": true,
+      "citations": [
+        "Preamble",
+        "Article 110",
+        "Article 106",
+        "Annex X(2)",
+        "Article 105",
+        "Article 109",
+        "Article 107",
+        "Annex X(3-4)"
+      ],
+      "error": null,
+      "latency_s": 2.432343,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Correctly refused an unanswerable question."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-6f4a-7870-ba7b-13484af113da",
+      "id": "29",
+      "category": "multi-hop",
+      "question": "If we use AI for biometric categorisation in a workplace, is it prohibited, high-risk, or neither \u2014 and what follows?",
+      "should_answer": "yes",
+      "expected_answer": "Yes, high risk",
+      "answer": "Based on the excerpts provided, the answer depends on the specific type of biometric categorisation:\n\n**If categorising according to sensitive/protected attributes:** The AI system would be classified as **high-risk** (Annex III(1)(b)), not prohibited. This is because Annex III(1)(b) covers \"AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics.\"\n\n**If categorising to infer protected characteristics like political opinions, religion, race, sex life, or sexual orientation:** The AI system would be **prohibited** (Recitals 30-31), as these recitals state that \"Biometric categorisation systems that are based on natural persons' biometric data...to deduce or infer an individuals' political opinions, trade union membership, religious or philosophical beliefs, race, sex life or sexual orientation should be prohibited.\"\n\n**What follows for high-risk systems:** If the system is high-risk rather than prohibited, \"certain mandatory requirements should apply to high-risk AI systems, taking into account the intended purpose and the context of use\" (Recital 64). Additionally, since the system would be used in employment, it falls under Recital 57, which notes that AI systems used in employment \"may perpetuate historical patterns of discrimination\" and \"may also undermine their fundamental rights to data protection and privacy.\"\n\nThe key distinction is whether the biometric categorisation infers the specifically prohibited characteristics or other sensitive attributes.",
+      "refused": false,
+      "citations": [
+        "Recital 54",
+        "Recitals 30-31",
+        "Annex III(1-3)",
+        "Recital 59",
+        "Recitals 44-45",
+        "Recitals 63-64",
+        "Recitals 92-93",
+        "Recital 57"
+      ],
+      "error": null,
+      "latency_s": 5.001553,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "The answer's claims are directly supported by the quoted excerpts: Annex III(1)(b) for biometric categorisation based on sensitive attributes, Recitals 30-31 for the prohibition on inferring protected characteristics, Recital 64 for general high-risk requirements, and Recital 57 for employment-related discrimination risks. All citations correctly match the source content and no outside legal knowledge is introduced beyond the excerpts themselves."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses the workplace biometric categorisation question, distinguishing prohibited vs high-risk cases with specific Annex/Recital references, and explains consequences (mandatory requirements for high-risk, employment-related discrimination concerns). It engages fully with the specific ask."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "The reference simply states biometric categorisation in the workplace is high-risk. The candidate's answer is more nuanced, splitting into prohibited vs high-risk depending on characteristics, which contradicts the reference's straightforward classification and introduces ambiguity rather than affirming the simple 'high risk' answer."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-82d3-7bd3-ac7b-d4c3282123d0",
+      "id": "39",
+      "category": "single",
+      "question": "how many annexes do we have?",
+      "should_answer": "yes",
+      "expected_answer": "13",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts show references to specific annexes (Annex I, Annex IV, and Annex X), but they do not contain information stating the total number of annexes in the EU AI Act.",
+      "refused": true,
+      "citations": [
+        "Annex X(2)",
+        "Annex X(7)",
+        "Annex X(1)",
+        "Annex X(5-6)",
+        "Annex IV(2)",
+        "Annex IV(1)",
+        "Annex I(19)",
+        "Annex I(14-18)"
+      ],
+      "error": null,
+      "latency_s": 2.124127,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-8b20-70c2-ab16-caab94e774db",
+      "id": "32",
+      "category": "single",
+      "question": "summarize article 112",
+      "should_answer": "yes",
+      "expected_answer": "Article 112 explains when, what, and how often the Commission must review the Act to decide whether updates are needed.",
+      "answer": "# Summary of Article 112 (Evaluation and Review)\n\n**Location:** Chapter XIII (FINAL PROVISIONS), Article 112\n\nArticle 112 establishes a comprehensive framework for evaluating and reviewing the EU AI Act:\n\n**Regular Assessment Schedule:**\n- \"(a) once a year following the entry into force of this Regulation\" the Commission assesses the need to amend Annex III (high-risk AI systems list) and Article 5 (prohibited practices) (Article 112(1))\n- \"By 2 August 2028 and every four years thereafter,\" the Commission evaluates amendments to Annex III area headings, Article 50 transparency measures, and supervision effectiveness (Article 112(2))\n- \"By 2 August 2029 and every four years thereafter,\" the Commission submits comprehensive reports on the Regulation's functioning, including assessment of enforcement structure and possible need for a Union agency (Article 112(3))\n\n**Specific Focus Areas:**\nThe reports must address: \"the status of the financial, technical and human resources of the national competent authorities,\" penalties applied by Member States, adopted harmonised standards, and \"the number of undertakings that enter the market after the entry into application of this Regulation, and how many of them are SMEs\" (Article 112(4))\n\n**Additional Evaluations:**\n- By 2 August 2028, evaluation of the AI Office's functioning and resources (Article 112(5))\n- By 2 August 2028 and every four years, review of energy-efficient AI development standardisation (Article 112(6))\n- By 2 August 2028 and every three years, evaluation of voluntary codes of conduct (Article 112(7))\n\n**Methodology and Amendments:**\n\"The AI Office shall undertake to develop an objective and participative methodology for the evaluation of risk levels\" (Article 112(11)), and the Commission may submit amendment proposals based on findings (Article 112(10))",
+      "refused": false,
+      "citations": [
+        "Article 112(11-13)",
+        "Annex VIII(13-1)",
+        "Article 112(1-4)",
+        "Annex IV(1)",
+        "Annex IV(3-9)",
+        "Annex VIII(2-5)",
+        "Article 46(5-7)",
+        "Article 112(5-10)"
+      ],
+      "error": null,
+      "latency_s": 5.896311,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims (annual assessment, quadrennial reports, 2028/2029 dates, focus areas listed, AI Office evaluation, energy-efficiency review, codes of conduct evaluation, methodology development, amendment proposals) are accurately supported by the Article 112 excerpts, with correct citations and no outside information added."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly summarizes Article 112, covering its schedule and content across subsections, which is exactly what was asked."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate provides a detailed, accurate summary covering the timing, content, and frequency of Commission reviews under Article 112, matching the substance of the reference (when, what, how often reviews occur)."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-a228-7ba0-8620-3ba393248cd4",
+      "id": "6",
+      "category": "multi-hop",
+      "question": "when is the AI system considered high risk?",
+      "should_answer": "yes",
+      "expected_answer": "Biometrics, critical infrastructure, educational and vocational training, employment, law enforcement, essential public/private services , Migration, asylum and border control management, Administration of justice and democratic processes,",
+      "answer": "Based on the excerpts provided, an AI system is considered high-risk under the following circumstances:\n\n**Primary Classification:**\nAn AI system is high-risk if it is \"(a) a safety component of a product, or (b) itself a product, that is put into service of that product pursuant to the Union harmonisation legislation listed in Annex I\" (Article 6(1)), or if it is \"referred to in Annex III\" (Article 6(2)).\n\n**For stand-alone AI systems (those in Annex III):**\nAn AI system is high-risk \"if, in light of their intended purpose, they pose a high risk of harm to the health and safety or the fundamental rights of persons, taking into account both the severity of the possible harm and its probability of occurrence and they are used in a number of specifically pre-defined areas specified in this Regulation\" (Recital 52).\n\n**Specific High-Risk Areas Include:**\n- AI systems for administration of justice and democratic processes (Recital 61)\n- AI systems intended to influence election outcomes or voting behavior (Recital 62)\n- AI systems for risk assessment and pricing in health and life insurance (Recital 58)\n- AI systems for evaluating emergency calls and dispatching emergency services (Recital 58)\n- AI systems used by law enforcement authorities in specific contexts (Recital 59)\n- AI systems as safety components in critical infrastructure management (Recital 55)\n\n**Exception:**\nAn AI system referred to in Annex III \"shall not be considered to be high-risk where it does not pose a significant risk of harm to the health, safety or fundamental rights of natural persons\" if certain conditions are met (Article 6(3)), except where the system performs profiling of natural persons (Article 6(3)).",
+      "refused": false,
+      "citations": [
+        "Article 6(3-5)",
+        "Recitals 61-62",
+        "Recitals 51-52",
+        "Recital 58",
+        "Recital 59",
+        "Article 9(10)",
+        "Article 15(5)",
+        "Recital 55"
+      ],
+      "error": null,
+      "latency_s": 5.736386,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All claims are directly traceable to the provided excerpts with correct citations, including Article 6(1)-(3), Recital 52, 58, 59, 61, 62, and 55, with no unsupported additions or misattributions. The quoted material matches the excerpts closely."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly addresses when an AI system is considered high-risk, citing the relevant classification (Article 6, Annex I/III), examples of high-risk areas, and the exception, which fully engages with the question asked."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "The reference lists specific Annex III domains: biometrics, critical infrastructure, education/vocational training, employment, law enforcement, essential public/private services, migration/asylum/border control, and administration of justice/democratic processes. The candidate covers administration of justice, elections/democratic processes, insurance/emergency services, law enforcement, and critical infrastructure, but omits biometrics, education/vocational training, employment, essential public/private services, and migration/asylum/border control - missing several key domains from the list."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-b891-7232-a4af-a2a7623e90a2",
+      "id": "21",
+      "category": "multi-hop",
+      "question": "what penalties do deployers of AI systems that targets the minorities in EU face?",
+      "should_answer": "yes",
+      "expected_answer": "hall be subject to administrative \nfines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the \npreceding financial year, whichever is higher ; .\nNon-compliance with any of the following provisions related to operators or notified bodies, other than those laid \ndown in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up \nto 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts provided discuss penalties for providers of general-purpose AI models (Article 101), but do not contain specific information about penalties for deployers of AI systems that target minorities. While the excerpts address non-discrimination obligations and protections for vulnerable groups in various contexts, they do not specify what penalties deployers face for violations related to targeting minorities.",
+      "refused": true,
+      "citations": [
+        "Recital 96",
+        "Article 101(1-6)",
+        "Recitals 169-172",
+        "Recital 132",
+        "Article 26(10)",
+        "Recital 60",
+        "Recitals 92-93",
+        "Article 50(3-5)"
+      ],
+      "error": null,
+      "latency_s": 4.895005,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable, so the ask went unaddressed."
+        },
+        "answer_correctness": {
+          "score": 0,
+          "comment": "Refused a question the golden dataset marks answerable."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-cbb0-7ea0-92be-ffb4480b1b06",
+      "id": "4",
+      "category": "single",
+      "question": "what is the difference between placing on market and making available on market and putting into service?",
+      "should_answer": "yes",
+      "expected_answer": "Placing on the market = First commercial launch in the EU (only once)\nMaking available on the market = Selling or distributing in the EU (can happen many times)\nPutting into service = First actual use for its intended purpose (when deployment begins)",
+      "answer": "Based on the excerpts provided, here are the distinctions:\n\n**Placing on the market:** \"(Article 3(9)) means the first making available of an AI system or a general-purpose AI model on the Union market\" (Article 3(9)).\n\n**Making available on the market:** \"means the supply of an AI system or a general-purpose AI model for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge\" (Article 3(10)).\n\n**Putting into service:** \"means the supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose\" (Article 3(11)).\n\nThe key differences are:\n\n1. **Placing on the market** emphasizes that it is the *first* making available on the Union market (Article 3(9)).\n\n2. **Making available on the market** is broader and encompasses supply for distribution or use in commercial activity, without necessarily being the first instance (Article 3(10)).\n\n3. **Putting into service** refers to supply for *first use* directly to a deployer or for the provider's own use, and is specifically tied to the system's intended purpose (Article 3(11)).",
+      "refused": false,
+      "citations": [
+        "Article 3(10-19)",
+        "Article 2(1-3)",
+        "Article 86(1-3)",
+        "Article 62(1-3)",
+        "Article 111(1-3)",
+        "Recital 97",
+        "Article 73(1-5)",
+        "Article 3(1-9)"
+      ],
+      "error": null,
+      "latency_s": 3.778791,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "All three quoted definitions accurately match Article 3(9), 3(10), and 3(11) as given in the excerpts, with correct citations. The analytical distinctions drawn (first making available vs. broader distribution/commercial use vs. first use for intended purpose) are reasonable paraphrases directly supported by the quoted text, with no outside information introduced."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "The answer directly defines all three terms (placing on market, making available on market, putting into service) and explicitly contrasts them, addressing exactly what was asked with specific article citations."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "The candidate accurately captures the distinctions: placing on market as first making available, making available as ongoing/commercial supply (can happen multiple times), and putting into service as first use for intended purpose. This matches the reference's substance."
+        }
+      }
+    },
+    {
+      "run_id": "01a0d142-da73-7a30-ab84-700a486b78ad",
+      "id": "33",
+      "category": "out of scope",
+      "question": "summarize article 114",
+      "should_answer": "no",
+      "expected_answer": "NA",
+      "answer": "I cannot find an answer to this in the EU AI Act excerpts provided.\n\nThe excerpts you have provided do not include Article 114 or any reference to it.",
+      "refused": true,
+      "citations": [
+        "Article 70(1-5)",
+        "Article 77(1-4)",
+        "Article 99(9-11)",
+        "Annex IV(1)",
+        "Article 58(1)",
+        "Article 57(1-5)",
+        "Article 54(1-4)",
+        "Article 59(2-3)"
+      ],
+      "error": null,
+      "latency_s": 2.545533,
+      "scores": {
+        "groundedness": {
+          "score": 1,
+          "comment": "Refusal: asserts no facts, so trivially grounded."
+        },
+        "answer_relevance": {
+          "score": 1,
+          "comment": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act."
+        },
+        "answer_correctness": {
+          "score": 1,
+          "comment": "Correctly refused an unanswerable question."
+        }
+      }
+    }
+  ]
+}

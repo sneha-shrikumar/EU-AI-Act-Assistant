@@ -1,0 +1,88 @@
+question,expected_answer,expected_source,should_answer,category,dataset_split,id
+What AI systems are excluded from the scope of the EU AI Act?,"AI systems used for : military, defence or national security purposes , ai systems used for scientific research and development; ","Recital 24, recital 25, article 2",yes,exemption,"[""base""]",1
+when does this regulation come into effect?,"his Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the 
+European Union.
+It shall apply from 2 August 2026.
+However:
+(a) Chapters I and II shall apply from 2 February 2025;
+(b) Chapter III Section 4, Chapter V, Chapter VII and Chapter XII and Article 78 shall apply from 2 August 2025, with the 
+exception of Article 101;
+(c) Article 6(1) and the corresponding obligations in this Regulation shall apply from 2 August 2027.","recital 179, article 113",yes,multi-hop,"[""base""]",2
+what is an AI system,"‘AI system’ means a machine-based system that is designed to operate with varying levels of autonomy and that may 
+exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, 
+how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or 
+virtual environments;",article 3,yes,single,"[""base""]",3
+what is the difference between placing on market and making available on market and putting into service?,"Placing on the market = First commercial launch in the EU (only once)
+Making available on the market = Selling or distributing in the EU (can happen many times)
+Putting into service = First actual use for its intended purpose (when deployment begins)",article 3,yes,single,"[""base""]",4
+what article talks about AI literacy?,"Article 4: Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of 
+their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their 
+technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering 
+the persons or groups of persons on whom the AI systems are to be used.",article 4,yes,single,"[""base""]",5
+when is the AI system considered high risk?,"Biometrics, critical infrastructure, educational and vocational training, employment, law enforcement, essential public/private services , Migration, asylum and border control management, Administration of justice and democratic processes,","Article 6, annex 3",yes,multi-hop,"[""base""]",6
+what are the requirements for a high risk system? How do we ensure compliance?,risk management system,"article 8, article 9",yes,multi-hop,"[""base""]",7
+how must high-risk systems be tested?,,"article 9, article 60",yes,multi-hop,"[""base""]",8
+how must examination of biases be carried out?,training and test data are subjected to governance. They can store personal data for testing but on conditions.,"article 10(2), 10(5)",yes,single,"[""base""]",9
+how must high-risk systems be logged? A,automatic recording of events (logs) over the lifetime of the system.,article 12,yes,single,"[""base""]",10
+"If we deploy AI for CV screening, what obligations apply?","it's a high risk system,  so testing, monitoring etc","annex 3, Article 9, article 10, article 11, article 12, article 13, article 14, article15, article 16",yes,multi-hop,"[""base""]",11
+who is a deployer? How do we ensure transaperency for deployers?,"‘deployer’ means a natural or legal person, public authority, agency or other body using an AI system under its 
+authority except where the AI system is used in the course of a personal non-professional activity. 
+High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently 
+transparent to enable deployers to interpret a system’s output and use it appropriately","article 3,  article 13",yes,multi-hop,"[""base""]",12
+for how long must the documentation of high-risk system that's in the market be kept?,"The provider shall, for a period ending 10 years after the high-risk AI system has been placed on the market or put 
+into service, keep at the disposal of the national competent authorities:",article 18,yes,single,"[""base""]",13
+what are the obligations of importers vs distributers vs deployers?,"Importer = ""Check before bringing it into the EU"" . Distributor = ""Check before selling""Deployer = ""Use the AI responsibly""","article 23, article24, article 26, article 50",yes,multi-hop,"[""base""]",14
+which section talks about notifying everyone along with the procedure?,"Section 4, article 30","Section 4, article 30",yes,single,"[""base""]",15
+for how long should certificates for high risk systems  be valid?,"Certificates shall be valid for the period they indicate, which shall not exceed five years for AI systems covered by 
+Annex I, and four years for AI systems covered by Annex III",Article 44,yes,multi-hop,"[""base""]",16
+what is a general purpose AI Model?,"	Systemic Risk Applies to General-Purpose AI (GPAI) models; in particular the generality and the capability to competently perform a wide range of distinct task","article 3, recital 97",yes,single,"[""base""]",17
+what are AI sandboxes?,"‘AI regulatory sandbox’ means a controlled framework set up by a competent authority which offers providers or 
+prospective providers of AI systems the possibility to develop, train, validate and test, where appropriate in real-world",Article 57,yes,multi-hop,"[""base""]",18
+by when should AI sandboxesby member states be operational?,by 2 August 2026.,article 57,yes,single,"[""base""]",19
+what data must be listed in the EU database for high-risk systems?,,"article 71, Annex 8",yes,multi-hop,"[""base""]",20
+what penalties do deployers of AI systems that targets the minorities in EU face?,"hall be subject to administrative 
+fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the 
+preceding financial year, whichever is higher ; .
+Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid 
+down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up 
+to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:","article 99, article 5",yes,multi-hop,"[""base""]",21
+what fines do providers of general purpose AI models face?,"The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total 
+worldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher.",article 101,yes,single,"[""base""]",22
+is an AI system that provides entertainment to children a prohibited AI practice?,"no, but with caution",article 5,yes,single,"[""base""]",23
+is sex trafficking a prohibited AI practice?,no;  No. AI used for sex trafficking is not automatically a prohibited AI practice under the EU AI Act.,Article 5,yes,multi-hop,"[""base""]",24
+What countries does the EU act cover?,NA,,no,out of scope,"[""base""]",25
+How much fine will a AI system plotting terrrorism in Singapore get in EU?,NA,,no,out of scope,"[""base""]",26
+Does R&D fall under a high risk AI system?,no,"Recital 24, recital 25, article 2",yes,multi-hop,"[""base""]",27
+We are a company selling AI software for Children in Italy. What applies to us?,high risk system,"annex 3,",yes,multi-hop,"[""base""]",28
+"If we use AI for biometric categorisation in a workplace, is it prohibited, high-risk, or neither — and what follows?","Yes, high risk","annex 3,",yes,multi-hop,"[""base""]",29
+we are a company selling AI recruitment software across europe. What penalties must we pay for non-compliance ?,"hall be subject to administrative 
+fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the 
+preceding financial year, whichever is higher ; .
+Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid 
+down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up 
+to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher:","Article 99, Annex 3",yes,"out of scope, multi-hop","[""base""]",30
+what does article 97 talk about?,It is about how the EU AI Act itself can be updated over time without having to pass an entirely new law.,article 97,yes,single,"[""base""]",31
+summarize article 112,"Article 112 explains when, what, and how often the Commission must review the Act to decide whether updates are needed.",article 112,yes,single,"[""base""]",32
+summarize article 114,NA,,no,out of scope,"[""base""]",33
+What did the European Parliament say in the 2027 amendment?,NA,,no,out of scope,"[""base""]",34
+what is the information to be submitted for a high-risk system while real-world testing?,"The following information shall be provided and thereafter kept up to date with regard to testing in real world conditions to 
+be registered in accordance with Article 60:
+1.
+2.
+3.
+4.
+5.
+A Union-wide unique single identification number of the testing in real world conditions;
+The name and contact details of the provider or prospective provider and of the deployers involved in the testing in 
+real world conditions;
+A brief description of the AI system, its intended purpose, and other information necessary for the identification of 
+the system;
+A summary of the main characteristics of the plan for testing in real world conditions;
+Information on the suspension or termination of the testing in real world conditions",annex 9,yes,single,"[""base""]",35
+how does this act apply if we are a company providing Ai services to the US?,"If you are established in the Union and placing AI systems on the market or putting them into service in the Union, the Act applies to you ",article 2,yes,out of scope,"[""base""]",36
+what does Annex 11 talk about?:,"Technical documentation referred to in Article 53(1), point (a) — technical documentation for 
+providers of general-purpose AI models",annex 11,yes,single,"[""base""]",37
+what article talks about classifying ai models as ones with systemic risk>?,article 51,Article 51,yes,single,"[""base""]",38
+how many annexes do we have?,13,,yes,single,"[""base""]",39
+what is this document dated as?,6/13/2024,preamble 0,yes,single,"[""base""]",40
+I am a AI tool that evaluates students' answers during their exams. What kind of tool am I\?,high-risk,"Article 6, annex 3",yes,multi-hop,"[""base""]",41

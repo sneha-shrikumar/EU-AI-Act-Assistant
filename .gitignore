@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Environments and caches
+venv/
+__pycache__/
+*.pyc
+.claude/
+
+# Generated / rebuildable
+chroma_db/
+chunks_export.txt
+
+# Source PDF: download from EUR-Lex (see README)
+data/*.pdf
+
+# Office lock files
+~$*
+
+# Stale copies at the repo root (canonical copies live in results/eval-sheets/)
+/eval_all_*.xlsx
