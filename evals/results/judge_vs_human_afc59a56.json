@@ -1,0 +1,453 @@
+[
+ {
+  "q": "who is a deployer? How do we ensure transaperency for deployers?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "what article talks about classifying ai models as ones with systemic risk>?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "is an AI system that provides entertainment to children a prohibited AI practice?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "I am a AI tool that evaluates students' answers during their exams. What kind of tool am I\\?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly identifies the tool as a high-risk AI system under the education category, citing the relevant classification and rationale, which directly addresses the user's question about what kind of tool they are.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate correctly concludes the tool is high-risk, matching the reference, and provides accurate supporting detail without contradiction."
+ },
+ {
+  "q": "how must examination of biases be carried out?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "which section talks about notifying everyone along with the procedure?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer identifies a specific article (Article 30) and provides detailed procedural quotes about notification, directly answering the question about which section addresses notification and its procedure.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "The reference specifies both 'Section 4' and 'Article 30', but the candidate only identifies 'Article 30' without mentioning Section 4, omitting part of the required citation."
+ },
+ {
+  "q": "what is this document dated as?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "We are a company selling AI software for Children in Italy. What applies to us?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "The question specifically asks about AI software for children, but the answer only recites generic scope-of-application provisions (Article 1(2), Article 2(1)(a)) that would apply to any AI company, and explicitly admits it has no information on child-specific classification, prohibitions, or transparency rules — the core of the question. Unlike the calibration example, no scenario-specific rules were actually provided before disclaiming the gap.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "The candidate never states the key conclusion that AI software for children is classified as high-risk; instead it explicitly says the excerpts lack information on this, failing to convey the reference's substantive point."
+ },
+ {
+  "q": "Does R&D fall under a high risk AI system?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "what data must be listed in the EU database for high-risk systems?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "The answer points to the correct locators (Article 71 and Annex VIII sections A, B, C) but explicitly states it lacks the actual content of what data must be listed, which is the core of the question. It gives only a minor detail (personal data limitation) and otherwise defers entirely to a source not provided, leaving the user without the substantive list they asked for.",
+  "answer_correctness": null,
+  "answer_correctness_c": "no expected_answer in reference_outputs; cannot grade"
+ },
+ {
+  "q": "If we deploy AI for CV screening, what obligations apply?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "how many annexes do we have?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "summarize article 112",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly summarizes Article 112's provisions with specific subsections, dates, and content, matching the user's request for a summary of that article.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate captures the reference's core point—the Commission's obligation to periodically review/evaluate the Act for updates (when, what, how often)—and elaborates with accurate detail from the article. It fully conveys the substance of the reference."
+ },
+ {
+  "q": "what penalties do deployers of AI systems that targets the minorities in EU face?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "what does article 97 talk about?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "we are a company selling AI recruitment software across europe. What penalties must we pay for non-compliance ?",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 0,
+  "answer_relevance_c": "Refused a question the golden dataset marks answerable, so the ask went unaddressed.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "Refused a question the golden dataset marks answerable."
+ },
+ {
+  "q": "what does Annex 11 talk about?:",
+  "human": {
+   "answer_relevance": 0,
+   "answer_correctness": 0
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses what Annex 11 (XI) covers, describing its content on technical documentation for general-purpose AI model providers and listing specific required information items, which is exactly what the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate correctly identifies Annex XI as technical documentation referred to in Article 53(1)(a) for providers of general-purpose AI models, matching the reference, plus adds extra detail."
+ },
+ {
+  "q": "by when should AI sandboxesby member states be operational?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly provides the specific date by which AI sandboxes must be operational, citing the relevant article, which is exactly what was asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate correctly states the deadline of 2 August 2026, matching the reference."
+ },
+ {
+  "q": "what is a general purpose AI Model?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly defines a general-purpose AI model using relevant citations, addressing exactly what was asked with usable detail.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate correctly conveys the key defining feature from the reference (generality and capability to competently perform a wide range of distinct tasks) and adds accurate supporting detail without contradicting the reference."
+ },
+ {
+  "q": "What AI systems are excluded from the scope of the EU AI Act?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly lists the categories of AI systems excluded from the AI Act's scope, citing specific articles and recitals, which is exactly what the question asked for.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate includes both categories from the reference (military/defence/national security, and scientific research and development) plus additional correct exclusions, satisfying the substance requirement."
+ },
+ {
+  "q": "How much fine will a AI system plotting terrrorism in Singapore get in EU?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Correctly refused an unanswerable question."
+ },
+ {
+  "q": "what are AI sandboxes?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly and thoroughly defines AI regulatory sandboxes, covering their purpose, objectives, form, establishment, and participation, with specific citations, fully addressing the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate accurately conveys the core definition: a controlled framework/environment set up by competent authorities enabling providers to develop, train, test, and validate AI systems, matching the reference's substance, with additional correct detail."
+ },
+ {
+  "q": "what is the information to be submitted for a high-risk system while real-world testing?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly lists the specific information items required under Annex IX for real-world testing of high-risk AI systems, precisely addressing the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate covers all five listed items matching the reference, and adds an extra detail not contradicting it."
+ },
+ {
+  "q": "What countries does the EU act cover?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Correctly refused an unanswerable question."
+ },
+ {
+  "q": "what are the obligations of importers vs distributers vs deployers?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses obligations for importers, distributors, and deployers with specific enumerated duties and article citations, matching exactly what was asked in the comparative question.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate provides detailed, accurate obligations for importers (checking documentation/conformity before import), distributors (checking conformity before selling), and deployers (using AI responsibly per instructions, oversight, monitoring), which matches the substance of the reference's simplified characterizations for all three roles."
+ },
+ {
+  "q": "for how long should certificates for high risk systems  be valid?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly states the validity periods for certificates for high-risk systems (5 years for Annex I, 4 years for Annex III) with extension provisions, citing Article 44(2), which directly addresses the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate matches the reference's core content exactly (five years for Annex I, four years for Annex III) and adds accurate extra detail about extension periods, which does not contradict the reference."
+ },
+ {
+  "q": "how must high-risk systems be tested?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses how high-risk systems must be tested, citing timing, standards, purpose, methods, and objectives from relevant Article 9 provisions, giving a usable and specific response to the question.",
+  "answer_correctness": null,
+  "answer_correctness_c": "no expected_answer in reference_outputs; cannot grade"
+ },
+ {
+  "q": "when does this regulation come into effect?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses when the regulation comes into effect, providing entry into force date and the staggered application timeline with specific dates and article citations.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate covers all elements of the reference: entry into force date, general application date, and all three staggered exceptions (a), (b), (c), matching the reference's content with added detail."
+ },
+ {
+  "q": "for how long must the documentation of high-risk system that's in the market be kept?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly states the retention period (10 years after placing on market/putting into service) with citation to Article 18(1), directly answering the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate states the 10-year retention period after placing on the market/put into service, matching the reference exactly, plus adds extra correct detail."
+ },
+ {
+  "q": "is sex trafficking a prohibited AI practice?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses whether sex trafficking is a prohibited AI practice, clarifies the distinction, and cites the relevant provision explaining how sex trafficking relates to prohibited practices under the Act. It gives a usable, on-topic answer.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate correctly answers 'No' matching the reference's conclusion, and adds relevant detail about how sex trafficking relates to exceptions in Article 5(1)(h)(i), which is consistent with and refines the reference's point without contradicting it."
+ },
+ {
+  "q": "what fines do providers of general purpose AI models face?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly specifies the fine amounts and conditions for GPAI model providers under Article 101, addressing exactly what was asked with specific figures and grounds.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate states the exact fine amount matching the reference (3% worldwide turnover or EUR 15,000,000, whichever higher) and adds accurate extra detail from Article 101 without contradicting the reference."
+ },
+ {
+  "q": "how must high-risk systems be logged? A",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses how high-risk AI systems must be logged, citing specific Article 12 provisions on automatic recording, scope of logging, and specific minimum requirements for certain systems, fully matching the question.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate states the core requirement matching the reference (automatic recording of logs over the lifetime of the system) and adds accurate additional detail from Article 12, which is permissible extra detail."
+ },
+ {
+  "q": "what article talks about AI literacy?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The question asks which article addresses AI literacy, and the answer directly identifies Article 4 and quotes its relevant text, fully addressing the specific ask.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate correctly identifies Article 4 and quotes the exact text matching the reference."
+ },
+ {
+  "q": "what is an AI system",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly defines 'AI system' per Article 3(1) and elaborates with supporting recitals, fully addressing the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Candidate provides exact definition matching reference, plus accurate additional detail from Recital 12. Fully covers reference content."
+ },
+ {
+  "q": "What did the European Parliament say in the 2027 amendment?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Correctly refused an unanswerable question."
+ },
+ {
+  "q": "what are the requirements for a high risk system? How do we ensure compliance?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly lists the substantive requirements for high-risk AI systems (risk management, data quality, documentation, transparency, human oversight, robustness/accuracy/cybersecurity) and then explains compliance mechanisms (risk management system, quality management system, testing) with specific article citations, addressing both parts of the question.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The reference's key point—risk management system—is covered thoroughly in the candidate's answer, including direct citation to Article 9. The candidate also adds additional correct detail (quality management, testing, etc.), which is permitted as extra detail."
+ },
+ {
+  "q": "If we use AI for biometric categorisation in a workplace, is it prohibited, high-risk, or neither — and what follows?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses the workplace biometric categorisation question, distinguishing between prohibited and high-risk scenarios with specific citations, and explains the consequences (compliance requirements vs. outright ban), giving a usable answer to the specific scenario asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "This mirrors the calibrated example: the candidate reaches the reference's conclusion (high-risk for biometric categorisation) and adds conditions under which other related uses (inferring protected attributes, emotion detection) would be prohibited, which refines rather than contradicts the reference."
+ },
+ {
+  "q": "when is the AI system considered high risk?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses when an AI system is classified as high-risk under the Act, citing the general rule (Annex I/III, Article 6), the narrow exceptions, and specific high-risk use cases, which is exactly what the question asked.",
+  "answer_correctness": 0,
+  "answer_correctness_c": "The reference lists the specific Annex III high-risk categories (biometrics, critical infrastructure, education/training, employment, essential services, migration/asylum/border, administration of justice/democratic processes). The candidate mentions general classification rules and only a few overlapping specific areas (administration of justice, law enforcement) but omits biometrics, critical infrastructure, education/vocational training, employment, and essential public/private services, and migration/border control — a substantial portion of the reference's list is missing."
+ },
+ {
+  "q": "what is the difference between placing on market and making available on market and putting into service?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly defines all three terms with citations and explains the distinctions between them, fully addressing the question asked.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate quotes the exact Article 3 definitions and correctly explains: placing on market = first making available (once), making available = supply for distribution/use (can happen many times, broader), putting into service = first use for intended purpose. This matches the reference's substance."
+ },
+ {
+  "q": "summarize article 114",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "Refusal is the responsive answer: the golden dataset marks this unanswerable from the Act.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "Correctly refused an unanswerable question."
+ },
+ {
+  "q": "how does this act apply if we are a company providing Ai services to the US?",
+  "human": {
+   "answer_relevance": 1,
+   "answer_correctness": 1
+  },
+  "answer_relevance": 1,
+  "answer_relevance_c": "The answer directly addresses the scenario of a company providing AI services to the US, explaining the relevant territorial scope provisions and concluding that if services are exclusively to US customers with no EU output, the Act would not apply. This gives a usable, specific answer to the user's scenario.",
+  "answer_correctness": 1,
+  "answer_correctness_c": "The candidate affirms that if established in the Union and placing AI systems on the market/into service in the Union, the Act applies, matching the reference, while adding accurate extra detail about third-country scenarios without contradicting the reference."
+ }
+]
